@@ -1,0 +1,272 @@
+{
+  "name": "Máquina de Ensaio Universal",
+  "painelPosition": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+  },
+  "painelRotation": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+  },
+  "libraryPosition": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": -2.0
+  },
+  "libraryRotation": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+  },
+  "tasks": [
+    {
+      "taskElements": [
+        {
+          "position": {
+            "x": -0.4650000035762787,
+            "y": 1.0789999961853028,
+            "z": -0.07400000095367432
+          },
+          "eulerRotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "assetName": "Tutorial_Maquina_1/PaginaInicial.txt",
+          "objType": 0
+        }
+      ],
+      "description": "Etapa 1",
+      "finished": false
+    },
+    {
+      "taskElements": [
+        {
+          "position": {
+            "x": -0.01899999938905239,
+            "y": -0.6050000190734863,
+            "z": -0.032999999821186069
+          },
+          "eulerRotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 270.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "assetName": "Arrow 1",
+          "objType": 1
+        },
+        {
+          "position": {
+            "x": 0.36500000953674319,
+            "y": -0.31299999356269839,
+            "z": -0.027000000700354577
+          },
+          "eulerRotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 0.6100000143051148,
+            "y": 0.5099999904632568,
+            "z": 0.4399999976158142
+          },
+          "assetName": "Tutorial_Maquina_1/Etapa2_Ligar.txt",
+          "objType": 0
+        }
+      ],
+      "description": "Etapa 2",
+      "finished": false
+    },
+    {
+      "taskElements": [
+        {
+          "position": {
+            "x": -0.4620000123977661,
+            "y": -1.2869999408721924,
+            "z": 0.3140000104904175
+          },
+          "eulerRotation": {
+            "x": 90.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 0.6399999856948853,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "assetName": "Tutorial_Maquina_1/Encaixe_Superior_Anim",
+          "objType": 1
+        },
+        {
+          "position": {
+            "x": -1.4739999771118165,
+            "y": -0.03799999877810478,
+            "z": 0.019999999552965165
+          },
+          "eulerRotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 0.8999999761581421,
+            "y": 0.699999988079071,
+            "z": 1.0
+          },
+          "assetName": "Tutorial_Maquina_1/Etapa3_Painel.txt",
+          "objType": 0
+        },
+        {
+          "position": {
+            "x": -0.921999990940094,
+            "y": -0.04100000113248825,
+            "z": 0.0
+          },
+          "eulerRotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 0.9527224898338318,
+            "y": 1.4900000095367432,
+            "z": 0.6600000262260437
+          },
+          "assetName": "Cube",
+          "objType": 1
+        }
+      ],
+      "description": "Etapa 3",
+      "finished": false
+    },
+    {
+      "taskElements": [
+        {
+          "position": {
+            "x": -1.496999979019165,
+            "y": 0.3479999899864197,
+            "z": -0.004999999888241291
+          },
+          "eulerRotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 0.9000002145767212,
+            "y": 0.6999999284744263,
+            "z": 1.0
+          },
+          "assetName": "Tutorial_Maquina_1/Etapa4_CorpoDeTeste.txt",
+          "objType": 0
+        },
+        {
+          "position": {
+            "x": -0.4410000145435333,
+            "y": 0.24199999868869782,
+            "z": 0.18199999630451203
+          },
+          "eulerRotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "assetName": "Arrow 1",
+          "objType": 1
+        }
+      ],
+      "description": "Etapa 4",
+      "finished": false
+    },
+    {
+      "taskElements": [
+        {
+          "position": {
+            "x": -0.4350000023841858,
+            "y": -0.9110000133514404,
+            "z": 0.2639999985694885
+          },
+          "eulerRotation": {
+            "x": 90.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 0.5299999713897705,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "assetName": "Tutorial_Maquina_1/Encaixe_Superior_Anim_Descendo",
+          "objType": 1
+        },
+        {
+          "position": {
+            "x": -1.4830000400543213,
+            "y": -0.020999999716877939,
+            "z": 0.024000050500035287
+          },
+          "eulerRotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 0.8999999761581421,
+            "y": 0.699999988079071,
+            "z": 1.0
+          },
+          "assetName": "Tutorial_Maquina_1/Etapa5_DescerEncaixe.txt",
+          "objType": 0
+        }
+      ],
+      "description": "Etapa 5",
+      "finished": false
+    },
+    {
+      "taskElements": [
+        {
+          "position": {
+            "x": -0.4650000035762787,
+            "y": 1.0789999961853028,
+            "z": -0.07400000095367432
+          },
+          "eulerRotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "assetName": "Tutorial_Maquina_1/PaginaFinal.txt",
+          "objType": 0
+        }
+      ],
+      "description": "Etapa 6",
+      "finished": false
+    }
+  ],
+  "fixedElements": [],
+  "currentTask": 0
+}

@@ -1,0 +1,58 @@
+ManifestFileVersion: 0
+CRC: 1360519864
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: sidewalk
+      Dependencies: {}
+    Info_1:
+      Name: street_2
+      Dependencies: {}
+    Info_2:
+      Name: lamp
+      Dependencies: {}
+    Info_3:
+      Name: build_1
+      Dependencies: {}
+    Info_4:
+      Name: build_2
+      Dependencies: {}
+    Info_5:
+      Name: carro_1
+      Dependencies: {}
+    Info_6:
+      Name: grass
+      Dependencies: {}
+    Info_7:
+      Name: bench
+      Dependencies: {}
+    Info_8:
+      Name: street_1
+      Dependencies: {}
+    Info_9:
+      Name: football_field
+      Dependencies: {}
+    Info_10:
+      Name: grass_1
+      Dependencies: {}
+    Info_11:
+      Name: grass_2
+      Dependencies: {}
+    Info_12:
+      Name: sidewalk_1
+      Dependencies: {}
+    Info_13:
+      Name: sidewalk_2
+      Dependencies: {}
+    Info_14:
+      Name: street_1_1
+      Dependencies: {}
+    Info_15:
+      Name: street_1_2
+      Dependencies: {}
+    Info_16:
+      Name: street_2_1
+      Dependencies: {}
+    Info_17:
+      Name: street_2_2
+      Dependencies: {}

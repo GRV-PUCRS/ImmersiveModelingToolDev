@@ -1,0 +1,71 @@
+{
+  "name": "Treinamento com AMBU",
+  "painelPosition": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+  },
+  "painelRotation": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+  },
+  "libraryPosition": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 2.0
+  },
+  "libraryRotation": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+  },
+  "tasks": [
+    {
+      "taskElements": [
+        {
+          "position": {
+            "x": -0.4830000102519989,
+            "y": 0.9120000004768372,
+            "z": -0.06300000101327896
+          },
+          "eulerRotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "assetName": "Treinamento_ABC/Texto_portugues.txt",
+          "objType": 0
+        },
+        {
+          "position": {
+            "x": -0.4830000102519989,
+            "y": 0.9120000004768372,
+            "z": -1
+          },
+          "eulerRotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "assetName": "Treinamento_ABC/Texto_ingles.txt",
+          "objType": 0
+        }
+      ],
+      "description": "Etapa 1",
+      "finished": false
+    }
+  ],
+  "fixedElements": [],
+  "currentTask": 0
+}

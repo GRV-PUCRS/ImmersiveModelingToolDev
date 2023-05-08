@@ -1,0 +1,32 @@
+{
+  "name": "Treinamento",
+  "painelPosition": {
+    "x": 0,
+    "y": 0.3,
+    "z": 1.0
+  },
+  "painelRotation": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+  },
+  "libraryPosition": {
+    "x": 0.0,
+    "y": -0.9,
+    "z": 1.0
+  },
+  "libraryRotation": {
+    "x": 0.0,
+    "y": 180.0,
+    "z": 0.0
+  },
+  "tasks": [
+    {
+      "taskElements": [],
+      "description": "Etapa 1",
+      "finished": false
+    }
+  ],
+  "fixedElements": [],
+  "currentTask": 0
+}
