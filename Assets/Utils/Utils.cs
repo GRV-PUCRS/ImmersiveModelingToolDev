@@ -1,31 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public static class Utils
-{
-    public static void SetLayer(Transform obj, string layerName, bool toChilds)
-    {
-        obj.gameObject.layer = LayerMask.NameToLayer(layerName);
-
-        if (!toChilds) return;
-
-        foreach (Transform child in obj.transform)
-            SetLayer(child, layerName, true);
-    }
-
-    public static void ClearChilds(Transform parent)
-    {
-        foreach (Transform child in parent)
-        {
-            Object.Destroy(child.gameObject);
-        }
-    }
-
-    public static string GetFileNameFromPath(string filePath)
-    {
-        string[] fileStrings = filePath.Replace("\\", "/").Split('/');
-
-        return fileStrings[fileStrings.Length - 1];
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ea8d467b9bfcfb8f9af57421ab515c3fd7ed08f18074d735f4641ae5e9b4ea68
+size 1000
