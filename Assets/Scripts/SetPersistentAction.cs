@@ -1,3 +1,78 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:219432e8cca37a5418af96b69d349222bb20418aca766f44a6a2acc9b5109871
-size 2034
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class SetPersistentAction : MonoBehaviour, IAction
+{
+    private bool isActive = false;
+    private bool colliding = false;
+
+    private DragUI objectToTransform;
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!isActive) return;
+
+        objectToTransform = other.GetComponent<DragUI>();
+        colliding = objectToTransform != null;
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (!isActive) return;
+
+        colliding = false;
+        objectToTransform = null;
+    }
+
+    private void OnEnable()
+    {
+        EventManager.OnObjectDragBegin += OnObjectDragBegin;
+        EventManager.OnObjectDragEnd += OnObjectDragEnd;
+        EventManager.OnStageChange += OnStageChange;
+    }
+
+    private void OnDisable()
+    {
+        EventManager.OnObjectDragBegin -= OnObjectDragBegin;
+        EventManager.OnObjectDragEnd -= OnObjectDragEnd;
+        EventManager.OnStageChange -= OnStageChange;
+    }
+
+    private void OnStageChange()
+    {
+        ObjectStore.Instance.RetrieveObjectToStore(transform);
+    }
+
+    private void OnObjectDragEnd(Transform obj)
+    {
+        if (obj != transform || !isActive) return;
+
+        ApplyAction();
+
+        isActive = false;
+    }
+
+    public void ApplyAction()
+    {
+        if (colliding && objectToTransform.gameObject.layer.Equals(LayerMask.NameToLayer("InteractableObject")))
+        {
+            //objectToTransform.IsPersistent = !objectToTransform.IsPersistent;
+            OculusManager.Instance.SetPersistentObject(objectToTransform);
+
+            SoundManager.Instance.PlaySound(objectToTransform.IsFixed ? SoundManager.Instance.confirmOrigin : SoundManager.Instance.resetOrigin);
+        }
+
+        ObjectStore.Instance.RetrieveObjectToStore(transform);
+
+        colliding = false;
+        objectToTransform = null;
+    }
+
+    private void OnObjectDragBegin(Transform obj)
+    {
+        if (obj != transform) return;
+
+        isActive = true;
+    }
+}
