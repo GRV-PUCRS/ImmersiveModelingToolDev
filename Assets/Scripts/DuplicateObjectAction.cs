@@ -49,45 +49,44 @@ public class DuplicateObjectAction : MonoBehaviour, IAction
     {
         if (obj != transform || !isActive) return;
 
-        ApplyAction();
-
         isActive = false;
-    }
-
-    public void ApplyAction()
-    {
-        Debug.Log("Set Occlusion " + colliding + "  " + objectToTransform);
 
         if (colliding && objectToTransform.gameObject.layer.Equals(LayerMask.NameToLayer("InteractableObject")))
         {
-            Outline outline = objectToTransform.TransformToUpdate.gameObject.GetComponentInChildren<Outline>();
-            if (outline != null)
-            {
-                outline.DisableOutline();
-                Debug.Log("outline");
-            }
-
-            GameObject duplicatedObj = Instantiate(objectToTransform.TransformToUpdate.gameObject);
-            OculusManager.Instance.AddObjectToTask(duplicatedObj.transform);
-
-            duplicatedObj.name = objectToTransform.name;
-            duplicatedObj.transform.localPosition = objectToTransform.TransformToUpdate.localPosition + new Vector3(0.1f, 0.1f, 0);
-
-            duplicatedObj.GetComponentInChildren<DragUI>().IsFixed = false;
-            duplicatedObj.GetComponentInChildren<DragUI>().IsReferenceObject = false;
-
-
-
-            if (duplicatedObj.GetComponentInChildren<OcclusionObject>() != null)
-                OculusManager.Instance.SetOcclusionObject(duplicatedObj.GetComponentInChildren<DragUI>());
+            ApplyAction(objectToTransform);
 
             SoundManager.Instance.PlaySound(SoundManager.Instance.confirmOrigin);
-
             ObjectStore.Instance.RetrieveObjectToStore(transform);
+
+            EventManager.TriggerObjectDuplicated(objectToTransform);
         }
 
         colliding = false;
         objectToTransform = null;
+    }
+
+    public void ApplyAction(DragUI instance)
+    {
+        Debug.Log("Set Occlusion " + colliding + "  " + instance);
+
+        Outline outline = instance.TransformToUpdate.gameObject.GetComponentInChildren<Outline>();
+        if (outline != null)
+        {
+            outline.DisableOutline();
+            Debug.Log("outline");
+        }
+
+        GameObject duplicatedObj = Instantiate(instance.TransformToUpdate.gameObject);
+        OculusManager.Instance.AddObjectToTask(duplicatedObj.transform);
+
+        duplicatedObj.name = instance.name;
+        duplicatedObj.transform.localPosition = instance.TransformToUpdate.localPosition + new Vector3(0.1f, 0.1f, 0);
+
+        duplicatedObj.GetComponentInChildren<DragUI>().IsFixed = false;
+        duplicatedObj.GetComponentInChildren<DragUI>().IsReferenceObject = false;
+
+        if (duplicatedObj.GetComponentInChildren<OcclusionObject>() != null)
+            OculusManager.Instance.SetOcclusionObject(duplicatedObj.GetComponentInChildren<DragUI>());
     }
 
     private void OnObjectDragBegin(Transform obj)

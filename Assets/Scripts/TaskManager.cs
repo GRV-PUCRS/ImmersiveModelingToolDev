@@ -252,6 +252,8 @@ public class TaskManager : MonoBehaviour
     {
         foreach (Task task in plan.Tasks)
         {
+            if (task == plan.CurrentTask) continue;
+
             task.taskElements.Add(new TaskElement(obj));
         }
     }

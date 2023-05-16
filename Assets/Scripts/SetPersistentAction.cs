@@ -48,25 +48,26 @@ public class SetPersistentAction : MonoBehaviour, IAction
     {
         if (obj != transform || !isActive) return;
 
-        ApplyAction();
-
-        isActive = false;
-    }
-
-    public void ApplyAction()
-    {
         if (colliding && objectToTransform.gameObject.layer.Equals(LayerMask.NameToLayer("InteractableObject")))
         {
-            //objectToTransform.IsPersistent = !objectToTransform.IsPersistent;
-            OculusManager.Instance.SetPersistentObject(objectToTransform);
+            ApplyAction(objectToTransform);
 
             SoundManager.Instance.PlaySound(objectToTransform.IsFixed ? SoundManager.Instance.confirmOrigin : SoundManager.Instance.resetOrigin);
+
+            ObjectStore.Instance.RetrieveObjectToStore(transform);
+
+            EventManager.TriggerObjectSetPersistent(objectToTransform);
         }
 
-        ObjectStore.Instance.RetrieveObjectToStore(transform);
 
+        isActive = false;
         colliding = false;
         objectToTransform = null;
+    }
+
+    public void ApplyAction(DragUI instance)
+    {
+        OculusManager.Instance.SetPersistentObject(instance);
     }
 
     private void OnObjectDragBegin(Transform obj)

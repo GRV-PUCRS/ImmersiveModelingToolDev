@@ -28,11 +28,15 @@ public class SelectionBoxAction : MonoBehaviour, IAction
         if (instances.Contains(element))
         {
             instances.Remove(element);
+
+            SoundManager.Instance.PlaySound(SoundManager.Instance.deselection);
         }
         else
         {
             instances.Add(element);
             isAdding = true;
+
+            SoundManager.Instance.PlaySound(SoundManager.Instance.selection);
         }
 
         outline.DisableOutline();
@@ -195,6 +199,55 @@ public class SelectionBoxAction : MonoBehaviour, IAction
         isActive = true;
     }
 
+    private void OnObjectDuplicated(DragUI obj)
+    {
+        if (!instances.Contains(obj)) return;
+
+
+        EventManager.OnObjectDuplicated -= OnObjectDuplicated;
+
+        GameObject tempObject = new GameObject();
+        DuplicateObjectAction action = tempObject.AddComponent<DuplicateObjectAction>();
+
+        foreach (DragUI instance in instances)
+        {
+            if (obj == instance) continue;
+
+            action.ApplyAction(instance);
+        }
+
+        foreach (DragUI instance in instances)
+        {
+            Outline outline = instance.GetComponent<Outline>();
+
+            if (outline == null) return;
+
+            outline.EnableOutline();
+        }
+
+        EventManager.OnObjectDuplicated += OnObjectDuplicated;
+    }
+
+    private void OnObjectSetPersistent(DragUI obj)
+    {
+        if (!instances.Contains(obj)) return;
+
+        EventManager.OnObjectSetPersistent -= OnObjectSetPersistent;
+
+        GameObject tempObject = new GameObject();
+        SetPersistentAction action = tempObject.AddComponent<SetPersistentAction>();
+
+        foreach (DragUI instance in instances)
+        {
+            if (obj == instance) continue;
+
+            action.ApplyAction(instance);
+            Debug.Log("Persistent to " + instance.name);
+        }
+
+        EventManager.OnObjectSetPersistent += OnObjectSetPersistent;
+    }
+
     private void OnEnable()
     {
         EventManager.OnObjectDragBegin += OnObjectDragBegin;
@@ -202,6 +255,9 @@ public class SelectionBoxAction : MonoBehaviour, IAction
 
         EventManager.OnObjectScaleBegin += OnObjectScaleBegin;
         EventManager.OnObjectScaleEnd += OnObjectScaleEnd;
+
+        EventManager.OnObjectDuplicated += OnObjectDuplicated;
+        EventManager.OnObjectSetPersistent += OnObjectSetPersistent;
 
         EventManager.OnStageChange += OnStageChange;
     }
@@ -213,6 +269,9 @@ public class SelectionBoxAction : MonoBehaviour, IAction
 
         EventManager.OnObjectScaleBegin -= OnObjectScaleBegin;
         EventManager.OnObjectScaleEnd -= OnObjectScaleEnd;
+
+        EventManager.OnObjectDuplicated -= OnObjectDuplicated;
+        EventManager.OnObjectSetPersistent -= OnObjectSetPersistent;
 
         EventManager.OnStageChange -= OnStageChange;
     }

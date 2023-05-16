@@ -19,6 +19,9 @@ public static class EventManager
     public static event Action<Transform, Transform, Transform> OnObjectScaleBegin;
     public static event Action<Transform> OnObjectScaleEnd;
 
+    public static event Action<DragUI> OnObjectDuplicated;
+    public static event Action<DragUI> OnObjectSetPersistent;
+
     public static event Action OnStageChange;
     public static event Action<bool> OnToggleObjectVisibility;
     public static event Action<GameObject> OnObjectDeleted;
@@ -74,6 +77,11 @@ public static class EventManager
 
     public static void TriggerScaleBegin(Transform origin, Transform pivot1, Transform pivot2) { OnObjectScaleBegin?.Invoke(origin, pivot1, pivot2); }
     public static void TriggerScaleEnd(Transform origin) { OnObjectScaleEnd?.Invoke(origin); }
+
+
+    public static void TriggerObjectDuplicated(DragUI obj) { OnObjectDuplicated?.Invoke(obj); }
+    public static void TriggerObjectSetPersistent(DragUI obj) { OnObjectSetPersistent?.Invoke(obj); }
+
 
     public static void TriggerStageChange() { OnStageChange?.Invoke(); }
     public static void TriggerToggleObjectVisibility(bool newValue) { OnToggleObjectVisibility?.Invoke(newValue); }

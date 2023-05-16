@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using static OVRManager;
 
 public class OculusManager : Singleton<OculusManager>
 {
@@ -15,6 +16,7 @@ public class OculusManager : Singleton<OculusManager>
     [SerializeField] private Transform initialScreen;
     [SerializeField] private GameObject environment;
     [SerializeField] private GameObject library;
+    [SerializeField] private GameObject anchorInstance;
 
     [Header("Objectos com Oclusao")]
     [SerializeField] private OcclusionObject environmentObject;
@@ -104,7 +106,7 @@ public class OculusManager : Singleton<OculusManager>
 
     private void OnButtonOneClicked()
     {
-        environmentObject.ToggleVisibility();
+        anchorInstance.SetActive(!anchorInstance.activeInHierarchy);
     }
 
     private void OnButtonTwoClicked()
@@ -173,7 +175,6 @@ public class OculusManager : Singleton<OculusManager>
     public void SetPersistentObject(DragUI referenceObject)
     {
         taskManager.AddObjectToAllStages(referenceObject.TransformToUpdate.gameObject);
-        SoundManager.Instance.PlaySound(SoundManager.Instance.confirmOrigin);
     }
 
 

@@ -17,6 +17,8 @@ public class SoundManager : Singleton<SoundManager>
     public AudioClip clickKey;
     public AudioClip confirmOrigin;
     public AudioClip resetOrigin;
+    public AudioClip selection;
+    public AudioClip deselection;
 
 
     private void Awake()
