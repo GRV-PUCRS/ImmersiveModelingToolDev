@@ -26,6 +26,8 @@ public static class EventManager
     public static event Action<bool> OnToggleObjectVisibility;
     public static event Action<GameObject> OnObjectDeleted;
 
+    public static event Action<bool> OnVRModeActive;
+
     public static event Action<RequestViewController> OnRequestViewCreated;
 
     public static void TriggerSocketConnectionStatus(bool isConnected)
@@ -87,4 +89,6 @@ public static class EventManager
     public static void TriggerToggleObjectVisibility(bool newValue) { OnToggleObjectVisibility?.Invoke(newValue); }
     public static void TriggerRequestViewCreated(RequestViewController requestView) { OnRequestViewCreated?.Invoke(requestView); }
     public static void TriggerObjectDeleted(GameObject deletedObject) { OnObjectDeleted?.Invoke(deletedObject); }
+
+    public static void TriggerVRModeActive(bool newValue) { OnVRModeActive?.Invoke(newValue); }
 }

@@ -1,22 +1,23 @@
 ﻿/*
- * Copyright (c) Facebook, Inc. and its affiliates.
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ * All rights reserved.
  *
  * This source code is licensed under the license found in the
  * LICENSE file in the root directory of this source tree.
  */
 
-using System;
 using UnityEditor;
 using UnityEngine;
 
-namespace Facebook.WitAi.Windows
+namespace Meta.WitAi.Windows
 {
     public abstract class WitScriptableWizard : ScriptableWizard
     {
         protected Vector2 scrollOffset;
 
-        protected virtual Texture2D HeaderIcon => WitStyles.HeaderIcon;
-        protected virtual string HeaderUrl => WitStyles.WitUrl;
+        protected virtual Texture2D HeaderIcon => WitTexts.HeaderIcon;
+        protected virtual string HeaderUrl => WitTexts.WitUrl;
+        protected virtual string DocsUrl => WitTexts.Texts.WitDocsUrl;
 
         protected abstract GUIContent Title { get; }
         protected abstract string ButtonLabel { get; }
@@ -25,7 +26,6 @@ namespace Facebook.WitAi.Windows
 
         protected virtual void OnEnable()
         {
-            WitAuthUtility.InitEditorTokens();
             createButtonName = ButtonLabel;
         }
         protected override bool DrawWizardGUI()
@@ -38,12 +38,12 @@ namespace Facebook.WitAi.Windows
 
             // Layout window
             Vector2 size = Vector2.zero;
-            WitEditorUI.LayoutWindow(ContentHeaderLabel, HeaderIcon, HeaderUrl, LayoutContent, ref scrollOffset, out size);
+            WitEditorUI.LayoutWindow(ContentHeaderLabel, HeaderIcon, HeaderUrl, DocsUrl, LayoutContent, ref scrollOffset, out size);
 
             // Set wizard to max width
             size.x = WitStyles.WindowMaxWidth;
             // Wizards add additional padding
-            size.y += 70f;
+            size.y += 120f;
 
             // Clamp wizard sizes
             maxSize = minSize = size;

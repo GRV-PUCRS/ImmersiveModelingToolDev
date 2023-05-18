@@ -11,7 +11,7 @@ using System.Text;
 
 public class VRKeyboardManager : Singleton<VRKeyboardManager>
 {
-    [SerializeField] private TMP_InputField inputField;
+    [SerializeField] private InputField inputField;
     [SerializeField] private GameObject keyboardView;
     [SerializeField] private GameObject capsOnObject;
     [SerializeField] private GameObject capsOffObject;
@@ -30,7 +30,7 @@ public class VRKeyboardManager : Singleton<VRKeyboardManager>
         }
     }
 
-    public void GetUserInputString(Action<string> callback, string deafultText="", TMP_InputField.ContentType contentType = TMP_InputField.ContentType.Standard)
+    public void GetUserInputString(Action<string> callback, string deafultText="", InputField.ContentType contentType = InputField.ContentType.Standard)
     {
         inputField.contentType = contentType;
 
@@ -51,7 +51,8 @@ public class VRKeyboardManager : Singleton<VRKeyboardManager>
         confirmUserInput = false;
 
         // InputField Focus
-        inputField.caretPosition = deafultText.Length;
+        inputField.caretPosition = deafultText.Length - 1;
+        inputField.ForceLabelUpdate();
         FocusInputField();
 
         // Posiciona teclado na frente do usuario
@@ -107,11 +108,15 @@ public class VRKeyboardManager : Singleton<VRKeyboardManager>
 
     public void AddCharacter(string character)
     {
+        inputField.Select();
+
         string oldString = inputField.text.Substring(0, inputField.caretPosition);
         oldString += character;
 
         inputField.text = oldString + inputField.text.Substring(inputField.caretPosition, inputField.text.Length - inputField.caretPosition);
         inputField.caretPosition += 1;
+
+        Debug.Log($"String = {inputField.text}   Pos = {inputField.caretPosition}");
 
         inputField.ForceLabelUpdate();
     }

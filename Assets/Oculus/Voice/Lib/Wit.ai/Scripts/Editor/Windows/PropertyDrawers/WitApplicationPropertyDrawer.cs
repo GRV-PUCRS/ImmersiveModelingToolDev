@@ -1,16 +1,15 @@
 ﻿/*
- * Copyright (c) Facebook, Inc. and its affiliates.
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ * All rights reserved.
  *
  * This source code is licensed under the license found in the
  * LICENSE file in the root directory of this source tree.
  */
 
 using UnityEditor;
-using UnityEngine;
-using Facebook.WitAi.Data.Configuration;
 using System.Reflection;
 
-namespace Facebook.WitAi.Windows
+namespace Meta.WitAi.Windows
 {
     public class WitApplicationPropertyDrawer : WitPropertyDrawer
     {
@@ -23,21 +22,29 @@ namespace Facebook.WitAi.Windows
             switch (key)
             {
                 case LocalizedTitleKey:
-                    return WitStyles.Texts.ConfigurationApplicationTabLabel;
+                    return WitTexts.Texts.ConfigurationApplicationTabLabel;
                 case LocalizedMissingKey:
-                    return WitStyles.Texts.ConfigurationApplicationMissingLabel;
+                    return WitTexts.Texts.ConfigurationApplicationMissingLabel;
                 case "name":
-                    return WitStyles.Texts.ConfigurationApplicationNameLabel;
+                    return WitTexts.Texts.ConfigurationApplicationNameLabel;
                 case "id":
-                    return WitStyles.Texts.ConfigurationApplicationIdLabel;
+                    return WitTexts.Texts.ConfigurationApplicationIdLabel;
                 case "lang":
-                    return WitStyles.Texts.ConfigurationApplicationLanguageLabel;
+                    return WitTexts.Texts.ConfigurationApplicationLanguageLabel;
                 case "isPrivate":
-                    return WitStyles.Texts.ConfigurationApplicationPrivateLabel;
+                    return WitTexts.Texts.ConfigurationApplicationPrivateLabel;
                 case "createdAt":
-                    return WitStyles.Texts.ConfigurationApplicationCreatedLabel;
+                    return WitTexts.Texts.ConfigurationApplicationCreatedLabel;
+                case "trainingStatus":
+                    return WitTexts.Texts.ConfigurationApplicationTrainingStatus;
+                case "lastTrainDuration":
+                    return WitTexts.Texts.ConfigurationApplicationTrainingLastDuration;
+                case "lastTrainedAt":
+                    return WitTexts.Texts.ConfigurationApplicationTrainingLast;
+                case "nextTrainAt":
+                    return WitTexts.Texts.ConfigurationApplicationTrainingNext;
             }
-            
+
             // Default to base
             return base.GetLocalizedText(property, key);
         }
@@ -46,7 +53,10 @@ namespace Facebook.WitAi.Windows
         {
             switch (subfield.Name)
             {
-                case "witConfiguration":
+                case "intents":
+                case "entities":
+                case "traits":
+                case "voices":
                     return false;
             }
             return base.ShouldLayoutField(property, subfield);

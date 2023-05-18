@@ -14,8 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Client_Oculus.unity
     guid: 4960ff47e276a7644ab84701fef2e204
+  - enabled: 0
+    path: Assets/Oculus/SampleFramework/Usage/Passthrough.unity
+    guid: 58e5fc2486c774a4e88ac76261268d52
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: c81fceebf9edb23498d4c17320851902,
+      type: 2}
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 6e572e983bc92454a86fffeb6ef94f6e,
       type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 7dc48075fc202b444b39a281feeee97f,
       type: 2}

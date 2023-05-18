@@ -242,10 +242,30 @@ public class SelectionBoxAction : MonoBehaviour, IAction
             if (obj == instance) continue;
 
             action.ApplyAction(instance);
-            Debug.Log("Persistent to " + instance.name);
         }
 
         EventManager.OnObjectSetPersistent += OnObjectSetPersistent;
+    }
+
+    private void OnObjectDeleted(GameObject obj)
+    {
+        Debug.Log("[SelectionBoxAction][OnObjectDeleted] Delete group");
+
+        DragUI drag = obj.GetComponentInChildren<DragUI>();
+
+        if (drag == null) return;
+
+        if (!instances.Contains(drag)) return;
+
+        foreach (DragUI instance in instances)
+        {
+            if (instance == drag) continue;
+
+            Destroy(instance.TransformToUpdate.gameObject);
+        }
+
+        instances.Clear();
+        OnStageChange();
     }
 
     private void OnEnable()
@@ -258,6 +278,8 @@ public class SelectionBoxAction : MonoBehaviour, IAction
 
         EventManager.OnObjectDuplicated += OnObjectDuplicated;
         EventManager.OnObjectSetPersistent += OnObjectSetPersistent;
+
+        EventManager.OnObjectDeleted += OnObjectDeleted;
 
         EventManager.OnStageChange += OnStageChange;
     }
@@ -272,6 +294,8 @@ public class SelectionBoxAction : MonoBehaviour, IAction
 
         EventManager.OnObjectDuplicated -= OnObjectDuplicated;
         EventManager.OnObjectSetPersistent -= OnObjectSetPersistent;
+
+        EventManager.OnObjectDeleted -= OnObjectDeleted;
 
         EventManager.OnStageChange -= OnStageChange;
     }

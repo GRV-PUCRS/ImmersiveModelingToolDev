@@ -234,6 +234,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -242,12 +243,12 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: -1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -265,6 +266,8 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
@@ -1826,6 +1829,77 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Alfabeto_i: -5638871248048761286
+      Alfabeto_J: 1076989395201330542
+      Alfabeto_C: 7634443294820324928
+      Alfabeto_Q: 582475214835079033
+      Alfabeto_Enter: 7507919247416875377
+      Alfabeto_N: 3828963961777731137
+      Alfabeto_H: 6922402747728203404
+      Alfabeto_4: -1164524576673684665
+      Alfabeto_W: -256078351214118027
+      Alfabeto_K: -8115151078002707605
+      Alfabeto_c: 2701431449574032913
+      Alfabeto_h: 2491658446630957277
+      Alfabeto_p: 7768810052464151986
+      "Alfabeto_\xE7": 687743798272080444
+      Alfabeto_k: -5637579554488418411
+      Alfabeto_r: 5827145189763586946
+      Alfabeto_L: -6778210498022909033
+      Alfabeto_s: 7994711377156580651
+      Alfabeto_0: 3445453089858988511
+      Alfabeto_69: -3087955514089404028
+      Alfabeto_m: -3147798495510800368
+      Alfabeto_q: 4099457088699761876
+      Alfabeto_o: 8502752088958223067
+      Alfabeto_A: -8489948274006799204
+      Alfabeto_F: 6576021853318849631
+      Alfabeto_Space: 6544608590621316042
+      Alfabeto_l: 4134544356507183080
+      Alfabeto_3: -2383203391854074168
+      Alfabeto_D: 7047342657171972634
+      Alfabeto_G: -655658134429399463
+      Alfabeto_x: 3895816651539968937
+      Alfabeto_Z: 3619160058117717063
+      Alfabeto_f: 7724340036519871965
+      Alfabeto_R: -5117629892304543104
+      Alfabeto_y: 1712463909018772639
+      Alfabeto_E: -3066036921043931745
+      Alfabeto_I: 7982664053483930025
+      Alfabeto_P: -7752411102197727949
+      Alfabeto_M: 1678688375014986590
+      Alfabeto_X: 4822276253596093303
+      Alfabeto_e: 8254689599122508622
+      Alfabeto_7: 5639269848871252972
+      "Alfabeto_\xC7": -7749421389243530432
+      Alfabeto_d: -7616834456468864976
+      Alfabeto_U: -8206462365485136536
+      Alfabeto_u: 512501178489822385
+      Alfabeto_5: -4699921087283688330
+      Alfabeto_Caps: -104023418396184960
+      Alfabeto_O: -1390022799997816733
+      Alfabeto_j: -1831211830732063555
+      Alfabeto_t: -8905891576913062369
+      Alfabeto_8: -2847349687094267215
+      Alfabeto_6: 2148248665971915821
+      Alfabeto_Backspace: 4323721306326071878
+      Alfabeto_n: -1464527114187471990
+      Alfabeto_v: -5308521804297987625
+      Alfabeto_B: -2052528644791023063
+      Alfabeto_S: 5385467357206453614
+      Alfabeto_a: -5067953543723208761
+      Alfabeto_z: 8705879748707886309
+      Alfabeto_9: 1761556779368858181
+      Alfabeto_Y: 4892642054832874942
+      Alfabeto_g: 1557772543193316551
+      Alfabeto_b: 7341720910251276765
+      Alfabeto_1: -6020290346043075763
+      Alfabeto_2: 1353020339782062167
+      Alfabeto_T: 4475042752830266746
+      Alfabeto_w: -1375632884530258473
+      Alfabeto_65: 3454309389872965331
+      Alfabeto_V: 8869557429465267918
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
