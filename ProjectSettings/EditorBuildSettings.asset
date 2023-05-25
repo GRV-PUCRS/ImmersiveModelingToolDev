@@ -1,28 +1,3 @@
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!1045 &1
-EditorBuildSettings:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/Client_Dados.unity
-    guid: 7f638cfc1d2e4884c82b98b0e7987298
-  - enabled: 0
-    path: Assets/Scenes/Servidor_Dados.unity
-    guid: 334dfeb40dbdd444dbcd750fa82b9b89
-  - enabled: 1
-    path: Assets/Scenes/Client_Oculus.unity
-    guid: 4960ff47e276a7644ab84701fef2e204
-  - enabled: 0
-    path: Assets/Oculus/SampleFramework/Usage/Passthrough.unity
-    guid: 58e5fc2486c774a4e88ac76261268d52
-  m_configObjects:
-    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: c81fceebf9edb23498d4c17320851902,
-      type: 2}
-    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 6e572e983bc92454a86fffeb6ef94f6e,
-      type: 2}
-    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 7dc48075fc202b444b39a281feeee97f,
-      type: 2}
-    xr.sdk.mock-hmd.settings: {fileID: 11400000, guid: af126110e2f4b0a418c936670761267a,
-      type: 2}
+version https://git-lfs.github.com/spec/v1
+oid sha256:05854fa9a3693114ca9a66b1449313d3fa4d08d8edc30f1c8035b15a979ec7bd
+size 1142
