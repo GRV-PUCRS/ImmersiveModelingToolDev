@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:206c7e0e17fb9db80ffbc89a991bf1bc5b6f0529c3c3b3d3338f3e2e6461001c
-size 174
+fileFormatVersion: 2
+guid: df3bb8182cdc0c6408825f047f65917c
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: building_gas_station
+  assetBundleVariant: 

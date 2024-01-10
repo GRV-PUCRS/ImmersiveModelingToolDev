@@ -1,3 +1,31 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:59707f6a1febe1a9b2ae1dae784ff81a3fbe0e200499bb47c1fc6fd53c552b5f
-size 784
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Events;
+
+[RequireComponent(typeof(SpeechResponseHandler))]
+public class SpeechCommandsManager : Singleton<SpeechCommandsManager>
+{
+    private SpeechResponseHandler handler;
+
+    public event Action OnCommandNext;
+    public event Action OnCommandBack;
+
+    private void Awake()
+    {
+        handler = GetComponent<SpeechResponseHandler>();
+
+        handler.OnWordFound.AddListener(HandleWordDetected);
+    }
+
+    public void HandleWordDetected(string word)
+    {
+        switch (word)
+        {
+            case "next": OnCommandNext?.Invoke(); break;
+            case "back": OnCommandBack?.Invoke(); break;
+            default: break;
+        }
+    }
+}

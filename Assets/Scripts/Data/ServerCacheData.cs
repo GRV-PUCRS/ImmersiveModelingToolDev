@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4454e80e5037d21fd7763b7b635cd78132999333772105f71facbb1fd76215d3
-size 887
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using System;
+
+[Serializable]
+public class ServerCacheData
+{
+    [SerializeField] private string serverID;
+    [SerializeField] private string serverPassword;
+    [SerializeField] private string sessionsFolderPath;
+    [SerializeField] private string objectsFolderPath;
+
+    public ServerCacheData()
+    {
+        serverID = "";
+        serverPassword = "";
+        sessionsFolderPath = "";
+        objectsFolderPath = "";
+    }
+
+    public string ServerID { get => serverID; set => serverID = value; }
+    public string ServerPassword { get => serverPassword; set => serverPassword = value; }
+    public string SessionsFolderPath { get => sessionsFolderPath; set => sessionsFolderPath = value; }
+    public string ObjectsFolderPath { get => objectsFolderPath; set => objectsFolderPath = value; }
+}

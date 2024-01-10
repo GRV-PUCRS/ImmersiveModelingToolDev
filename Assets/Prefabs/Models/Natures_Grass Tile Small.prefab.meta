@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a57a5f42a5f0173250e5e740eaa2075540359d8c966d51647999dfdee5ca207b
-size 159
+fileFormatVersion: 2
+guid: f4db15ea8df314747a3037496d558444
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: grass
+  assetBundleVariant: 

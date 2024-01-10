@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4bf841da0b8bbecf1d34561616dbd0f77c30b935c0110cffa4e885c36064e277
-size 792
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
+
+public class RuntimeLogger : MonoBehaviour
+{
+    public TextMeshProUGUI txtLog;
+    public int maxCounter = 15;
+
+    private int counter = 0;
+
+    private void Awake()
+    {
+        Application.logMessageReceived += Application_logMessageReceived;
+    }
+
+    private void Application_logMessageReceived(string condition, string stackTrace, LogType type)
+    {
+        if (counter >= maxCounter)
+        {
+            txtLog.text = "";
+            counter = 0;
+        }
+
+
+        txtLog.text += $"[{type}]{condition}\n";
+        
+        if (type == LogType.Exception)
+        {
+            txtLog.text += $"[StackTracer] {stackTrace}";
+        }
+
+        counter++;
+    }
+}

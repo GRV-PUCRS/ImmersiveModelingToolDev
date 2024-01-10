@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2a0c535bcdf1c1d4c1b1dc645c59934c6b7ef5390b5c1658883a5ea234aca9f5
-size 723
+ManifestFileVersion: 0
+CRC: 4034020806
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 55996f400c55dab604d8b73bdf8f9329
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ac9493b7c514904e0a4f6b314f7c1aad
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 54
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Prefabs/Models/Car_1.prefab
+Dependencies: []

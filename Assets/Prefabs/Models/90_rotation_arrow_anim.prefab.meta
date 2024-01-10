@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:249078ad24e351fcf257cf8aa8b87aedd2ec92f5503d0ac981bac8534e3e9864
-size 176
+fileFormatVersion: 2
+guid: b1ebd22b8fdc4f941a088eb7f0c5ff77
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 90_rotation_arrow_anim
+  assetBundleVariant: 

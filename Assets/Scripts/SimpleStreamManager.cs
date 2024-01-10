@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4e845386166d185ad018b91ddca0b2258a7677a8d8f6e16c995c6ef24a8ac072
-size 545
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class SimpleStreamManager : MonoBehaviour
+{
+    public Transform world;
+    public Transform camera;
+
+    public void SetOrigin(object[] message)
+    {
+        world.position = (Vector3)message[2];
+        world.rotation = Quaternion.Euler((Vector3)message[3]);
+    }
+
+    public void SetCameraPosition(object[] message)
+    {
+        camera.position = (Vector3)message[2];
+        camera.rotation = Quaternion.Euler((Vector3)message[3]);
+    }
+}

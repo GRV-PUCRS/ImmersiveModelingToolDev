@@ -1,3 +1,57 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b638439e09739d370e3f00e606f8ee0668fb79cd1ff6e15ec7c3917ee4f55357
-size 1502
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using TMPro;
+using UnityEngine.Events;
+using Oculus.Interaction;
+
+public class HandTrackingManager : Singleton<HandTrackingManager>
+{
+    [SerializeField] private bool allowHandTracking = true;
+
+    [Header("Hand References")]
+    [SerializeField] private GameObject leftHand;
+    [SerializeField] private GameObject rightHand;
+
+    [Header("Controllers References")]
+    [SerializeField] private GameObject controllersParent;
+
+    public UnityEvent OnThumbsUpSelected;
+    public UnityEvent OnThumbsUpUnselected;
+
+    private bool isEnable = false;
+
+    private void Start()
+    {
+        SetHandActive(false);
+    }
+
+    private void Update()
+    {
+        if (!allowHandTracking) return;
+
+        if (isEnable != OVRPlugin.GetHandTrackingEnabled())
+        {
+            isEnable = !isEnable;
+            SetHandActive(isEnable);
+        }
+    }
+
+    public void SetHandActive(bool newValue)
+    {
+        leftHand.SetActive(newValue);
+        rightHand.SetActive(newValue);
+        controllersParent.SetActive(!newValue);
+
+        InputController.Instance.SetControllerActive(!newValue);
+    }
+
+    public void OnThumbsDectected(bool isSelected)
+    {
+        if (isSelected) OnThumbsUpSelected?.Invoke();
+        else OnThumbsUpUnselected?.Invoke();
+    }
+
+    public Transform LeftHand { get => leftHand.transform; }
+    public Transform RightHand { get => rightHand.transform; }
+}

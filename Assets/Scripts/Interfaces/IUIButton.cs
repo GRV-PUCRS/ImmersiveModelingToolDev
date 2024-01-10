@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f6ffd3745446c082476243fecb4de7c12558b853ae93f929137dfad4ac1c87a6
-size 308
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public interface IUIButton
+{
+    void OnSelected(ObjectSelector controller);
+
+    void OnUnselected(ObjectSelector controller);
+
+    void OnSubmited(ObjectSelector controller);
+
+    void OnReleased(ObjectSelector controller);
+}

@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0ac17ba1ddbbafb504319c8be653ab0378857e0233642c73da2e290691ba2c05
-size 159
+fileFormatVersion: 2
+guid: 419a51e64dfd2534b98ebf4e79890407
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: car_3
+  assetBundleVariant: 

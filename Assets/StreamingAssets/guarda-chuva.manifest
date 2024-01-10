@@ -1,3 +1,33 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f6c7b4284577f52791a4ffc1918e277e9a2324e1de69ee1f93a312a8e8001bff
-size 684
+ManifestFileVersion: 0
+CRC: 911391931
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a65f4f6586d0c1c8fef6dd97a7e38b51
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2c922eb53098619ae28305bb1ba52450
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 54
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Prefabs/Guarda-Chuva.prefab
+Dependencies: []

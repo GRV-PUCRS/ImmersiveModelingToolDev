@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:22053a7e7e06aef10fe963cab1bd868815ef8c4df4e8aad12e821e921e9618f7
-size 476
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using TMPro;
+
+public class ScriptTemp : MonoBehaviour
+{
+    private void Awake()
+    {
+        InputController.Instance.OnLeftHandTriggerUp.AddListener(Action);
+        InputController.Instance.OnThreeButtonPressed.AddListener(Action2);
+    }
+
+    public void Action2()
+    {
+
+    }
+
+    public void Action()
+    {
+        KeyboardManager.Instance.GetInput(null, null, "Teste");
+    }
+}

@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e483fa39ceed8472596981b729745083dbbaf44dccd6188351d61e034c375bdd
-size 821
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class ResetOriginTutorialController : MonoBehaviour
+{
+    [SerializeField] private Image _imgController;
+    [SerializeField] private Sprite _spriteQuest2Controller;
+    [SerializeField] private Sprite _spriteQuestProController;
+
+    private void Start()
+    {
+        var questType = OVRPlugin.GetSystemHeadsetType();
+
+        var questProEnuns = new List<OVRPlugin.SystemHeadset> { OVRPlugin.SystemHeadset.Meta_Link_Quest_Pro, OVRPlugin.SystemHeadset.Meta_Quest_Pro };
+
+        if (questProEnuns.Contains(questType)) _imgController.sprite = _spriteQuestProController;
+        else _imgController.sprite = _spriteQuest2Controller;
+
+        gameObject.SetActive(false);
+        Destroy(this);
+    }
+}

@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1e097be0e19c7735dc7de988c4c5a37b65beb8f4dda5a813efae33edc1741319
-size 172
+fileFormatVersion: 2
+guid: 051fd5a848859c24faa77a0c1a96751c
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: props_street_light
+  assetBundleVariant: 

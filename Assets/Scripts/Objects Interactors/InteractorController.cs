@@ -1,3 +1,37 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:522a5b41aa8364ed2170ebbd2105d34b5609b3e1806e01efc8744b563b855a63
-size 1083
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class InteractorController : MonoBehaviour, IInteractor
+{
+    [SerializeField] private GameObject interactor;
+    [SerializeField] private bool isPersistent;
+
+    public void OnInstantiated()
+    {
+        GameObject sceneElement = new GameObject("Scene Element");
+        GameObject instance = Instantiate(interactor, sceneElement.transform);
+        instance.transform.position = transform.position;
+
+        Vector3 direction = InputController.Instance.HMD.position - transform.position;
+        instance.transform.LookAt(InputController.Instance.HMD);
+
+        if (isPersistent)
+        {
+            OculusManager.Instance.TaskManager.AddPersistentObject(sceneElement.transform);
+        }
+        else
+        {
+            OculusManager.Instance.TaskManager.AddObjectInTask(sceneElement.transform);
+        }
+
+        StartCoroutine(DestroyObject());
+    }
+
+    IEnumerator DestroyObject()
+    {
+        yield return null;
+
+        Destroy(gameObject);
+    }
+}

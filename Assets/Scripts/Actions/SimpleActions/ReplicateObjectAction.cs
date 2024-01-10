@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0cbfa0a0efcee0dc4507e6bf4876556d35f9d4f23d5f6172862dcd9b91708f03
-size 452
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ReplicateObjectAction : AbstractSimpleAction
+{
+    public override void ApplyAction(List<GameObject> sceneElements)
+    {
+        foreach (GameObject sceneElement in sceneElements)
+        {
+            OculusManager.Instance.ReplicateObject(sceneElement);
+        }
+
+        SoundManager.Instance.PlaySound(SoundManager.Instance.confirmOrigin);
+    }
+}

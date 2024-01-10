@@ -1,3 +1,37 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:239ab61c82fde27689923a73003547cfc6898aa8dd84954145ee4b47c84e7e15
-size 780
+ManifestFileVersion: 0
+CRC: 366760768
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 429e7bfb5b377f51a741af37d6ad90a4
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2d04eedbc478119801437065eaffa367
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 54
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 111
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Prefabs/Models/forward_loop_arrow_anim .prefab
+Dependencies: []

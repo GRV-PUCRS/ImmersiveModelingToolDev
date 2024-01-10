@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f63fb93c798e43b9b7075ceba405bb92509c28c44fea9200316435e4b6c515b9
-size 992
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[RequireComponent(typeof(AudioSource))]
+public class SoundManager : Singleton<SoundManager>
+{
+    private AudioSource audioSource;
+
+    [Header("Sound Effects")]
+    public AudioClip beginGrab;
+    public AudioClip endGrab;
+    public AudioClip increaseScale;
+    public AudioClip decreaseScale;
+    public AudioClip highlightObject;
+    public AudioClip clickButton;
+    public AudioClip clickKey;
+    public AudioClip confirmOrigin;
+    public AudioClip resetOrigin;
+    public AudioClip selection;
+    public AudioClip deselection;
+    public AudioClip join;
+    public AudioClip disjoin;
+    public AudioClip duplicate;
+
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();   
+    }
+
+    public void PlaySound(AudioClip newClip)
+    {
+        //audioSource.Stop();
+        audioSource.clip = newClip;
+        audioSource.Play();
+    }
+}

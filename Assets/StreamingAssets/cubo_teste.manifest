@@ -1,3 +1,33 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:13e3b8f09fe46ddc84043f05c46ae07bd242ef6757336e0ca93bfa7d70b79021
-size 683
+ManifestFileVersion: 0
+CRC: 1725324135
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: ea123dbd853e235940b4651187e6069f
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2c922eb53098619ae28305bb1ba52450
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 54
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Prefabs/Cubo Teste.prefab
+Dependencies: []

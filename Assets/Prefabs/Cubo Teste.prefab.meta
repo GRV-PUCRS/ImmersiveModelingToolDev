@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e19094f1b8a7a0fb41338566ed0cd7ff6262f5f09bb6a8b8a08cffee648927a4
-size 164
+fileFormatVersion: 2
+guid: d3013f923bde99f469f28b2523922b63
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: cubo_teste
+  assetBundleVariant: 

@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:843c4a1bfedd52ef22d5c1ed22f922a1fe4a6c53c1ef072da7af061c39f6502e
-size 172
+fileFormatVersion: 2
+guid: ba5e58619d5195d4bb0c4f7f2a6283b1
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: forward_arrow_anim
+  assetBundleVariant: 

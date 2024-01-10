@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:96460a7c278868060162a87c5a02d329dbd32ea234769a4ee5d7b943423748a1
-size 522
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ARCameraController : MonoBehaviour
+{
+    [SerializeField] private Transform tagTransform;
+    [SerializeField] private Transform cameraTransform;
+    [SerializeField] private Transform arCameraTransform;
+
+    public void OnARCameraReset(object[] message)
+    {
+        Vector3 arCanera = tagTransform.position + (Vector3)message[0];
+
+        arCameraTransform.localPosition = cameraTransform.position - arCanera;
+    }
+}

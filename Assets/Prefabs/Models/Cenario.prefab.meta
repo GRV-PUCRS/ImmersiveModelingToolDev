@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0b775fbd57366af7a874d8732abb5e908ea902dbea39cf9c3402ee66eb47723b
-size 161
+fileFormatVersion: 2
+guid: d0e5166cff978fa4da3e99c3016fb2ae
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: cenario
+  assetBundleVariant: 

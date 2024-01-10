@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:40bb07634834546436c64b6bb47d1060cf2fdbe1a1067f184a8b3f409495953a
-size 387
+﻿using UnityEngine;
+
+// Script to create Singleton Classes
+// Date: 01/03/2023
+public class Singleton<T> : MonoBehaviour where T : Singleton<T>
+{
+    public static T _Instance;
+    public static T Instance
+    {
+        get
+        {
+            if (_Instance == null)
+                _Instance = FindObjectOfType<T>();
+
+            return _Instance;
+        }
+    }
+}

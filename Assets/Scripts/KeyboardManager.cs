@@ -1,3 +1,64 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0f2918423d7f5dcf513bf1384e4a9cd4317aae3faf2b8f1889dea97f475d7a4f
-size 2340
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Reflection;
+using TMPro;
+using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
+
+public class KeyboardManager : Singleton<KeyboardManager>
+{
+    [SerializeField] private GameObject activeKeyboardMethod;
+    [SerializeField] private ObjectSelector _controller;
+
+    [SerializeField] private InputField inputField;
+    [SerializeField] private UIButton btnCancel;
+    [SerializeField] private UIButton btnConfirm;
+
+    private IKeyboard keyboard = null;
+
+    private void Awake()
+    {
+        if (activeKeyboardMethod == null) return;
+
+        keyboard = activeKeyboardMethod.GetComponentInChildren<IKeyboard>();
+    }
+
+    // Reference: https://forum.unity.com/threads/howto-inputfield-always-show-caret.424556/
+    public void GetInput(Action<string> onConfirm, Action onCancel, string defaultString = "", TouchScreenKeyboardType touchScreenKeyboardType = TouchScreenKeyboardType.Default)
+    {
+        if (keyboard == null)
+        {
+            Debug.Log("[KeyboardManager][WARNING] No keyboard method defined!");
+            return;
+        }
+
+        _controller.SetRayActive(false);
+        activeKeyboardMethod.SetActive(true);
+
+        inputField.text = defaultString;
+
+        /*
+        activeKeyboardMethod.transform.position = InputController.Instance.RightController.position + InputController.Instance.HMD.forward * 0.5f;
+        activeKeyboardMethod.transform.rotation = Quaternion.Euler(InputController.Instance.HMD.rotation.eulerAngles + new Vector3(-90, 0, 0));
+
+        btnConfirm.callbacks.RemoveAllListeners();
+        btnCancel.callbacks.RemoveAllListeners();
+
+        btnConfirm.callbacks.AddListener(() => { keyboard.Confirm(); onConfirm?.Invoke(inputField.text); activeKeyboardMethod.SetActive(false); });
+        btnCancel.callbacks.AddListener(() => { keyboard.CancelSelection(); onCancel?.Invoke(); activeKeyboardMethod.SetActive(false); });
+        */
+        keyboard.GetInput(inputField, result => { onConfirm?.Invoke(result); _controller.SetRayActive(true); }, touchScreenKeyboardType);
+    }
+
+    public void SelectInputField()
+    {
+        keyboard.SelectInputField();
+    }
+
+    public void CancelSelection()
+    {
+        keyboard.CancelSelection();
+    }
+}

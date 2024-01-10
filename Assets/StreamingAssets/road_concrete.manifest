@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bcd19daea2924b75101f12c8100897f8ca9adf891b07db5ddcbb9d06d6f7a8af
-size 736
+ManifestFileVersion: 0
+CRC: 1388918006
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: e8bc5b880e47c43034a2668a8d5d4df4
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ac9493b7c514904e0a4f6b314f7c1aad
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 54
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Prefabs/Models/Road Concrete Tile.prefab
+Dependencies: []

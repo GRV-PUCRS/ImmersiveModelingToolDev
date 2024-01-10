@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:93304ffd51a5dd44b4946f2544cfdc9a98ef2776c09188137b471748134d74a8
-size 170
+fileFormatVersion: 2
+guid: 8886b0ce988f5024eba489f39601fbbd
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: natures_fir_tree
+  assetBundleVariant: 

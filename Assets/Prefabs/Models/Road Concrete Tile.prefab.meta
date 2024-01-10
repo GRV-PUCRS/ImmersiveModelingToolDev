@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ca715d6a03111e3258d545a8dae3a704389358a75e7af0f12a987f731b54ae48
-size 167
+fileFormatVersion: 2
+guid: 0d7217b5a9986dc4aba6af5586acf1dc
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: road_concrete
+  assetBundleVariant: 

@@ -1,3 +1,37 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9154943092bbb186346c38fc4f1e3eedc93c2a2221863a1032e208eef43a30f2
-size 778
+ManifestFileVersion: 0
+CRC: 1992172466
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: eb001f773e30b0a8614ac489127bf598
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2d04eedbc478119801437065eaffa367
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 54
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 111
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Prefabs/Models/360_rotate_arrow_anim.prefab
+Dependencies: []

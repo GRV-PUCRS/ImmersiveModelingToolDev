@@ -1,3 +1,47 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ae170ae07f59175f1a544acaf85efd9baacd25c3aa72a5cd4a28bdb5c6aeabf2
-size 607
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - InteractableObject
+  - Bullet
+  - TextPainel
+  - Painel
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Left Eye
+  - Right Eye
+  - Object
+  - InteractableObject
+  - Environment
+  - Device
+  - Background Image
+  - ObjEnv
+  - Camera
+  - Pointer
+  - UI Collider
+  - StoredObject
+  - Draggable
+  - Key
+  - KeySelector
+  - ObjectLibrary
+  - Library
+  - ControlPainel
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
