@@ -14,7 +14,10 @@ public class BlockBuilderUIController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI txtXAxis;
     [SerializeField] private TextMeshProUGUI txtYAxis;
     [SerializeField] private TextMeshProUGUI txtZAxis;
-    
+
+    private const float CURRENT_SCALE = 100f;
+    private const string VALUES_FORMAT = "0.00";
+
     public void ChangeAxisValue(TextMeshProUGUI txtField)
     {
         KeyboardManager.Instance.GetInput(result => ChangeAxis(txtField, result), null, txtField.text, TouchScreenKeyboardType.NumbersAndPunctuation | TouchScreenKeyboardType.DecimalPad);
@@ -40,7 +43,7 @@ public class BlockBuilderUIController : MonoBehaviour
     {
         float value = float.Parse(txtField.text) * -1;
 
-        txtField.text = value.ToString("0.0000");
+        txtField.text = value.ToString(VALUES_FORMAT);
         UpdateBlockScale();
     }
 
@@ -52,7 +55,7 @@ public class BlockBuilderUIController : MonoBehaviour
 
         if (floatValue == 0f) return;
 
-        txtAxis.text = floatValue.ToString("0.0000");
+        txtAxis.text = floatValue.ToString(VALUES_FORMAT);
         UpdateBlockScale();
     }
 
@@ -64,13 +67,15 @@ public class BlockBuilderUIController : MonoBehaviour
         newScale.y = float.Parse(txtYAxis.text);
         newScale.z = float.Parse(txtZAxis.text);
 
-        builder.ChangeAxis(newScale);
+        builder.ChangeAxis(newScale / CURRENT_SCALE);
     }
 
     public void InitValues(Vector3 values)
     {
-        txtXAxis.text = values.x.ToString("0.0000");
-        txtYAxis.text = values.y.ToString("0.0000");
-        txtZAxis.text = values.z.ToString("0.0000");
+        Vector3 formattedValues = values * CURRENT_SCALE;
+
+        txtXAxis.text = formattedValues.x.ToString(VALUES_FORMAT);
+        txtYAxis.text = formattedValues.y.ToString(VALUES_FORMAT);
+        txtZAxis.text = formattedValues.z.ToString(VALUES_FORMAT);
     }
 }

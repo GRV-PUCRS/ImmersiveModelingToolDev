@@ -11,18 +11,10 @@ public class BlockBuilder : MonoBehaviour
 
     public Vector3 BlockScale { get => _instance.localScale; }
 
+
     public void ChangeAxis(Vector3 axisValues)
     {
         _instance.localScale = axisValues;
-        /*
-        Vector3 size = axisValues;
-        size.x = Mathf.Abs(size.x);
-        size.y = Mathf.Abs(size.y);
-        size.z = Mathf.Abs(size.z);
-        _instanceCollider. .size = size;
-
-        _instanceCollider.center = blockInstance.localPosition;
-        */
     }
 
     public void Complete()

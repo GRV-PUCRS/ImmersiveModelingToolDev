@@ -6615,7 +6615,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activeKeyboardMethod: {fileID: 1682487871}
-  _controller: {fileID: 0}
+  _controller: {fileID: 7840954515302189030}
   inputField: {fileID: 8704943018423948080}
   btnCancel: {fileID: 2140948233}
   btnConfirm: {fileID: 149067913}
