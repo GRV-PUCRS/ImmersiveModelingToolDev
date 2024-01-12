@@ -28,7 +28,7 @@ public class ReplicateObjectActionUIController : MonoBehaviour
             heightToAdd = i % _StepPerLine == 0 ? heightToAdd + _heightPerLine : heightToAdd;
 
             var instance = Instantiate(_stepPrefab, _stepParent).GetComponent<StepElementTemplateController>();
-            instance.Setup(i == currentStep);
+            instance.Setup(i == currentStep, i+1);
         }
 
         var sizeDelta = _canvasRectTransform.sizeDelta.SetY(_defaultHeight + heightToAdd);

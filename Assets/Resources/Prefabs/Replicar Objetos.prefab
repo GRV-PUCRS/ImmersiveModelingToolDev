@@ -329,7 +329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _id: Replicar Objetos
-  _description: Replica o objeto nas etapas selecionadas
+  _description: "Cria uma c\xF3pia do objeto nas etapas de sua escolha"
   interactable: 1
   useParent: 0
   scallable: 0

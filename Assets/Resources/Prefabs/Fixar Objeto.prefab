@@ -248,7 +248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _id: Fixar Objeto
-  _description: Torna um objeto fixo na cena
+  _description: "Mant\xE9m o objeto fixo na etapa"
   interactable: 1
   useParent: 0
   scallable: 0
