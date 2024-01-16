@@ -4,6 +4,7 @@ using System.IO;
 using UnityEngine;
 using TMPro;
 using static PhotonServerManager;
+using System.Linq;
 
 public class SessionManager : Singleton<SessionManager>
 {
@@ -65,6 +66,24 @@ public class SessionManager : Singleton<SessionManager>
         }
 
         NetworkPhoton.Instance.OnFileTransferRequest.AddListener(OnFileRequestReceived);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.B))
+        {
+            CopySession("");
+        }
+
+        if (Input.GetKeyUp(KeyCode.N))
+        {
+            CopySession(currentSession.name.Replace(".json", ""));
+        }
+
+        if (Input.GetKeyUp(KeyCode.M))
+        {
+            CopySession("new");
+        }
     }
 
     public void LoadSessionScreen(bool guest)
@@ -178,7 +197,7 @@ public class SessionManager : Singleton<SessionManager>
         foreach (string filePath in Directory.GetFiles(sessionFolderPath))
         {
             string fileContent = File.ReadAllText(filePath);
-            string fileName = Utils.GetFileNameFromPath(filePath);
+            string fileName = Utils.GetFileNameFromPath(filePath).Replace(".json","");
 
             files.Add(new SessionFile(fileName, filePath, SessionFile.SessionFileState.Local, fileContent));
             Debug.Log("[SessionManager]    " + fileName);
@@ -289,6 +308,31 @@ public class SessionManager : Singleton<SessionManager>
         //VRKeyboardManager.Instance.GetUserInputString(CreateSession, "");
 
         KeyboardManager.Instance.GetInput(CreateSession, null, "");
+    }
+
+    public void CopySession()
+    {
+        KeyboardManager.Instance.GetInput(CopySession, null, currentSession.name);
+    }
+
+    public void CopySession(string sessionName)
+    {
+        string newSessionName = sessionName;
+
+        if (newSessionName.Trim().Length == 0)
+        {
+            newSessionName = currentSession.name;
+        }
+
+        while (files.Any(s => s.name.Equals(newSessionName)))
+        {
+            newSessionName = newSessionName + "_2";
+        }
+        
+        string filePath = $"{Application.persistentDataPath}/{sessionFolder}/{newSessionName.Replace(" ", "_")}.json";
+        File.Copy(currentSession.filePath, filePath);
+
+        UpdateSessionList(IsGuest);
     }
 
     public void CreateSession(string sessionName)
@@ -452,7 +496,7 @@ public class SessionManager : Singleton<SessionManager>
         NetworkPhoton.Instance.OnFileTransferRequest.RemoveListener(OnFileRequestReceived);
     }
 
-    public bool IsGuess { get => isGuest; }
+    public bool IsGuest { get => isGuest; }
 
     public class SessionFile 
     {

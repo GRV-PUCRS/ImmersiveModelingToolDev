@@ -118,7 +118,7 @@ public class ObjectStore : Singleton<ObjectStore>
         btnNextPage.SetActive(value);
         btnPrevPage.SetActive(value);
 
-        SetButtonsVisibility(!SessionManager.Instance.IsGuess);
+        SetButtonsVisibility(!SessionManager.Instance.IsGuest);
     }
 
     private void SetActiveLoadScreen(bool value)
