@@ -44,6 +44,7 @@ public class JoinObjectAction : AbstractProlongedAction
 
         Outline outline = element.GetComponent<Outline>();
 
+        /*
         if (element.TransformToUpdate == tempSceneElement)
         {
             element.IsSelected = false;
@@ -55,6 +56,8 @@ public class JoinObjectAction : AbstractProlongedAction
             SoundManager.Instance.PlaySound(SoundManager.Instance.deselection);
         }
         else
+        */
+        if (element.TransformToUpdate != tempSceneElement)
         {
             element.IsSelected = true;
 
