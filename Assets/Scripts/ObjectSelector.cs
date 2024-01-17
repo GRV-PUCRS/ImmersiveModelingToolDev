@@ -31,6 +31,7 @@ public class ObjectSelector : MonoBehaviour
 
     private bool result;
     private RaycastHit info;
+    private Vector3 _originalGrabLocalPosition;
 
     private void Awake()
     {
@@ -64,7 +65,7 @@ public class ObjectSelector : MonoBehaviour
             }
         }
 
-        if (isTouchingObj) return;
+        if (isTouchingObj || !lineRenderer.enabled) return;
 
 
         if (isController)
@@ -189,9 +190,11 @@ public class ObjectSelector : MonoBehaviour
 
     public void SetRayActive(bool isActive)
     {
-        gameObject.SetActive(isActive);
-        otherController.gameObject.SetActive(isActive);
+        SetLineRenderActive(isActive);
+        otherController.SetLineRenderActive(isActive);
     }
+
+    public void SetLineRenderActive(bool isActive) => lineRenderer.enabled = isActive;
 
     private void HandleStickAction(Vector2 stickState)
     {

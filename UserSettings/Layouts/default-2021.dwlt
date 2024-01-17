@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Hierarchy
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -243,15 +243,15 @@ MonoBehaviour:
     y: 558
     width: 1557
     height: 389
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 17}
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 17}
   - {fileID: 13}
   - {fileID: 18}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -368,9 +368,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 5ce2ffffb0e2ffff8cf0fffff4faffff866900000a6b0000d86c0000
+      m_SelectedIDs: 48a00300
+      m_LastClickedID: 237640
+      m_ExpandedIDs: 7020ffffc220ffff9c2efffff250ffff4451ffff1e5fffff5266ffff9e66ffff886dffffbe71ffff0a72fffff478ffff4a7dffff9c7dffff768bffff92a9ffffdea9ffffc8b0ffff96b9ffffe2b9ffffccc0ffffd8d1ffff2ad2ffff02e0fffff4faffff343101003e3101005c310100e4330100463401005e340100a634010084360100e03601003e3801009e3801004a43010054430100ec280200f42b02000c2c0200542c0200322e0200aa740200b2770200ca77020012780200f079020026ed02002ef0020046f002008ef002006cf20200b2f302007e290300c03003005e3403005a380300583a030088930300669e0300689e030064a2030062a40300
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -642,9 +642,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.29110846, y: 0.36154503, z: 0.4183932}
+    m_Target: {x: 0.14633793, y: 0.048130423, z: 1.0831147}
     speed: 2
-    m_Value: {x: -0.29110846, y: 0.36154503, z: 0.4183932}
+    m_Value: {x: 0.14633793, y: 0.048130423, z: 1.0831147}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -691,13 +691,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.1616522, y: 0.116344616, z: -0.019305836, w: 0.9799517}
+    m_Target: {x: 0.21289411, y: -0.004724409, z: 0.0009142764, w: 0.97724044}
     speed: 2
-    m_Value: {x: 0.16162428, y: 0.11632452, z: -0.019302502, w: 0.97978246}
+    m_Value: {x: 0.21285729, y: -0.0047235917, z: 0.0009141183, w: 0.97707146}
   m_Size:
-    m_Target: 0.11420336
+    m_Target: 0.90532017
     speed: 2
-    m_Value: 0.11420336
+    m_Value: 0.8663351
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -859,22 +859,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/Prefabs
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Resources/Prefabs
+  - Assets/Scripts
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\Pastas_Pessoais\ViniciusChrisosthemos\Github\ImmersiveModelingToolDev
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 628}
-    m_SelectedIDs: 668d0000
-    m_LastClickedID: 36198
-    m_ExpandedIDs: 00000000f88c0000fa8c0000fc8c0000fe8c0000008d0000028d0000048d0000068d0000088d00000a8d0000148d000000ca9a3b
+    scrollPos: {x: 0, y: 644}
+    m_SelectedIDs: fe8c0000
+    m_LastClickedID: 36094
+    m_ExpandedIDs: 00000000f88c0000fa8c0000fc8c0000fe8c0000008d0000028d0000048d0000068d0000088d00000a8d00001c8d00004e8d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -927,21 +927,21 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: ca370100
+    m_LastClickedInstanceID: 79818
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c623000066e000000292000020e0000022260100d6c10000742d0000f28e0000fa73020000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: JoinObjectAction
-      m_OriginalName: JoinObjectAction
+      m_Name: MultiplyUIManager
+      m_OriginalName: MultiplyUIManager
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 7334
+      m_UserData: 31876
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -954,7 +954,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 751.5}
     m_GridSize: 16
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 209
@@ -989,7 +989,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 255548
+  m_LastSelectedObjectID: 211920
 --- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52

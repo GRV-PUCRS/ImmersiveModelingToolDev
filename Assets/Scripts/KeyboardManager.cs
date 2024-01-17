@@ -34,7 +34,7 @@ public class KeyboardManager : Singleton<KeyboardManager>
             return;
         }
 
-        _controller.SetRayActive(false);
+        //_controller.SetRayActive(false);
         activeKeyboardMethod.SetActive(true);
 
         inputField.text = defaultString;
