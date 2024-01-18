@@ -27,6 +27,7 @@ public class JoinObjectAction : AbstractProlongedAction
 
                     Outline childDutline = childElement.GetComponent<Outline>();
 
+                    childDutline.OutlineColor = Color.white;
                     childDutline.EnableOutline();
                 }
             }

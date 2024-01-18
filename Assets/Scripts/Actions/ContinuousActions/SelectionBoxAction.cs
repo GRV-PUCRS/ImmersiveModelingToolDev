@@ -8,12 +8,12 @@ public class SelectionBoxAction : AbstractProlongedAction
 
         if (OculusManager.Instance.SelectionList.Contains(sceneElement))
         {
-            OculusManager.Instance.RmvSelectedObject(sceneElement);
+            OculusManager.Instance.RmvSelectedObject(sceneElement, Color.red);
             SoundManager.Instance.PlaySound(SoundManager.Instance.deselection);
         }
         else
         {
-            OculusManager.Instance.AddSelectedObject(sceneElement);
+            OculusManager.Instance.AddSelectedObject(sceneElement, Color.red);
             SoundManager.Instance.PlaySound(SoundManager.Instance.disjoin);
         }
     }

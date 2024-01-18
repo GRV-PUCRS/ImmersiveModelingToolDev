@@ -39,16 +39,11 @@ public class KeyboardManager : Singleton<KeyboardManager>
 
         inputField.text = defaultString;
 
-        /*
         activeKeyboardMethod.transform.position = InputController.Instance.RightController.position + InputController.Instance.HMD.forward * 0.5f;
-        activeKeyboardMethod.transform.rotation = Quaternion.Euler(InputController.Instance.HMD.rotation.eulerAngles + new Vector3(-90, 0, 0));
+        var eulerAngle = InputController.Instance.HMD.rotation.eulerAngles;
+        eulerAngle.z = 0;
+        activeKeyboardMethod.transform.eulerAngles = eulerAngle;
 
-        btnConfirm.callbacks.RemoveAllListeners();
-        btnCancel.callbacks.RemoveAllListeners();
-
-        btnConfirm.callbacks.AddListener(() => { keyboard.Confirm(); onConfirm?.Invoke(inputField.text); activeKeyboardMethod.SetActive(false); });
-        btnCancel.callbacks.AddListener(() => { keyboard.CancelSelection(); onCancel?.Invoke(); activeKeyboardMethod.SetActive(false); });
-        */
         keyboard.GetInput(inputField, result => { onConfirm?.Invoke(result); _controller.SetRayActive(true); }, touchScreenKeyboardType);
     }
 

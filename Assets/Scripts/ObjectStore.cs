@@ -425,6 +425,8 @@ public class ObjectStore : Singleton<ObjectStore>
 
         toDelete = toCreate = false;
         currentObj = null;
+
+        RetrieveObjectToStore(obj.TransformToUpdate);
     }
 
     public void RetrieveObjectToStore(Transform obj)

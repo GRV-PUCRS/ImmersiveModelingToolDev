@@ -152,25 +152,31 @@ public class OculusManager : Singleton<OculusManager>
         scaleZ = newValue;
     }
 
-    public void AddSelectedObject(GameObject sceneElement)
+    public void AddSelectedObject(GameObject sceneElement) => AddSelectedObject(sceneElement, Color.red);
+
+    public void AddSelectedObject(GameObject sceneElement, Color colorWhenSelected)
     {
         if (currentSelection.Contains(sceneElement)) return;
 
-        ChangeObjectSelectionState(sceneElement, true);
+        ChangeObjectSelectionState(sceneElement, true, colorWhenSelected);
 
         currentSelection.Add(sceneElement);
     }
 
-    public void RmvSelectedObject(GameObject sceneElement)
+    public void RmvSelectedObject(GameObject sceneElement) => RmvSelectedObject(sceneElement, Color.red);
+
+    public void RmvSelectedObject(GameObject sceneElement, Color colorWhenSelected)
     {
         if (!currentSelection.Contains(sceneElement)) return;
 
-        ChangeObjectSelectionState(sceneElement, false);
+        ChangeObjectSelectionState(sceneElement, false, colorWhenSelected);
 
         currentSelection.Remove(sceneElement);
     }
 
-    private void ChangeObjectSelectionState(GameObject sceneElement, bool isOn)
+    private void ChangeObjectSelectionState(GameObject sceneElement, bool isOn) => ChangeObjectSelectionState(sceneElement, isOn, Color.red);
+
+    private void ChangeObjectSelectionState(GameObject sceneElement, bool isOn, Color colorWhenSelected)
     {
         if (sceneElement == null) return;
 
@@ -186,7 +192,7 @@ public class OculusManager : Singleton<OculusManager>
 
                 if (isOn)
                 {
-                    outline.OutlineColor = Color.red;
+                    outline.OutlineColor = colorWhenSelected;
                     outline.EnableOutline();
                 }
                 else

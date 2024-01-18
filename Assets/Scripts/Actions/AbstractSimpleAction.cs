@@ -20,7 +20,7 @@ public abstract class AbstractSimpleAction : AbstractAction
             if (OculusManager.Instance.SelectionList.Count != 0)
                 OculusManager.Instance.ClearSelection();
 
-            OculusManager.Instance.AddSelectedObject(currentElement.TransformToUpdate.gameObject);
+            OculusManager.Instance.AddSelectedObject(currentElement.TransformToUpdate.gameObject, Color.yellow);
             objInCurrentSelection = false;
         }
         else

@@ -9,10 +9,16 @@ public class VirtualKeyboardController : MonoBehaviour, IKeyboard
 {
     private const string STR_CARET_OFF = "<color=#FFFFFF>|</color>";
     private const string STR_CARET_ON = "<color=#2B3C44>|</color>";
+    private const string TMP_TEXTPREVIEW_COMPONENT_ID = "TXT Text Preview";
 
-    [SerializeField] private GameObject _keyboardView;
+
+    [Header("Keyboards Views")]
+    [SerializeField] private KeyboardTypeProvider _defaultKeyboard;
+    [SerializeField] private KeyboardTypeProvider _numericKeyboard;
+    private KeyboardTypeProvider _currentKeyboardProvider;
+
     [SerializeField] private float _caretRefreshTime = 0.4f;
-    [SerializeField] private TextMeshProUGUI _txtTextPreview;
+    private TextMeshProUGUI _txtTextPreview;
 
     [SerializeField] private List<TextMeshProUGUI> _keys;
     [SerializeField] private TextMeshProUGUI _shift;
@@ -24,18 +30,12 @@ public class VirtualKeyboardController : MonoBehaviour, IKeyboard
     private Action<string> _onConfirmAction;
     private Coroutine _caretAnimationCoroutine;
 
-    private void Update()
+    private void Start()
     {
-        if (Input.GetKeyUp(KeyCode.Alpha1))
-        {
-            _caretPosition = Mathf.Min(_caretPosition + 1, _text.Length);
-            UpdateText();
-        }
-        if (Input.GetKeyUp(KeyCode.Alpha2))
-        {
-            _caretPosition = Mathf.Max(_caretPosition - 1, 0);
-            UpdateText();
-        }
+        _currentKeyboardProvider = _defaultKeyboard;
+
+        _defaultKeyboard.SetActive(false);
+        _numericKeyboard.SetActive(false);
     }
 
     public IEnumerator UpdateInputfield()
@@ -63,12 +63,12 @@ public class VirtualKeyboardController : MonoBehaviour, IKeyboard
     public void Confirm()
     {
         _onConfirmAction?.Invoke(_text);
-        _keyboardView.SetActive(false);
+        _currentKeyboardProvider.SetActive(false);
     }
 
     public void Cancel()
     {
-        _keyboardView.SetActive(false);
+        _currentKeyboardProvider.SetActive(false);
     }
 
     public void MoveCaret(bool toLeft)
@@ -116,11 +116,21 @@ public class VirtualKeyboardController : MonoBehaviour, IKeyboard
 
     public void GetInput(InputField inputField, Action<string> onConfirm, TouchScreenKeyboardType keyboardType)
     {
+        switch (keyboardType)
+        {
+            case TouchScreenKeyboardType.DecimalPad:
+            case TouchScreenKeyboardType.NumbersAndPunctuation:
+            case TouchScreenKeyboardType.NumberPad: _currentKeyboardProvider = _numericKeyboard; break;
+            default: _currentKeyboardProvider = _defaultKeyboard; break;
+        }
+
+        _txtTextPreview = _currentKeyboardProvider._txtTextPreview;
+
         _text = inputField.text;
         _caretPosition = _text.Length;
         _onConfirmAction = onConfirm;
 
-        _keyboardView.SetActive(true);
+        _currentKeyboardProvider.SetActive(true);
         UpdateCaretAnimtion();
     }
 
