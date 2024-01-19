@@ -16,6 +16,9 @@ public class UIButton : MonoBehaviour, IUIButton
 
 
     public UnityEvent callbacks;
+    public UnityEvent _OnReleasedButton;
+    public UnityEvent _OnHighlightedButton;
+    public UnityEvent _OnHighlightedReleasedButton;
 
     private Image backgroundButton;
     private Toggle toggle;
@@ -40,12 +43,16 @@ public class UIButton : MonoBehaviour, IUIButton
     {
         if (!interactable) return;
         if (backgroundButton != null) backgroundButton.color = selectedColor;
+
+        _OnHighlightedButton?.Invoke();
     }
 
     public void OnUnselected(ObjectSelector controller)
     {
         if (!interactable) return;
         if (backgroundButton != null) backgroundButton.color = unselectedColor;
+
+        _OnHighlightedReleasedButton?.Invoke();
     }
 
     public void OnSubmited(ObjectSelector controller)
@@ -63,6 +70,8 @@ public class UIButton : MonoBehaviour, IUIButton
     {
         if (!interactable) return;
         if (backgroundButton != null) backgroundButton.color = releasedColor;
+
+        _OnReleasedButton?.Invoke();
     }
 
     public void ToggleSelect()

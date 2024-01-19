@@ -712,6 +712,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &54916690
 GameObject:
   m_ObjectHideFlags: 0
@@ -1339,6 +1348,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &90933569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1823,6 +1841,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &111120597
 GameObject:
   m_ObjectHideFlags: 0
@@ -1988,6 +2015,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &124446071
 GameObject:
   m_ObjectHideFlags: 0
@@ -2252,6 +2288,15 @@ MonoBehaviour:
   interactableInExecMode: 1
   interactable: 1
   callbacks:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &155094386
@@ -2966,6 +3011,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &209488015
 GameObject:
   m_ObjectHideFlags: 0
@@ -3054,6 +3108,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &209488019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3179,6 +3242,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &215890653
 GameObject:
   m_ObjectHideFlags: 0
@@ -3261,37 +3333,6 @@ MonoBehaviour:
   _oculusManager: {fileID: 955171383}
   _sessionEnvironment: {fileID: 1364849338}
   _tutorialInstance: {fileID: 1888074847}
---- !u!1 &223202354
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 223202355}
-  m_Layer: 0
-  m_Name: b_button_oculus
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &223202355
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 223202354}
-  m_LocalRotation: {x: 3.4694465e-18, y: 6.938894e-18, z: -4.336809e-19, w: 1}
-  m_LocalPosition: {x: 0.013279789, y: 0.0018553109, z: -0.01104566}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1255572390}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &223243420
 GameObject:
   m_ObjectHideFlags: 0
@@ -3379,37 +3420,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!1 &227702369
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 227702370}
-  m_Layer: 0
-  m_Name: laser_begin
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &227702370
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 227702369}
-  m_LocalRotation: {x: 6.363525e-17, y: 0.9991979, z: -6.363525e-17, w: 0.040044595}
-  m_LocalPosition: {x: 0.009, y: 0, z: 0}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1255572390}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &228914690
 GameObject:
   m_ObjectHideFlags: 0
@@ -3497,6 +3516,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &233469512
 GameObject:
   m_ObjectHideFlags: 0
@@ -3682,6 +3710,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &251919620
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4050,6 +4087,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &266024585
 GameObject:
   m_ObjectHideFlags: 0
@@ -4125,6 +4171,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &266024588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4339,6 +4394,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &291936284
 GameObject:
   m_ObjectHideFlags: 0
@@ -4675,6 +4739,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &324323806
 GameObject:
   m_ObjectHideFlags: 0
@@ -4827,38 +4900,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 324406247}
   m_CullTransparentMesh: 1
---- !u!1 &326271299
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 326271300}
-  m_Layer: 0
-  m_Name: b_thumbstick
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &326271300
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 326271299}
-  m_LocalRotation: {x: -0.000000001901585, y: 0.0000000057047544, z: 0.00000000380317,
-    w: 1}
-  m_LocalPosition: {x: 0.006998126, y: -0.0024625768, z: 0.0077800765}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1255572390}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &326906985
 GameObject:
   m_ObjectHideFlags: 0
@@ -5687,6 +5728,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &377492289
 GameObject:
   m_ObjectHideFlags: 0
@@ -6234,6 +6284,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &390743980
 GameObject:
   m_ObjectHideFlags: 0
@@ -6321,6 +6380,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &391151418
 GameObject:
   m_ObjectHideFlags: 0
@@ -6485,6 +6553,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &414265410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7775,6 +7852,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &468577933
 GameObject:
   m_ObjectHideFlags: 0
@@ -8008,6 +8094,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &474759460
 GameObject:
   m_ObjectHideFlags: 0
@@ -8365,37 +8460,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!1 &480234717
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 480234718}
-  m_Layer: 0
-  m_Name: b_button_b
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &480234718
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 480234717}
-  m_LocalRotation: {x: 1.9081955e-17, y: 1.174176e-39, z: -1.6637081e-16, w: 1}
-  m_LocalPosition: {x: -0.013317339, y: 0.006368489, z: 0.003019979}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1255572390}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &481006965
 GameObject:
   m_ObjectHideFlags: 0
@@ -8858,6 +8931,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &514989155
 GameObject:
   m_ObjectHideFlags: 0
@@ -9216,6 +9298,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &541219282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10315,6 +10406,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &577559279
 GameObject:
   m_ObjectHideFlags: 0
@@ -10402,6 +10502,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &579372811
 GameObject:
   m_ObjectHideFlags: 0
@@ -10585,6 +10694,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &579372817
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10798,6 +10916,102 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 594477516}
   m_CullTransparentMesh: 1
+--- !u!1 &599170261
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 599170262}
+  - component: {fileID: 599170264}
+  - component: {fileID: 599170263}
+  m_Layer: 5
+  m_Name: '"'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &599170262
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599170261}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 881460142}
+  - {fileID: 1805506526}
+  m_Father: {fileID: 638981072}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1320, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!65 &599170263
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599170261}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 100, y: 100, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &599170264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599170261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e081e4e4a20371488e637a2c8845353, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unselectedColor: {r: 1, g: 1, b: 1, a: 1}
+  selectedColor: {r: 0.849, g: 0.849, b: 0.849, a: 1}
+  submitedColor: {r: 0.7547, g: 0.7547, b: 0.7547, a: 1}
+  releasedColor: {r: 1, g: 1, b: 1, a: 1}
+  interactableOff: {r: 0.5943, g: 0.5943, b: 0.5943, a: 1}
+  interactableInExecMode: 1
+  interactable: 1
+  callbacks:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 690127879}
+        m_TargetAssemblyTypeName: VirtualKeyboardController, Assembly-CSharp
+        m_MethodName: OnKeyPressed
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1805506527}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &604106777
 GameObject:
   m_ObjectHideFlags: 0
@@ -11335,6 +11549,7 @@ RectTransform:
   - {fileID: 1127103579}
   - {fileID: 1601814083}
   - {fileID: 1962488993}
+  - {fileID: 599170262}
   m_Father: {fileID: 67051201}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11431,6 +11646,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!222 &649422399
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11648,6 +11872,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &664246951
 GameObject:
   m_ObjectHideFlags: 0
@@ -11811,6 +12044,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &676105615
 GameObject:
   m_ObjectHideFlags: 0
@@ -11898,6 +12140,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &676410701
 GameObject:
   m_ObjectHideFlags: 0
@@ -12109,98 +12360,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 688172367}
   m_CullTransparentMesh: 1
---- !u!1 &689564305
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 689564306}
-  - component: {fileID: 689564307}
-  m_Layer: 0
-  m_Name: right_oculus_controller_mesh
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &689564306
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 689564305}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1855483742}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!137 &689564307
-SkinnedMeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 689564305}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: dfee80e1d2a38ea45a01698af1c06034, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: -8344784108403131872, guid: c933168a9a0f1e04bb793786b96e2f4b, type: 3}
-  m_Bones:
-  - {fileID: 1255572390}
-  - {fileID: 1302952907}
-  - {fileID: 480234718}
-  - {fileID: 223202355}
-  - {fileID: 1052638024}
-  - {fileID: 710374037}
-  - {fileID: 326271300}
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 1255572390}
-  m_AABB:
-    m_Center: {x: -0.00616638, y: -0.030066561, z: -0.020585023}
-    m_Extent: {x: 0.033926036, y: 0.041736547, z: 0.054627255}
-  m_DirtyAABB: 0
 --- !u!1 &690127876
 GameObject:
   m_ObjectHideFlags: 0
@@ -12648,37 +12807,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 702977099}
   m_CullTransparentMesh: 1
---- !u!1 &710374036
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 710374037}
-  m_Layer: 0
-  m_Name: b_trigger_grip
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &710374037
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 710374036}
-  m_LocalRotation: {x: 0.023553137, y: -0.02494789, z: 0.05215005, w: 0.99804974}
-  m_LocalPosition: {x: -0.006004659, y: -0.02616301, z: -0.013198219}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1255572390}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &718982611
 GameObject:
   m_ObjectHideFlags: 0
@@ -12754,6 +12882,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &718982614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13923,50 +14060,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 800001175}
   m_CullTransparentMesh: 0
---- !u!1 &805163886
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 805163888}
-  - component: {fileID: 805163887}
-  m_Layer: 0
-  m_Name: Teste
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &805163887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 805163886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67a59e7d440fb664491315c2a301afa8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &805163888
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 805163886}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.0475504, y: 0.036611967, z: 0.20426784}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &807749879
 GameObject:
   m_ObjectHideFlags: 0
@@ -14839,6 +14932,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &867757918
 GameObject:
   m_ObjectHideFlags: 0
@@ -15231,6 +15333,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 873154152}
   m_CullTransparentMesh: 1
+--- !u!1 &881460141
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 881460142}
+  - component: {fileID: 881460144}
+  - component: {fileID: 881460143}
+  m_Layer: 5
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &881460142
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881460141}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 599170262}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &881460143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881460141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.16862746, g: 0.23529412, b: 0.26666668, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 3aefacba63048184e82ca5ad40c86bf6, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &881460144
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881460141}
+  m_CullTransparentMesh: 1
 --- !u!1 &900716113
 GameObject:
   m_ObjectHideFlags: 0
@@ -15521,6 +15699,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &912040355
 GameObject:
   m_ObjectHideFlags: 0
@@ -15684,6 +15871,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &914653000 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8146443261137503434, guid: 7096ad5c60d52bb40b0ba3d0de399723,
@@ -15852,6 +16048,15 @@ MonoBehaviour:
           m_StringArgument: ' '
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &923261255
 GameObject:
   m_ObjectHideFlags: 0
@@ -15939,6 +16144,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &926689992
 GameObject:
   m_ObjectHideFlags: 0
@@ -17624,6 +17838,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &977314533
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17805,6 +18028,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &980376212
 GameObject:
   m_ObjectHideFlags: 0
@@ -18058,6 +18290,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1005428414
 GameObject:
   m_ObjectHideFlags: 0
@@ -18222,6 +18463,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1010541766
 GameObject:
   m_ObjectHideFlags: 0
@@ -18673,6 +18923,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1019754561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19166,37 +19425,6 @@ Transform:
   - {fileID: 1999506822}
   m_Father: {fileID: 1045970211}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1052638023
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1052638024}
-  m_Layer: 0
-  m_Name: b_trigger_front
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1052638024
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1052638023}
-  m_LocalRotation: {x: 0.0028242967, y: -0.05819442, z: -0.010116533, w: 0.99825007}
-  m_LocalPosition: {x: -0.011773869, y: -0.0039231847, z: 0.02834368}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1255572390}
-  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1058836288
 GameObject:
@@ -19885,6 +20113,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1107459802
 GameObject:
   m_ObjectHideFlags: 0
@@ -20332,6 +20569,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1136908425
 GameObject:
   m_ObjectHideFlags: 0
@@ -20598,6 +20844,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1182067219
 GameObject:
   m_ObjectHideFlags: 0
@@ -20753,6 +21008,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1203343525
 GameObject:
   m_ObjectHideFlags: 0
@@ -22169,130 +22433,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1252577367}
   m_CullTransparentMesh: 0
---- !u!1 &1255572389
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1255572390}
-  m_Layer: 0
-  m_Name: right_oculus_controller_world
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1255572390
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1255572389}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.11022e-18, y: -2.7755598e-19, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1302952907}
-  - {fileID: 480234718}
-  - {fileID: 223202355}
-  - {fileID: 326271300}
-  - {fileID: 1052638024}
-  - {fileID: 710374037}
-  - {fileID: 227702370}
-  m_Father: {fileID: 1855483742}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1266823755
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1266823756}
-  - component: {fileID: 1266823757}
-  m_Layer: 0
-  m_Name: right_nub
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1266823756
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1266823755}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1855483742}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!137 &1266823757
-SkinnedMeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1266823755}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: dfee80e1d2a38ea45a01698af1c06034, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 6118253600298082114, guid: c933168a9a0f1e04bb793786b96e2f4b, type: 3}
-  m_Bones:
-  - {fileID: 1255572390}
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 1255572390}
-  m_AABB:
-    m_Center: {x: 0.008976316, y: -0.064772196, z: -0.067473285}
-    m_Extent: {x: 0.0043462086, y: 0.006806761, z: 0.0068782493}
-  m_DirtyAABB: 0
 --- !u!1001 &1280117749
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22622,6 +22762,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1298246444
 GameObject:
   m_ObjectHideFlags: 0
@@ -22727,92 +22876,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1 &1299408858
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1299408859}
-  - component: {fileID: 1299408860}
-  m_Layer: 0
-  m_Name: right_batteryIndicatorQuad
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1299408859
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1299408858}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1855483742}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!137 &1299408860
-SkinnedMeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1299408858}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 3abd38e0d18db6c49b2c96961d69d024, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 7239682268775398997, guid: c933168a9a0f1e04bb793786b96e2f4b, type: 3}
-  m_Bones:
-  - {fileID: 1255572390}
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 1255572390}
-  m_AABB:
-    m_Center: {x: -0.034548517, y: 0.00051147584, z: 0.000073043164}
-    m_Extent: {x: 0.0009967126, y: 0.0020704698, z: 0.0044533596}
-  m_DirtyAABB: 0
 --- !u!1 &1300099251
 GameObject:
   m_ObjectHideFlags: 0
@@ -22900,37 +22963,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!1 &1302952906
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1302952907}
-  m_Layer: 0
-  m_Name: b_button_a
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1302952907
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1302952906}
-  m_LocalRotation: {x: 1.7347238e-17, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0031760607, y: 0.004118483, z: -0.009094926}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1255572390}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1303696977 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5189708113386645228, guid: 4cbbe9e1627348549a9fa9ce633797d8,
@@ -25344,6 +25385,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1395493244
 GameObject:
   m_ObjectHideFlags: 0
@@ -25431,6 +25481,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1396478061
 GameObject:
   m_ObjectHideFlags: 0
@@ -25729,6 +25788,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1409305853
 GameObject:
   m_ObjectHideFlags: 0
@@ -25991,6 +26059,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1431063683
 GameObject:
   m_ObjectHideFlags: 0
@@ -26819,6 +26896,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1475933490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26957,6 +27043,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1486026167
 GameObject:
   m_ObjectHideFlags: 0
@@ -27487,6 +27582,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1507402788
 GameObject:
   m_ObjectHideFlags: 0
@@ -27849,6 +27953,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1520320671
 GameObject:
   m_ObjectHideFlags: 0
@@ -28074,6 +28187,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1526622880
 GameObject:
   m_ObjectHideFlags: 0
@@ -28238,6 +28360,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1533868686
 GameObject:
   m_ObjectHideFlags: 0
@@ -29309,6 +29440,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1564676606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29676,6 +29816,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1603224023
 GameObject:
   m_ObjectHideFlags: 0
@@ -30320,6 +30469,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1624795815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30695,6 +30853,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1637820675
 GameObject:
   m_ObjectHideFlags: 0
@@ -30829,6 +30996,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1647750799
 GameObject:
   m_ObjectHideFlags: 0
@@ -31539,6 +31715,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1693714331
 GameObject:
   m_ObjectHideFlags: 0
@@ -31691,6 +31876,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1696412464
 GameObject:
   m_ObjectHideFlags: 0
@@ -32221,6 +32415,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1724407129
 GameObject:
   m_ObjectHideFlags: 0
@@ -32522,6 +32725,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1734475164
 GameObject:
   m_ObjectHideFlags: 0
@@ -33223,6 +33435,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1785354323
 GameObject:
   m_ObjectHideFlags: 0
@@ -33403,6 +33624,141 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1787461831}
+  m_CullTransparentMesh: 1
+--- !u!1 &1805506525
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1805506526}
+  - component: {fileID: 1805506528}
+  - component: {fileID: 1805506527}
+  m_Layer: 5
+  m_Name: TXT Value
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1805506526
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805506525}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 599170262}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1805506527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805506525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: '"'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1805506528
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805506525}
   m_CullTransparentMesh: 1
 --- !u!1 &1811555925
 GameObject:
@@ -33987,6 +34343,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1852964634
 GameObject:
   m_ObjectHideFlags: 0
@@ -34144,62 +34509,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1 &1855483740
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1855483742}
-  - component: {fileID: 1855483741}
-  m_Layer: 0
-  m_Name: MetaQuestTouchPro_Right
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!95 &1855483741
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1855483740}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: c933168a9a0f1e04bb793786b96e2f4b, type: 3}
-  m_Controller: {fileID: 9100000, guid: 4da77ccaa334a3e45961430811956356, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!4 &1855483742
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1855483740}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1299408859}
-  - {fileID: 1266823756}
-  - {fileID: 689564306}
-  - {fileID: 1255572390}
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1862394764
 GameObject:
   m_ObjectHideFlags: 0
@@ -35838,6 +36147,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1901438729
 GameObject:
   m_ObjectHideFlags: 0
@@ -36377,6 +36695,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &1935244016
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36695,6 +37022,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1955726752
 GameObject:
   m_ObjectHideFlags: 0
@@ -36858,6 +37194,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1958415967
 GameObject:
   m_ObjectHideFlags: 0
@@ -36945,6 +37290,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1962488992
 GameObject:
   m_ObjectHideFlags: 0
@@ -37032,6 +37386,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1965203332
 GameObject:
   m_ObjectHideFlags: 0
@@ -37119,6 +37482,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1971625719
 GameObject:
   m_ObjectHideFlags: 0
@@ -37611,6 +37983,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1979112395
 GameObject:
   m_ObjectHideFlags: 0
@@ -37774,6 +38155,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1999506821
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38037,6 +38427,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2035841954
 GameObject:
   m_ObjectHideFlags: 0
@@ -38166,6 +38565,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2039491636
 GameObject:
   m_ObjectHideFlags: 0
@@ -38837,6 +39245,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2062178296
 GameObject:
   m_ObjectHideFlags: 0
@@ -38972,95 +39389,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2062178296}
   m_CullTransparentMesh: 1
---- !u!1001 &2073517447
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 4ce6a3f7ad68c214590f35e65c7b45fc,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4ce6a3f7ad68c214590f35e65c7b45fc,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4ce6a3f7ad68c214590f35e65c7b45fc,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4ce6a3f7ad68c214590f35e65c7b45fc,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4ce6a3f7ad68c214590f35e65c7b45fc,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4ce6a3f7ad68c214590f35e65c7b45fc,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4ce6a3f7ad68c214590f35e65c7b45fc,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4ce6a3f7ad68c214590f35e65c7b45fc,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4ce6a3f7ad68c214590f35e65c7b45fc,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4ce6a3f7ad68c214590f35e65c7b45fc,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4ce6a3f7ad68c214590f35e65c7b45fc,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4ce6a3f7ad68c214590f35e65c7b45fc,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4ce6a3f7ad68c214590f35e65c7b45fc,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4ce6a3f7ad68c214590f35e65c7b45fc,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 4ce6a3f7ad68c214590f35e65c7b45fc,
-        type: 3}
-      propertyPath: m_Name
-      value: Controle
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 4ce6a3f7ad68c214590f35e65c7b45fc,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4ce6a3f7ad68c214590f35e65c7b45fc, type: 3}
 --- !u!1 &2076269126
 GameObject:
   m_ObjectHideFlags: 0
@@ -39148,6 +39476,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2083034236
 GameObject:
   m_ObjectHideFlags: 0
@@ -39274,6 +39611,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2094455161
 GameObject:
   m_ObjectHideFlags: 0
@@ -39827,6 +40173,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2133206053
 GameObject:
   m_ObjectHideFlags: 0
@@ -40106,6 +40461,15 @@ MonoBehaviour:
   interactableInExecMode: 1
   interactable: 1
   callbacks:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &2141157372
@@ -41199,6 +41563,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &260671184541676993
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41376,6 +41749,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &260671184852970724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41904,6 +42286,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!224 &260671185379814954
 RectTransform:
   m_ObjectHideFlags: 0
@@ -42260,6 +42651,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &260671185587340833
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42546,6 +42946,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &260671185897739502
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -62199,6 +62608,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &5473993145611595359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69029,6 +69447,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &8727116565969589554
 MonoBehaviour:
   m_ObjectHideFlags: 0

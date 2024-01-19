@@ -101,7 +101,6 @@ public class ObjectSelector : MonoBehaviour
                     if (currentHit.gameObject.layer.Equals(LayerMask.NameToLayer("UI")))
                     {
                         OnHandleUnselectedUIElement(currentHit);
-                        OnHandleReleaseUIElement(currentHit);
                     }
                     else
                     {
@@ -152,7 +151,6 @@ public class ObjectSelector : MonoBehaviour
                 if (currentHit.gameObject.layer.Equals(LayerMask.NameToLayer("UI")))
                 {
                     OnHandleUnselectedUIElement(currentHit);
-                    OnHandleReleaseUIElement(currentHit);
                 }
                 else
                 {
