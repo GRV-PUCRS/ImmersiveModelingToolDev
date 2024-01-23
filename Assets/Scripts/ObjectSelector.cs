@@ -1,6 +1,8 @@
 using UnityEngine;
 using TMPro;
 using System.Collections.Generic;
+using System;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(LineRenderer))]
 public class ObjectSelector : MonoBehaviour
@@ -9,8 +11,9 @@ public class ObjectSelector : MonoBehaviour
     [SerializeField] private bool isLeftController = false;
     [SerializeField] private bool isController = true;
     [SerializeField] private LayerMask target;
+    [SerializeField] private Transform lineRendererPivot;
     [SerializeField] private Transform pivot;
-    [SerializeField] private Transform objectHolderParent;
+    [SerializeField] private Transform actionIconPlace;
     [SerializeField] private ObjectSelector otherController;
     [SerializeField] private Color normalColor;
     [SerializeField] private Color hitColor;
@@ -20,22 +23,25 @@ public class ObjectSelector : MonoBehaviour
     [SerializeField] private GameObject pointer;
     [SerializeField] private BannerController _bannerController;
 
+    public UnityEvent<bool, GameObject, bool> OnObjectPointedEvent;
+    public UnityEvent<bool, GameObject, bool> OnObjectToBannderEvent;
+    public UnityEvent<bool, bool> OnActionHolder;
 
     private Transform currentHit;
     private Transform currentObjectHold;
-    private bool turnOffDescription = false;
     private Vector3 hitPoint;
     private bool isTouchingObj = false;
 
     private bool toDeselect = false;
+    private bool _withActionHolder = false;
 
     private bool result;
     private RaycastHit info;
-    private Vector3 _originalGrabLocalPosition;
 
     private void Awake()
     {
         lineRenderer = GetComponent<LineRenderer>();
+        HighlightColor = Color.white;
     }
 
     private void Update()
@@ -70,7 +76,7 @@ public class ObjectSelector : MonoBehaviour
 
         if (isController)
         {
-            result = Physics.Raycast(pivot.position, pivot.forward, out info, lineDistance, target);
+            result = Physics.Raycast(lineRendererPivot.position, lineRendererPivot.forward, out info, lineDistance, target);
         }
         else
         {
@@ -81,7 +87,7 @@ public class ObjectSelector : MonoBehaviour
         {
             if (isController)
             {
-                lineRenderer.SetPosition(0, pivot.position);
+                lineRenderer.SetPosition(0, lineRendererPivot.position);
                 lineRenderer.SetPosition(1, info.point);
             }
             else
@@ -91,8 +97,6 @@ public class ObjectSelector : MonoBehaviour
             }
 
             hitPoint = info.point;
-
-            _bannerController.ActiveBanner(isLeftController, info.transform.gameObject);
 
             if (currentHit != info.transform)
             {
@@ -106,7 +110,6 @@ public class ObjectSelector : MonoBehaviour
                     {
                         SetHighlight(currentHit.gameObject, false);
                     }
-
                 }
 
                 if (info.collider.gameObject.layer.Equals(LayerMask.NameToLayer("UI")))
@@ -118,12 +121,13 @@ public class ObjectSelector : MonoBehaviour
                 }
                 else
                 {
-                    if (OculusManager.Instance.IsEditMode && !IsReferenceObject(info.transform.gameObject))
+                    if (OculusManager.Instance.IsEditMode)
                     {
                         SetHighlight(info.transform.gameObject, true);
                         SetLineRendererColor(hitColor);
                         currentHit = info.transform;
 
+                        OnObjectToBannderEvent?.Invoke(IsLeft, currentHit.gameObject, true);
                         //PlaySound(SoundManager.Instance.highlightObject);
                     }
                 }
@@ -137,8 +141,8 @@ public class ObjectSelector : MonoBehaviour
         {
             if (isController)
             {
-                lineRenderer.SetPosition(0, pivot.position);
-                lineRenderer.SetPosition(1, pivot.position + pivot.forward * lineDistance);
+                lineRenderer.SetPosition(0, lineRendererPivot.position);
+                lineRenderer.SetPosition(1, lineRendererPivot.position + lineRendererPivot.forward * lineDistance);
             }
             else
             {
@@ -148,6 +152,7 @@ public class ObjectSelector : MonoBehaviour
 
             if (currentHit != null)
             {
+
                 if (currentHit.gameObject.layer.Equals(LayerMask.NameToLayer("UI")))
                 {
                     OnHandleUnselectedUIElement(currentHit);
@@ -157,15 +162,13 @@ public class ObjectSelector : MonoBehaviour
                     SetHighlight(currentHit.gameObject, false);
                 }
 
-                currentHit = null;
 
+                OnObjectToBannderEvent?.Invoke(IsLeft, currentHit.gameObject, false);
+                currentHit = null;
 
                 SetLineRendererColor(normalColor);
                 pointer.SetActive(false);
             }
-
-
-            _bannerController.DeactivateBanner(isLeftController);
         }
     }
 
@@ -202,7 +205,7 @@ public class ObjectSelector : MonoBehaviour
 
             if (Vector3.Distance(hitPoint, InputController.Instance.RightController.position) > 0.1f || signal > 0)
             {
-                objectHolderParent.position = objectHolderParent.position + InputController.Instance.RightController.forward * Time.deltaTime * signal;
+                pivot.position = pivot.position + InputController.Instance.RightController.forward * Time.deltaTime * signal;
             }
         }
     }
@@ -216,38 +219,29 @@ public class ObjectSelector : MonoBehaviour
         return dragUI.IsFixed;
     }
 
-    public void SetHighlight(GameObject obj, bool newValue)
+    public void SetHighlight(GameObject obj, bool isActive)
     {
-        /*
-        Outline outline = obj.transform.GetComponent<Outline>();
-
-        if (outline != null)
-            outline.IsActive = newValue;*/
-
         DragUI element = obj.GetComponent<DragUI>();
 
-        if (element == null || element.IsSelected || !element.IsVisible) return;
+        if (element == null || !element.IsVisible || (!WithActionHolder && element.IsFixed)) return;
 
-        if (obj.layer == LayerMask.NameToLayer("Draggable"))
+        if (!WithActionHolder)
         {
-            Outline outline = obj.GetComponent<Outline>();
-
-            if (outline == null) return;
-
-            if (newValue)
-                outline.EnableOutline();
+            if (obj.layer == LayerMask.NameToLayer("Draggable"))
+            {
+                element.SetHighlighted(isActive);
+            }
             else
-                outline.DisableOutline();
+            {
+                foreach (DragUI child in element.TransformToUpdate.GetComponentsInChildren<DragUI>())
+                {
+                    child.SetHighlighted(isActive);
+                }
+            }
         }
         else
         {
-            foreach (Outline child in element.TransformToUpdate.GetComponentsInChildren<Outline>())
-            {
-                if (newValue)
-                    child.EnableOutline();
-                else
-                    child.DisableOutline();
-            }
+            OnObjectPointedEvent?.Invoke(IsLeft, obj, isActive);
         }
     }
 
@@ -321,8 +315,6 @@ public class ObjectSelector : MonoBehaviour
             // Acaba Escala
             if (currentObjectHold.GetComponent<DragUI>().IsScalling)
             {
-                Debug.Log("Fim da Escala");
-
                 foreach (GameObject sceneElement in OculusManager.Instance.SelectionList)
                 {
                     foreach (DragUI child in sceneElement.GetComponentsInChildren<DragUI>())
@@ -342,8 +334,6 @@ public class ObjectSelector : MonoBehaviour
             }
             else // Solta objeto
             {
-                Debug.Log("Fim do Drag");
-
                 if (isAction || currentObjectHold.gameObject.layer.Equals(LayerMask.NameToLayer("Draggable")))
                 {
                     currentObjectHold.GetComponent<DragUI>().EndDrag();
@@ -370,7 +360,7 @@ public class ObjectSelector : MonoBehaviour
 
                 SoundManager.Instance.PlaySound(SoundManager.Instance.endGrab);
 
-                EventManager.TriggerDragEnd(currentObjectHold.GetComponent<DragUI>());
+                EventManager.TriggerDragEnd(this, currentObjectHold.GetComponent<DragUI>());
             }
         }
 
@@ -399,11 +389,11 @@ public class ObjectSelector : MonoBehaviour
             if (CheckScaleOperation())
             {
                 // End drag action on the other controller
-                foreach (DragUI child in otherController.ObjectHolder.GetComponentsInChildren<DragUI>())
+                foreach (DragUI child in otherController.Pivot.GetComponentsInChildren<DragUI>())
                 {
                     child.EndDrag();
                 }
-                EventManager.TriggerDragEnd(otherController.ObjectHold.GetComponent<DragUI>());
+                EventManager.TriggerDragEnd(this, otherController.ObjectHold.GetComponent<DragUI>());
 
                 // Start scale action
                 foreach (GameObject sceneElement in OculusManager.Instance.SelectionList)
@@ -424,7 +414,7 @@ public class ObjectSelector : MonoBehaviour
             }
             else if (otherController.ObjectHold == null) // senao, segue a acao de grab
             {
-                objectHolderParent.localPosition = Vector3.zero;
+                pivot.localPosition = Vector3.zero;
 
                 DragUI element = currentObjectHold.gameObject.GetComponent<DragUI>();
 
@@ -432,7 +422,7 @@ public class ObjectSelector : MonoBehaviour
 
                 if (currentObjectHold.GetComponent<IAction>() != null || currentObjectHold.gameObject.layer.Equals(LayerMask.NameToLayer("Draggable")))
                 {
-                    currentObjectHold.GetComponent<DragUI>().BeginDrag(ObjectHolder);
+                    currentObjectHold.GetComponent<DragUI>().BeginDrag(this);
                 }
                 else
                 {
@@ -450,13 +440,11 @@ public class ObjectSelector : MonoBehaviour
 
                     foreach (GameObject sceneElement in OculusManager.Instance.SelectionList)
                     {
-                        Debug.Log($"Scene Element === {sceneElement}");
-
                         DragUI child = sceneElement.GetComponentInChildren<DragUI>();
 
                         if (child == null) continue;
 
-                        child.BeginDrag(objectHolderParent);
+                        child.BeginDrag(this);
                     }
                 }
 
@@ -464,7 +452,7 @@ public class ObjectSelector : MonoBehaviour
                 SetPointerActive(true);
                 pointer.transform.position = hitPoint;
 
-                EventManager.TriggerDragBegin(currentObjectHold.gameObject.GetComponent<DragUI>());
+                EventManager.TriggerDragBegin(this, currentObjectHold.gameObject.GetComponent<DragUI>());
 
 
                 SoundManager.Instance.PlaySound(SoundManager.Instance.beginGrab);
@@ -482,7 +470,7 @@ public class ObjectSelector : MonoBehaviour
     {
         if (otherController.ObjectHold == null) return false;
 
-        return currentObjectHold.IsChildOf(otherController.ObjectHolder) || otherController.ObjectHold == currentObjectHold;
+        return currentObjectHold.IsChildOf(otherController.Pivot) || otherController.ObjectHold == currentObjectHold;
     }
 
     public void SetPointerActive(bool newValue)
@@ -490,9 +478,10 @@ public class ObjectSelector : MonoBehaviour
         pointer.SetActive(newValue);
     }
 
+    public bool WithActionHolder { get => _withActionHolder; set { _withActionHolder = value; OnActionHolder?.Invoke(IsLeft, _withActionHolder); } }
+    public Color HighlightColor { get; set; }
     public Transform ObjectHold { get => currentObjectHold; set => currentObjectHold = value; }
-    public Transform ObjectHolder { get => objectHolderParent; }
-
+    public Transform ActionIconPlace { get => actionIconPlace; }
     public Transform Pivot { get => pivot; }
     public bool IsLeft { get => isLeftController; }
 

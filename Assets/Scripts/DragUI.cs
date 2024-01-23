@@ -28,6 +28,7 @@ public class DragUI : MonoBehaviour, IDraggable
     private bool isFixed = false;
     private bool isPersistent = false;
     private bool isSelected = false;
+    private bool isHighlighted = false;
     private bool isOcclusion = false;
 
     // Occlusion variables
@@ -78,12 +79,12 @@ public class DragUI : MonoBehaviour, IDraggable
         }
     }
 
-    public void BeginDrag(Transform controllerPivot)
+    public void BeginDrag(ObjectSelector controller)
     {
         if (!OculusManager.Instance.IsEditMode || IsReferenceObject || IsDragging || IsFixed) return;
 
         oldParent = transformToUpdate.parent;
-        transformToUpdate.SetParent(controllerPivot);
+        transformToUpdate.SetParent(controller.Pivot);
 
         isDragging = true;
     }
@@ -165,11 +166,66 @@ public class DragUI : MonoBehaviour, IDraggable
         }
     }
 
+    public void SetSelected(bool isActive)
+    {
+        isSelected = isActive;
+
+        SetOutline(isActive, Color.red);
+    }
+
+    public void SetHighlighted(bool isActive)
+    {
+        isHighlighted = isActive;
+
+        if (isSelected)
+        {
+            SetOutline(true, Color.red);
+        }
+        else
+        {
+            SetOutline(isActive, Color.white);
+        }
+    }
+
+    public void SetHighlightedByAction(bool isActive)
+    {
+        isHighlighted = isActive;
+
+        if (isSelected && !isActive)
+        {
+            SetOutline(true, Color.red);
+        }
+        else
+        {
+            SetOutline(isActive, Color.yellow);
+        }
+
+    }
+
+    private void SetOutline(bool active, Color color)
+    {
+        var outline = GetComponent<Outline>();
+
+        if (outline == null) return;
+
+        outline.OutlineColor = color;
+        
+        if (active)
+        {
+            outline.EnableOutline();
+        }
+        else
+        {
+            outline.DisableOutline();
+        }
+    }
+
     public ColorController ColorController { get => colorController; }
     public bool IsReferenceObject { get => isReferenceObject; set => isReferenceObject = value; }
     public bool IsFixed { get => isFixed; set => isFixed = value; }
     public bool IsPersistent { get => isPersistent; set => isPersistent = value; }
-    public bool IsSelected { get => isSelected; set => isSelected = value; }
+    public bool IsSelected { get => isSelected; }
+    public bool IsHighlighted { get => isHighlighted; }
     public bool IsDragging { get => isDragging; }
     public bool IsScalling { get => isInScaleMode; }
     public bool IsOcclusion

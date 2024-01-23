@@ -307,7 +307,7 @@ public class ObjectStore : Singleton<ObjectStore>
             deleteObjectView.SetActive(true);
     }
 
-    private void OnObjectDragBegin(DragUI obj)
+    private void OnObjectDragBegin(ObjectSelector controller, DragUI obj)
     {
         if (obj.TransformToUpdate == baseLibrary) return;
 
@@ -403,7 +403,7 @@ public class ObjectStore : Singleton<ObjectStore>
         action.OnInstantiated();
     }
 
-    private void OnObjectDragEnd(DragUI obj)
+    private void OnObjectDragEnd(ObjectSelector controller, DragUI obj)
     {
         if (toDelete)
         {
@@ -452,7 +452,6 @@ public class ObjectStore : Singleton<ObjectStore>
 
     public void SetButtonsVisibility(bool newValue)
     {
-        Debug.Log("BTN " + newValue);
         refreshObjsBTN.SetActive(newValue);
     }
 

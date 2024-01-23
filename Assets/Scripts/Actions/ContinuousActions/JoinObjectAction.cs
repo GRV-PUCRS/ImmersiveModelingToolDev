@@ -34,6 +34,7 @@ public class JoinObjectAction : AbstractProlongedAction
 
             SoundManager.Instance.PlaySound(SoundManager.Instance.disjoin);
 
+            Debug.Log($"2 IF   {element.name}");
             return;
 
         }
@@ -43,24 +44,19 @@ public class JoinObjectAction : AbstractProlongedAction
             OculusManager.Instance.ClearSelection();
         }
 
-        Outline outline = element.GetComponent<Outline>();
-
-        /*
         if (element.TransformToUpdate == tempSceneElement)
         {
-            element.IsSelected = false;
+            element.SetSelected(false);
 
             RemoveElementFromSceneElement(element);
 
-            outline.DisableOutline();
-
             SoundManager.Instance.PlaySound(SoundManager.Instance.deselection);
+
+            Debug.Log($"InGroup Element {element.name}");
         }
-        else
-        */
-        if (element.TransformToUpdate != tempSceneElement)
+        else/* if (element.TransformToUpdate != tempSceneElement)*/
         {
-            element.IsSelected = true;
+            element.SetSelected(true);
 
             Transform oldParent = element.TransformToUpdate;
 
@@ -71,10 +67,11 @@ public class JoinObjectAction : AbstractProlongedAction
                 Destroy(oldParent.gameObject);
             }
 
-            outline.EnableOutline();
             EventManager.TriggerJoinedObject(element, oldParent);
 
             SoundManager.Instance.PlaySound(SoundManager.Instance.disjoin);
+
+            Debug.Log($"Add to Group Element {element.name}");
         }
 
     }
@@ -90,6 +87,7 @@ public class JoinObjectAction : AbstractProlongedAction
 
         if (tempSceneElement.childCount != 0)
         {
+            /*
             foreach (Outline outline in tempSceneElement.GetComponentsInChildren<Outline>())
             {
                 outline.DisableOutline();
@@ -98,6 +96,12 @@ public class JoinObjectAction : AbstractProlongedAction
             foreach (DragUI element in tempSceneElement.GetComponentsInChildren<DragUI>())
             {
                 element.IsSelected = false;
+            }
+            */
+
+            foreach (DragUI element in tempSceneElement.GetComponentsInChildren<DragUI>())
+            {
+                element.SetSelected(false);
             }
 
             OculusManager.Instance.TaskManager.AddObjectInTask(tempSceneElement);

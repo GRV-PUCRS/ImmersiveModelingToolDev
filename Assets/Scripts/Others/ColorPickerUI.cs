@@ -20,15 +20,16 @@ public class ColorPickerUI : Singleton<ColorPickerUI>
     private List<MeshRenderer> meshRenderers;
     private int index = 0;
     private ChangeColorAction colorAction;
+    private List<GameObject> _groups;
 
     private void Start()
     {
-        ChnageRGBValue(0);
+        ChangeRGBValue(0);
     }
 
-    public void ChnageRGBValue(float value)
+    public void ChangeRGBValue(float value)
     {
-        UpdateColor(newColor, GetColor());   
+        UpdateColor(newColor, GetColor());
     }
 
     public void Back()
@@ -62,6 +63,18 @@ public class ColorPickerUI : Singleton<ColorPickerUI>
     {
         colorAction.AddColor(index, GetColor());
         UpdateColorInfo();
+
+        foreach (var element in _groups)
+        {
+            foreach (Transform obj in element.transform)
+            {
+                if (obj.TryGetComponent<DragUI>(out var dragUI))
+                {
+                    dragUI.ColorController.AddColor(0, GetColor());
+                }
+            }
+
+        }
     }
 
     public void RmvColor()
@@ -93,6 +106,11 @@ public class ColorPickerUI : Singleton<ColorPickerUI>
             UpdateColor(newColor, GetColor());
             colorAction.SelectComponent(index);
         }
+    }
+
+    public void SetGroup(List<GameObject> sceneElements)
+    {
+        _groups = sceneElements;
     }
 
     private Color GetColor()

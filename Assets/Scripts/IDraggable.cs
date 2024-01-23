@@ -4,6 +4,6 @@ using UnityEngine;
 
 public interface IDraggable
 {
-    void BeginDrag(Transform pivot);
+    void BeginDrag(ObjectSelector controller);
     void EndDrag();
 }

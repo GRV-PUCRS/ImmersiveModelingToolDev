@@ -15,8 +15,8 @@ public static class EventManager
     public static event Action<object[]> OnPainelEvent;
     public static event Action<object[]> OnAnimationEvent;
 
-    public static event Action<DragUI> OnObjectDragBegin;
-    public static event Action<DragUI> OnObjectDragEnd;
+    public static event Action<ObjectSelector, DragUI> OnObjectDragBegin;
+    public static event Action<ObjectSelector, DragUI> OnObjectDragEnd;
 
     public static event Action<Transform, Transform, Transform> OnObjectScaleBegin;
     public static event Action<Transform> OnObjectScaleEnd;
@@ -88,8 +88,8 @@ public static class EventManager
         OnAnimationEvent?.Invoke(message);
     }
 
-    public static void TriggerDragBegin(DragUI obj) { OnObjectDragBegin?.Invoke(obj); }
-    public static void TriggerDragEnd(DragUI obj) { OnObjectDragEnd?.Invoke(obj); }
+    public static void TriggerDragBegin(ObjectSelector controller, DragUI obj) { OnObjectDragBegin?.Invoke(controller, obj); }
+    public static void TriggerDragEnd(ObjectSelector controller, DragUI obj) { OnObjectDragEnd?.Invoke(controller, obj); }
 
     public static void TriggerScaleBegin(Transform origin, Transform pivot1, Transform pivot2) { OnObjectScaleBegin?.Invoke(origin, pivot1, pivot2); }
     public static void TriggerScaleEnd(Transform origin) { OnObjectScaleEnd?.Invoke(origin); }

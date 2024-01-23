@@ -5,7 +5,6 @@ using UnityEngine;
 public abstract class AbstractSimpleAction : AbstractAction
 {
     protected DragUI currentElement;
-    private bool objInCurrentSelection = false;
 
     public override void OnTriggerEnterWithObject(Collider other)
     {
@@ -14,7 +13,7 @@ public abstract class AbstractSimpleAction : AbstractAction
         if (obj == null) return;
 
         currentElement = obj;
-
+        /*
         if (!OculusManager.Instance.SelectionList.Contains(currentElement.TransformToUpdate.gameObject))
         {
             if (OculusManager.Instance.SelectionList.Count != 0)
@@ -27,10 +26,63 @@ public abstract class AbstractSimpleAction : AbstractAction
         {
             objInCurrentSelection = true;
         }
+        */
+
+        if (OculusManager.Instance.SelectionList.Contains(currentElement.TransformToUpdate.gameObject))
+        {
+            foreach (GameObject selectedObject in OculusManager.Instance.SelectionList)
+            {
+                if (selectedObject.TryGetComponent<DragUI>(out var element))
+                {
+                    element.SetHighlightedByAction(true);
+                }
+            }
+        }
+        else
+        {
+            foreach (GameObject selectedObject in OculusManager.Instance.SelectionList)
+            {
+                if (selectedObject.TryGetComponent<DragUI>(out var element))
+                {
+                    element.SetHighlightedByAction(false);
+                }
+            }
+
+            foreach (DragUI element in obj.TransformToUpdate.GetComponentsInChildren<DragUI>())
+            {
+                element.SetHighlightedByAction(true);
+            }
+        }
     }
 
     public override void OnTriggerExitWithObject(Collider other)
     {
+        DragUI obj = other.GetComponent<DragUI>();
+
+        if (obj == null) return;
+
+        if (OculusManager.Instance.SelectionList.Contains(obj.TransformToUpdate.gameObject))
+        {
+            foreach (GameObject selectedObject in OculusManager.Instance.SelectionList)
+            {
+                if (selectedObject.TryGetComponent<DragUI>(out var element))
+                {
+                    element.SetHighlightedByAction(false);
+                }
+            }
+        }
+        else
+        {
+            foreach (DragUI element in obj.TransformToUpdate.GetComponentsInChildren<DragUI>())
+            {
+                element.SetHighlightedByAction(false);
+            }
+        }
+
+
+        currentElement = null;
+
+        /*
         if (currentElement == null) return;
 
         if (!objInCurrentSelection)
@@ -39,20 +91,29 @@ public abstract class AbstractSimpleAction : AbstractAction
         }
 
         currentElement = null;
+        */
     }
 
     public override void ReleaseActionObject()
     {
         if (currentElement == null) return;
 
-        GameObject[] sceneElements = new GameObject[OculusManager.Instance.SelectionList.Count];
-
-        OculusManager.Instance.SelectionList.CopyTo(sceneElements);
-        //OculusManager.Instance.ClearSelection();
-
-        if (sceneElements.Length != 0)
+        if (OculusManager.Instance.SelectionList.Contains(currentElement.TransformToUpdate.gameObject))
         {
-            ApplyAction(new List<GameObject>(sceneElements));
+
+            GameObject[] sceneElements = new GameObject[OculusManager.Instance.SelectionList.Count];
+
+            OculusManager.Instance.SelectionList.CopyTo(sceneElements);
+            //OculusManager.Instance.ClearSelection();
+
+            if (sceneElements.Length != 0)
+            {
+                ApplyAction(new List<GameObject>(sceneElements));
+            }
+        }
+        else
+        {
+            ApplyAction(new List<GameObject>() { currentElement.TransformToUpdate.gameObject });
         }
 
         currentElement = null;
@@ -81,6 +142,7 @@ public abstract class AbstractSimpleAction : AbstractAction
     }
 
     public abstract void ApplyAction(List<GameObject> sceneElement);
+
     public override void OnInstantiated()
     {
         return;

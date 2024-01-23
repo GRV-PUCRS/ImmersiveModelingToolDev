@@ -182,24 +182,7 @@ public class OculusManager : Singleton<OculusManager>
 
         foreach (DragUI element in sceneElement.GetComponentsInChildren<DragUI>())
         {
-            element.IsSelected = isOn;
-
-            Outline outline = element.GetComponent<Outline>();
-
-            if (outline != null)
-            {
-                outline.DisableOutline();
-
-                if (isOn)
-                {
-                    outline.OutlineColor = colorWhenSelected;
-                    outline.EnableOutline();
-                }
-                else
-                {
-                    outline.OutlineColor = Color.white;
-                }
-            }
+            element.SetSelected(isOn);
         }
     }
 

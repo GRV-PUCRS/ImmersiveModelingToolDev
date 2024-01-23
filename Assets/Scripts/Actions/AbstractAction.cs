@@ -6,20 +6,22 @@ using UnityEngine;
 public abstract class AbstractAction : MonoBehaviour, IAction
 {
     protected bool isActive = false;
+    private ObjectSelector _controller;
+    private Vector3 _oldScale;
 
     private void Awake()
     {
         GetComponent<Collider>().isTrigger = true;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnRayEnter(Collider other)
     {
         if (!isActive || !other.gameObject.layer.Equals(LayerMask.NameToLayer("InteractableObject"))) return;
 
         OnTriggerEnterWithObject(other);
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnRayExit(Collider other)
     {
         if (!isActive || !other.gameObject.layer.Equals(LayerMask.NameToLayer("InteractableObject"))) return;
 
@@ -31,7 +33,7 @@ public abstract class AbstractAction : MonoBehaviour, IAction
         ObjectStore.Instance.RetrieveObjectToStore(transform);
     }
 
-    private void OnObjectDragEnd(DragUI obj)
+    private void OnObjectDragEnd(ObjectSelector controller, DragUI obj)
     {
         if (obj.transform != transform || !isActive) return;
 
@@ -39,13 +41,47 @@ public abstract class AbstractAction : MonoBehaviour, IAction
 
         isActive = false;
         OnStageChange();
+
+        _controller.OnObjectPointedEvent.RemoveListener(OnObjectPointedEvent);
+        //_controller.HighlightColor = Color.white;
+        _controller.WithActionHolder = false;
+        transform.localScale = _oldScale;
+
+        obj.SetHighlighted(false);
     }
 
-    private void OnObjectDragBegin(DragUI obj)
+    private void OnObjectDragBegin(ObjectSelector controller, DragUI obj)
     {
         if (obj.transform != transform) return;
 
+        _controller = controller;
+        _controller.OnObjectPointedEvent.AddListener(OnObjectPointedEvent);
+        //_controller.HighlightColor = Color.yellow;
+        _controller.WithActionHolder = true;
+
+        transform.position = _controller.ActionIconPlace.position;
+        _oldScale = transform.localScale;
+        transform.localScale = Vector3.one * 0.7f;
+
         isActive = true;
+    }
+
+    private void OnObjectPointedEvent(bool isLeft, GameObject obj, bool isHighlighted)
+    {
+        if (isLeft != _controller.IsLeft) return;
+
+        var collider = obj.GetComponent<Collider>();
+
+        if (collider == null) return;
+
+        if (isHighlighted)
+        {
+            OnRayEnter(collider);
+        }
+        else
+        {
+            OnRayExit(collider);
+        }
     }
 
     protected virtual void OnEnable()

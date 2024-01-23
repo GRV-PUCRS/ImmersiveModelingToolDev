@@ -396,7 +396,7 @@ public class TaskManager : MonoBehaviour
         editModeToggle.IsOn = isEditMode;
     }
 
-    private void OnObjectDragEnd(DragUI obj)
+    private void OnObjectDragEnd(ObjectSelector controller, DragUI obj)
     {
         Debug.Log($"[TaskManager][OnObjectDragEnd] Evento de objeto solto recebido");
 
@@ -476,7 +476,7 @@ public class TaskManager : MonoBehaviour
         return plan;
     }
 
-    private void OnObjectDragBegin(DragUI obj)
+    private void OnObjectDragBegin(ObjectSelector controller, DragUI obj)
     {
         //EventManager.TriggerTaskChanged(plan.CurrentTask.Copy(), plan.FixedElements);
     }

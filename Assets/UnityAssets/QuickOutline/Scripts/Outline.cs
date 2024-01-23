@@ -151,8 +151,10 @@ public class Outline : MonoBehaviour
             renderer.materials = materials.ToArray();
         }
 
+        UpdateMaterialProperties();
+
         isActive = true;
-        needsUpdate = true;
+
     }
     void OnValidate()
     {

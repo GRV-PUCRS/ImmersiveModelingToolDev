@@ -8,17 +8,51 @@ public class BannerController : MonoBehaviour
     [SerializeField] private GameObject _view;
     [SerializeField] private TextMeshProUGUI _txtID; 
     [SerializeField] private TextMeshProUGUI _txtDescription;
+    [SerializeField] private ObjectSelector _leftController;
+    [SerializeField] private ObjectSelector _rightController;
 
     private bool _isLeftController;
 
-    public void ActiveBanner(bool isleft, GameObject obj)
+    private void Awake()
     {
-        if (!OculusManager.Instance.IsEditMode || !obj.gameObject.layer.Equals(LayerMask.NameToLayer("StoredObject"))) return;
+        _view.SetActive(false);
+    }
 
-        if (obj.TryGetComponent<DragUI>(out var dragUI)) ActiveBanner(dragUI);
-        if (obj.TryGetComponent<PainelController>(out var painel)) ActiveBanner(painel);
+    public void ActiveBanner(bool isleft, GameObject obj, bool isHighlighted)
+    {
+        if (isHighlighted)
+        {
+            if (!OculusManager.Instance.IsEditMode || !obj.gameObject.layer.Equals(LayerMask.NameToLayer("StoredObject"))) return;
 
-        _isLeftController = isleft;
+            if (obj.TryGetComponent<DragUI>(out var dragUI)) ActiveBanner(dragUI);
+            if (obj.TryGetComponent<PainelController>(out var painel)) ActiveBanner(painel);
+
+            _isLeftController = isleft;
+        }
+        else
+        {
+            DeactivateBanner(isleft);
+        }
+
+    }
+
+    public void ActiveBannerWhenHolderAction(bool isleft, GameObject obj, bool isHighlighted)
+    {
+        if (!(_leftController.WithActionHolder || _rightController.WithActionHolder)) return;
+
+        if (isHighlighted)
+        {
+            if (!OculusManager.Instance.IsEditMode || !obj.gameObject.layer.Equals(LayerMask.NameToLayer("StoredObject"))) return;
+
+            if (obj.TryGetComponent<DragUI>(out var dragUI)) ActiveBanner(dragUI);
+            if (obj.TryGetComponent<PainelController>(out var painel)) ActiveBanner(painel);
+
+            _isLeftController = isleft;
+        }
+        else
+        {
+            DeactivateBanner(isleft);
+        }
     }
 
     public void ActiveBanner(DragUI obj)
@@ -45,5 +79,10 @@ public class BannerController : MonoBehaviour
         if (isLeft != _isLeftController) return;
 
         _view.SetActive(false);
+    }
+
+    public void OnHoldeActionChange(bool isLeftController, bool isActionActive)
+    {
+        if (!isActionActive) _view.SetActive(false);
     }
 }
