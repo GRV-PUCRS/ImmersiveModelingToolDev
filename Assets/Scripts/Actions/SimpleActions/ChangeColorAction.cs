@@ -10,7 +10,9 @@ public class ChangeColorAction : AbstractSimpleAction
     {
         ObjectStore.Instance.RetrieveObjectToStore(transform);
 
-        if (sceneElements.Count == 0) return;
+        if (sceneElements.Count != 1) return;
+
+        if (sceneElements[0].transform.childCount != 1) return;
 
         DragUI element = sceneElements[0].transform.GetChild(0).GetComponentInChildren<DragUI>();
         colorController = element.ColorController;
@@ -18,7 +20,7 @@ public class ChangeColorAction : AbstractSimpleAction
         ColorPickerUI colorPickerUI = ColorPickerUI.Instance;
         colorPickerUI.SetColorAction(this);
         colorPickerUI.SetInfo(colorController.MeshRenderers);
-        colorPickerUI.SetGroup(sceneElements);
+        //colorPickerUI.SetGroup(sceneElements);
 
         var hmdToObjectDirection = InputController.Instance.HMD.position - element.transform.position;
         colorPickerUI.transform.position = element.transform.position + hmdToObjectDirection * 0.2f;

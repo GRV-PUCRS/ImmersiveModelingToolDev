@@ -63,18 +63,6 @@ public class ColorPickerUI : Singleton<ColorPickerUI>
     {
         colorAction.AddColor(index, GetColor());
         UpdateColorInfo();
-
-        foreach (var element in _groups)
-        {
-            foreach (Transform obj in element.transform)
-            {
-                if (obj.TryGetComponent<DragUI>(out var dragUI))
-                {
-                    dragUI.ColorController.AddColor(0, GetColor());
-                }
-            }
-
-        }
     }
 
     public void RmvColor()

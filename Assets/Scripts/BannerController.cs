@@ -11,7 +11,9 @@ public class BannerController : MonoBehaviour
     [SerializeField] private ObjectSelector _leftController;
     [SerializeField] private ObjectSelector _rightController;
 
-    private bool _isLeftController;
+    [SerializeField] private bool _isLeftController;
+
+    private bool _isActionActive = false;
 
     private void Awake()
     {
@@ -31,14 +33,22 @@ public class BannerController : MonoBehaviour
         }
         else
         {
-            DeactivateBanner(isleft);
+            DeactivateBanner();
         }
-
     }
 
     public void ActiveBannerWhenHolderAction(bool isleft, GameObject obj, bool isHighlighted)
     {
-        if (!(_leftController.WithActionHolder || _rightController.WithActionHolder)) return;
+        if (!_isActionActive) return;
+
+        if (obj.TryGetComponent<IAction>(out var action))
+        {
+            if (!action.IsActive()) return;
+        }
+        else
+        {
+            return;
+        }
 
         if (isHighlighted)
         {
@@ -47,11 +57,10 @@ public class BannerController : MonoBehaviour
             if (obj.TryGetComponent<DragUI>(out var dragUI)) ActiveBanner(dragUI);
             if (obj.TryGetComponent<PainelController>(out var painel)) ActiveBanner(painel);
 
-            _isLeftController = isleft;
         }
         else
         {
-            DeactivateBanner(isleft);
+            DeactivateBanner();
         }
     }
 
@@ -74,15 +83,14 @@ public class BannerController : MonoBehaviour
         _txtDescription.gameObject.SetActive(description.Length != 0);
     }
 
-    public void DeactivateBanner(bool isLeft)
+    public void DeactivateBanner()
     {
-        if (isLeft != _isLeftController) return;
-
         _view.SetActive(false);
     }
 
     public void OnHoldeActionChange(bool isLeftController, bool isActionActive)
     {
-        if (!isActionActive) _view.SetActive(false);
+        _view.SetActive(false);
+        _isActionActive = isActionActive;
     }
 }

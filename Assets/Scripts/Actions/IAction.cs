@@ -5,4 +5,5 @@ using UnityEngine;
 public interface IAction
 {
     void OnInstantiated();
+    bool IsActive();
 }

@@ -105,7 +105,7 @@ public class VirtualKeyboardController : MonoBehaviour, IKeyboard
         }
         else
         {
-            _text = _text.Remove(_caretPosition - 1);
+            _text = _text.Remove(_caretPosition - 1, 1);
             MoveCaret(true);
         }
 
@@ -142,6 +142,11 @@ public class VirtualKeyboardController : MonoBehaviour, IKeyboard
         {
             if (_isShiftOn) key.text = key.text.ToUpper();
             else key.text = key.text.ToLower();
+        }
+
+        foreach (var multipleKeysController in _defaultKeyboard.gameObject.GetComponentsInChildren<MultipleKeysController>())
+        {
+            multipleKeysController.IsShiftOn = _isShiftOn;
         }
 
         if (!_isShiftOn) _shift.text = _shift.text.ToUpper();

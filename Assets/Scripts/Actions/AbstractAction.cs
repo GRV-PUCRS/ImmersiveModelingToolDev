@@ -9,9 +9,16 @@ public abstract class AbstractAction : MonoBehaviour, IAction
     private ObjectSelector _controller;
     private Vector3 _oldScale;
 
+    Coroutine _positionAnimationCoroutine;
+
     private void Awake()
     {
         GetComponent<Collider>().isTrigger = true;
+    }
+
+    private void Update()
+    {
+        if (!isActive) return;
     }
 
     private void OnRayEnter(Collider other)
@@ -37,9 +44,12 @@ public abstract class AbstractAction : MonoBehaviour, IAction
     {
         if (obj.transform != transform || !isActive) return;
 
+        if (_positionAnimationCoroutine != null) StopCoroutine(_positionAnimationCoroutine);
+
         ReleaseActionObject();
 
         isActive = false;
+
         OnStageChange();
 
         _controller.OnObjectPointedEvent.RemoveListener(OnObjectPointedEvent);
@@ -52,18 +62,36 @@ public abstract class AbstractAction : MonoBehaviour, IAction
 
     private void OnObjectDragBegin(ObjectSelector controller, DragUI obj)
     {
-        if (obj.transform != transform) return;
+        if (obj.transform != transform || isActive) return;
 
         _controller = controller;
         _controller.OnObjectPointedEvent.AddListener(OnObjectPointedEvent);
         //_controller.HighlightColor = Color.yellow;
         _controller.WithActionHolder = true;
 
-        transform.position = _controller.ActionIconPlace.position;
         _oldScale = transform.localScale;
         transform.localScale = Vector3.one * 0.7f;
 
+        Quaternion newRotation = Quaternion.LookRotation(InputController.Instance.HMD.position - transform.position, Vector3.up);
+        _positionAnimationCoroutine = StartCoroutine(SetActionPosition(transform, _controller.ActionIconPlace.position, newRotation));
+
         isActive = true;
+    }
+
+    private IEnumerator SetActionPosition(Transform action, Vector3 newPosition, Quaternion newOrientation, float animationTime=0.2f)
+    {
+        float currentTme = 0;
+
+        Vector3 originalPosition = action.position;
+
+        while(currentTme < animationTime)
+        {
+            action.position = Vector3.Lerp(originalPosition, newPosition, currentTme / animationTime);
+            action.rotation = Quaternion.Lerp(action.rotation, newOrientation, currentTme / animationTime);
+            yield return null;
+
+            currentTme += Time.deltaTime;
+        }
     }
 
     private void OnObjectPointedEvent(bool isLeft, GameObject obj, bool isHighlighted)
@@ -103,4 +131,9 @@ public abstract class AbstractAction : MonoBehaviour, IAction
     public abstract void ReleaseActionObject();
 
     public abstract void OnInstantiated();
+
+    public bool IsActive()
+    {
+        return isActive;
+    }
 }
