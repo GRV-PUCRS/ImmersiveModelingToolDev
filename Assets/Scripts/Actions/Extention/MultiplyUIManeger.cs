@@ -78,6 +78,7 @@ public class MultiplyUIManeger : Singleton<MultiplyUIManeger>
             // Define o objeto como filho do objeto original
 
             newObject.transform.SetParent(sceneElement.transform);
+            newObject.GetComponent<DragUI>().SetNewTransform(sceneElement.transform);
             //GameObject newObject = Instantiate(originalObjectPrefab, originalObjectPrefab.transform.position, Quaternion.identity);
             //newObject.transform.Translate(new Vector3(i * spacingX, i * spacingY, i * spacingZ));
             OculusManager.Instance.TaskManager.AddObjectInTask(sceneElement.transform);

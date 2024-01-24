@@ -70,7 +70,7 @@ public abstract class AbstractAction : MonoBehaviour, IAction
         _controller.WithActionHolder = true;
 
         _oldScale = transform.localScale;
-        transform.localScale = Vector3.one * 0.7f;
+        transform.localScale = Vector3.one * 0.55f;
 
         Quaternion newRotation = Quaternion.LookRotation(InputController.Instance.HMD.position - transform.position, Vector3.up);
         _positionAnimationCoroutine = StartCoroutine(SetActionPosition(transform, _controller.ActionIconPlace.position, newRotation));
