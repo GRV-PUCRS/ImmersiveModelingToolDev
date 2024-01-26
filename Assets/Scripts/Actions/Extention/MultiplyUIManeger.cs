@@ -31,18 +31,27 @@ public class MultiplyUIManeger : Singleton<MultiplyUIManeger>
 
     public void ChangeAxisValue(TextMeshProUGUI txtField)
     {
-        // Use o teclado virtual para obter a entrada do usuário
+        //  teclado virtual para obter a entrada do usuário
         KeyboardManager.Instance.GetInput(result => UpdateUIValue(txtField, result), null, txtField.text, TouchScreenKeyboardType.NumbersAndPunctuation | TouchScreenKeyboardType.DecimalPad);
     }
 
     // Método para atualizar o valor do campo de texto da UI
     private void UpdateUIValue(TextMeshProUGUI txtField, string result)
     {
-        float resultInCentimeters = float.Parse(result) / 100f;
+        if (txtField == quantityInputField)
+        {
+            txtField.text = result;
+        }
+        else
+        {
+            float resultInCentimeters = float.Parse(result) / 100f;
+            txtField.text = resultInCentimeters.ToString();
+        }
+        // float resultInCentimeters = float.Parse(result) / 100f;
 
         // Atribuindo o valor convertido ao campo de texto
-        txtField.text = resultInCentimeters.ToString();
-       // txtField.text = result;
+        //  txtField.text = resultInCentimeters.ToString();
+        // txtField.text = result;
     }
      
     public void metodo()
