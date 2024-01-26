@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3d6a47c1c6d44da07e7edb49e69c39a74e448ca6e05879a78d99515cf3f3d72d
-size 418
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using System;
+
+[Serializable]
+public class Question
+{
+
+    public string description;
+    public List<string> alternatives = new List<string>();
+    public List<string> answers = new List<string>();
+    public bool multipleAnswers;
+    public bool mandatory;
+
+    public void Reset()
+    {
+        answers = new List<string>();
+    }
+}

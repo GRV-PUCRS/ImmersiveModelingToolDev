@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bca0fbce7006ef991a036c2e012ef3b9dd6848b01fb6be5a700197e82a1c9065
-size 387
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using System;
+
+[Serializable]
+public class QuestionBlock
+{
+    public enum QuestionType { Radio, List }
+
+    public string description;
+    public QuestionType type;
+    public List<Question> questions = new List<Question>();
+
+    public void Reset() => questions.ForEach(question => question.Reset());
+}

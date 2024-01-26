@@ -230,6 +230,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8118779900919023943
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,6 +365,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8118779900954362074
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,7 +440,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -657,6 +675,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8118779901299004075
 GameObject:
   m_ObjectHideFlags: 0
@@ -669,7 +696,7 @@ GameObject:
   - component: {fileID: 8118779901299004077}
   - component: {fileID: 8118779901299004074}
   m_Layer: 5
-  m_Name: TXT MeshRenderer Z
+  m_Name: TXT MeshRenderer X
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -804,7 +831,7 @@ GameObject:
   - component: {fileID: 8118779901362686055}
   - component: {fileID: 8118779901362686054}
   m_Layer: 5
-  m_Name: TXT MeshRenderer X
+  m_Name: TXT MeshRenderer Z
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1797,13 +1824,22 @@ MonoBehaviour:
         m_MethodName: ChangeAxisValue
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8118779901299004074}
+          m_ObjectArgument: {fileID: 8118779901362686054}
           m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8118779902218215885
 GameObject:
   m_ObjectHideFlags: 0
@@ -2316,13 +2352,22 @@ MonoBehaviour:
         m_MethodName: ChangeAxisValue
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8118779901362686054}
+          m_ObjectArgument: {fileID: 8118779901299004074}
           m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8118779902709955246
 GameObject:
   m_ObjectHideFlags: 0

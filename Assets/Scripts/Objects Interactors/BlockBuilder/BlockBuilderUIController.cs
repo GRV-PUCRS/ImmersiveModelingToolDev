@@ -27,15 +27,15 @@ public class BlockBuilderUIController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.V))
         {
-            ChangeAxis(txtXAxis, "-0,8");
+            ChangeAxis(txtXAxis, "-0.8");
         }
         if (Input.GetKeyDown(KeyCode.C))
         {
-            ChangeAxis(txtYAxis, "0,1");
+            ChangeAxis(txtYAxis, "0.1");
         }
         if (Input.GetKeyDown(KeyCode.B))
         {
-            ChangeAxis(txtZAxis, "0,3");
+            ChangeAxis(txtZAxis, "0.3");
         }
     }
 
