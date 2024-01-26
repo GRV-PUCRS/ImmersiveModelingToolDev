@@ -55,7 +55,7 @@ public class BlockBuilderUIController : MonoBehaviour
 
         if (floatValue == 0f) return;
 
-        txtAxis.text = floatValue.ToString(VALUES_FORMAT);
+        txtAxis.text = ParseFloat(floatValue);
         UpdateBlockScale();
     }
 
@@ -74,8 +74,10 @@ public class BlockBuilderUIController : MonoBehaviour
     {
         Vector3 formattedValues = values * CURRENT_SCALE;
 
-        txtXAxis.text = formattedValues.x.ToString(VALUES_FORMAT);
-        txtYAxis.text = formattedValues.y.ToString(VALUES_FORMAT);
-        txtZAxis.text = formattedValues.z.ToString(VALUES_FORMAT);
+        txtXAxis.text = ParseFloat(formattedValues.x);
+        txtYAxis.text = ParseFloat(formattedValues.y);
+        txtZAxis.text = ParseFloat(formattedValues.z);
     }
+
+    public string ParseFloat(float value) => value.ToString(VALUES_FORMAT).Replace(",", ".");
 }
