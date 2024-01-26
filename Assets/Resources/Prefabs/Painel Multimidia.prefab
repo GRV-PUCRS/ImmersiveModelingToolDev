@@ -267,6 +267,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &5572449247773206921
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -439,6 +448,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1757041179853474427
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,6 +762,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &4323764257488046257
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1039,6 +1066,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &8013691437945570947
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1802,7 +1838,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!1 &5787007200335731943
 GameObject:
   m_ObjectHideFlags: 0
@@ -2344,6 +2380,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7283393514726752104
 GameObject:
   m_ObjectHideFlags: 0
@@ -2572,6 +2617,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &4286460872673429992
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2874,6 +2928,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &2326260086324689714
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3122,3 +3185,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []

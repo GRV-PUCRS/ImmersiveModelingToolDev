@@ -1,58 +1,49 @@
 ManifestFileVersion: 0
-CRC: 3596747841
+CRC: 3288622619
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
       Name: 90_rotation_arrow_anim
       Dependencies: {}
     Info_1:
-      Name: 360_rotate_arrow_anim
-      Dependencies: {}
-    Info_2:
-      Name: 180_rotate_arrow_anim
-      Dependencies: {}
-    Info_3:
-      Name: forward_arrow_anim
-      Dependencies: {}
-    Info_4:
-      Name: forward_loop_arrow_anim
-      Dependencies: {}
-    Info_5:
       Name: guarda-chuva
       Dependencies: {}
+    Info_2:
+      Name: 360_rotate_arrow_anim
+      Dependencies: {}
+    Info_3:
+      Name: 180_rotate_arrow_anim
+      Dependencies: {}
+    Info_4:
+      Name: cubo_teste
+      Dependencies: {}
+    Info_5:
+      Name: arvore
+      Dependencies: {}
     Info_6:
-      Name: road_concrete
+      Name: asfalto
       Dependencies: {}
     Info_7:
-      Name: natures_fir_tree
+      Name: carro_1
       Dependencies: {}
     Info_8:
-      Name: props_street_light
+      Name: carro_2
       Dependencies: {}
     Info_9:
-      Name: grass
+      Name: carro_3
       Dependencies: {}
     Info_10:
-      Name: road
+      Name: carro_4
       Dependencies: {}
     Info_11:
-      Name: car_1
-      Dependencies: {}
-    Info_12:
-      Name: car_2
-      Dependencies: {}
-    Info_13:
-      Name: car_3
-      Dependencies: {}
-    Info_14:
-      Name: car_4
-      Dependencies: {}
-    Info_15:
-      Name: building_gas_station
-      Dependencies: {}
-    Info_16:
       Name: cenario
       Dependencies: {}
-    Info_17:
-      Name: cubo_teste
+    Info_12:
+      Name: grama_1
+      Dependencies: {}
+    Info_13:
+      Name: paralelepipedo_estacionamento
+      Dependencies: {}
+    Info_14:
+      Name: posto_de_gasolina
       Dependencies: {}

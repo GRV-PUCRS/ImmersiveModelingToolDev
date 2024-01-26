@@ -1,0 +1,39 @@
+ManifestFileVersion: 0
+CRC: 954056031
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a8b2f47efbdbaee48dce72b1b64b5dbb
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f93fa14d1e1ace4aa2cabc3877fd4453
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 54
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: d888891d4fd728b43a380f005160a35f, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Prefabs/Cenario/Carro_1.prefab
+Dependencies: []

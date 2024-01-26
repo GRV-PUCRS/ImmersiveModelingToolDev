@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 1470557281
+CRC: 936878463
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 4d1452d875396aaf6c940c37d6f22d04
+    Hash: dddd7564b1197ec8b854e44d8060abae
   TypeTreeHash:
     serializedVersion: 2
-    Hash: ac9493b7c514904e0a4f6b314f7c1aad
+    Hash: f93fa14d1e1ace4aa2cabc3877fd4453
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -29,7 +29,11 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 65
   Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: d888891d4fd728b43a380f005160a35f, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
-- Assets/Prefabs/Models/Cenario.prefab
+- Assets/Prefabs/Cenario/Cenario.prefab
 Dependencies: []

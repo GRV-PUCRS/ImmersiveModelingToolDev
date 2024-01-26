@@ -348,6 +348,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &282877134997526969
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -474,6 +483,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &747087041154143571
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -776,6 +794,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &4236645249842213832
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1192,6 +1219,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &4735894616341838727
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1511,6 +1547,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &9048572181778487233
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1910,7 +1955,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1,00
+  m_text: 1.00
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2230,6 +2275,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &3750392944877254046
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2466,7 +2520,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1,00
+  m_text: 1.00
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3110,7 +3164,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1,00
+  m_text: 1.00
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3311,6 +3365,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &8812382888231847192
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -1,0 +1,39 @@
+ManifestFileVersion: 0
+CRC: 2306575613
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: c7e57f87e5f7dad890b3d623df2b0dc8
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f93fa14d1e1ace4aa2cabc3877fd4453
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 54
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: d888891d4fd728b43a380f005160a35f, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Prefabs/Cenario/Asfalto.prefab
+Dependencies: []
