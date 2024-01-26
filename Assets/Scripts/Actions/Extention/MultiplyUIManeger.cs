@@ -38,7 +38,11 @@ public class MultiplyUIManeger : Singleton<MultiplyUIManeger>
     // Método para atualizar o valor do campo de texto da UI
     private void UpdateUIValue(TextMeshProUGUI txtField, string result)
     {
-        txtField.text = result;
+        float resultInCentimeters = float.Parse(result) / 100f;
+
+        // Atribuindo o valor convertido ao campo de texto
+        txtField.text = resultInCentimeters.ToString();
+       // txtField.text = result;
     }
      
     public void metodo()

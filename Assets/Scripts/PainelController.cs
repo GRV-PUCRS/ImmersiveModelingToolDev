@@ -110,9 +110,14 @@ public class PainelController : MonoBehaviour
         imageView.SetActive(true);
         videoView.SetActive(false);
 
-        float aspectRatioHeight = texture.height / (float) texture.width;
-        imgField.rectTransform.anchorMin = new Vector2(0, 0.5f - aspectRatioHeight/2f);
-        imgField.rectTransform.anchorMax = new Vector2(1, 0.5f + aspectRatioHeight/2f);
+        //float aspectRatioHeight = texture.height / (float) texture.width;
+        //imgField.rectTransform.anchorMin = new Vector2(0, 0.5f - aspectRatioHeight/2f);
+        //imgField.rectTransform.anchorMax = new Vector2(1, 0.5f + aspectRatioHeight/2f);
+
+        if (TryGetComponent<RectTransform>(out var rectTransform))
+        {
+            rectTransform.sizeDelta = new Vector2(texture.width, texture.height);
+        }
 
         /*
         if (TryGetComponent<RectTransform>(out var rectTransform))
