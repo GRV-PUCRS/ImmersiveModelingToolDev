@@ -2,9 +2,18 @@ using UnityEngine;
 
 public class SelectionBoxAction : AbstractProlongedAction
 {
+    [SerializeField] private float _timeUntilNextEvent = 0.35f;
+
+    private float _lastTime = 0f;
+    private DragUI _lastElement;
+
     public override void ApplyActionOnTriggerEnter(DragUI element)
     {
         if (element.IsInteractionDisabled) return;
+
+        float newtime = Time.realtimeSinceStartup;
+
+        if (newtime - _lastTime < _timeUntilNextEvent && _lastElement == element) return;
 
         GameObject sceneElement = element.TransformToUpdate.gameObject;
 
@@ -18,6 +27,9 @@ public class SelectionBoxAction : AbstractProlongedAction
             OculusManager.Instance.AddSelectedObject(sceneElement);
             SoundManager.Instance.PlaySound(SoundManager.Instance.disjoin);
         }
+
+        _lastTime = newtime;
+        _lastElement = element;
     }
 
     public override void ApplyActionOnTriggerExit(DragUI element)

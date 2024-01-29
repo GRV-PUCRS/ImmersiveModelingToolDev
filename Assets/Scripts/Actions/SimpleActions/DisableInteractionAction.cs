@@ -36,13 +36,11 @@ public class DisableInteractionAction : AbstractSimpleAction
 
     protected override void ValidadeAndOnTriggerEnterWithObject(Collider other)
     {
-        Debug.Log("DisableInteraction Enter");
         base.OnTriggerEnterWithObject(other);
     }
 
     protected override void ValidadeAndOnTriggerExitWithObject(Collider other)
     {
-        Debug.Log("DisableInteraction Exit");
         base.OnTriggerExitWithObject(other);
     }
 }

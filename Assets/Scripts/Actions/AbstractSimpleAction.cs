@@ -28,26 +28,18 @@ public abstract class AbstractSimpleAction : AbstractAction
         }
         */
 
-        if (OculusManager.Instance.SelectionList.Contains(currentElement.TransformToUpdate.gameObject))
+        bool isSelected = OculusManager.Instance.SelectionList.Contains(currentElement.TransformToUpdate.gameObject);
+
+        foreach (GameObject selectedObject in OculusManager.Instance.SelectionList)
         {
-            foreach (GameObject selectedObject in OculusManager.Instance.SelectionList)
+            if (selectedObject.TryGetComponent<DragUI>(out var element))
             {
-                if (selectedObject.TryGetComponent<DragUI>(out var element))
-                {
-                    element.SetHighlightedByAction(true);
-                }
+                element.SetHighlightedByAction(isSelected);
             }
         }
-        else
-        {
-            foreach (GameObject selectedObject in OculusManager.Instance.SelectionList)
-            {
-                if (selectedObject.TryGetComponent<DragUI>(out var element))
-                {
-                    element.SetHighlightedByAction(false);
-                }
-            }
 
+        if (!isSelected)
+        {
             foreach (DragUI element in obj.TransformToUpdate.GetComponentsInChildren<DragUI>())
             {
                 element.SetHighlightedByAction(true);
