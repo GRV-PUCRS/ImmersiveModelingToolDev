@@ -208,6 +208,8 @@ public class PainelController : MonoBehaviour
 
     private void OpenLoadFileScreen(PainelType type)
     {
+        if (gameObject.layer == LayerMask.NameToLayer("StoredObject")) return;
+
         var fileSelector = Instantiate(_fileSelectorPrafab);
         fileSelector.SetPainelController(this, type);
 

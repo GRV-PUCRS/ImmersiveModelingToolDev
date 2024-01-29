@@ -100,7 +100,7 @@ public class DragUI : MonoBehaviour, IDraggable
 
     public void BeginScale(Transform newPivot1, Transform newPivot2, bool recursive = true)
     {
-        if (!OculusManager.Instance.IsEditMode || IsReferenceObject || IsFixed) return;
+        if (!OculusManager.Instance.IsEditMode || IsReferenceObject || IsFixed || !IsInteractableObject) return;
 
         isInScaleMode = scallable;
 
@@ -220,6 +220,7 @@ public class DragUI : MonoBehaviour, IDraggable
         }
     }
 
+    public bool IsInteractableObject { get => gameObject.layer == LayerMask.NameToLayer("InteractableObject"); }
     public ColorController ColorController { get => colorController; }
     public bool IsReferenceObject { get => isReferenceObject; set => isReferenceObject = value; }
     public bool IsFixed { get => isFixed; set => isFixed = value; }
