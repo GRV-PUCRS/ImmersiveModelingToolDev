@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 2695314321897672511}
   - component: {fileID: 4386578216255761521}
   m_Layer: 0
-  m_Name: "Definir Objeto de Oclus\xE3o"
+  m_Name: Definir Objeto de Oclusao
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

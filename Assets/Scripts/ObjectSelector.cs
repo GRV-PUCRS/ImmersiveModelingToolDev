@@ -203,7 +203,9 @@ public class ObjectSelector : MonoBehaviour
         {
             int signal = stickState.y < 0 ? -1 : 1;
 
-            if (Vector3.Distance(hitPoint, InputController.Instance.RightController.position) > 0.1f || signal > 0)
+            float distance = Vector3.Distance(hitPoint, InputController.Instance.RightController.position);
+
+            if ((distance > 0.1f || signal > 0) && (distance < lineDistance - 1 || signal < 0))
             {
                 pivot.position = pivot.position + InputController.Instance.RightController.forward * Time.deltaTime * signal;
             }

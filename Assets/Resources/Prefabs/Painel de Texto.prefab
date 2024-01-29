@@ -227,6 +227,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &5772329867297049799
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -605,6 +614,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &8248456624333759437
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -748,6 +766,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &2400179802833120767
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -870,8 +897,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35
-  m_fontSizeBase: 35
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 5
@@ -1562,6 +1589,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &4397403598531141244
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -33,10 +33,10 @@ RectTransform:
   m_Father: {fileID: 8146443260176383970}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.11755329, y: 0}
+  m_AnchorMin: {x: 0.3, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2.5, y: 0}
-  m_SizeDelta: {x: -5, y: -4}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0.00000047683716, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8146443259172951461
 CanvasRenderer:
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Y
+  m_text: Eixo Y
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -93,15 +93,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 36
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -483,6 +483,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8146443259314184751
 GameObject:
   m_ObjectHideFlags: 0
@@ -651,10 +660,10 @@ RectTransform:
   m_Father: {fileID: 8146443259707958747}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 20}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.00008392334, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8146443259323341017
 CanvasRenderer:
@@ -731,10 +740,10 @@ RectTransform:
   m_Father: {fileID: 8146443259934085436}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.55}
+  m_AnchorMin: {x: 0, y: 0.47}
   m_AnchorMax: {x: 1, y: 0.7}
-  m_AnchoredPosition: {x: 0, y: -1.447712}
-  m_SizeDelta: {x: -20, y: -7.6954346}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8146443259330342706
 MonoBehaviour:
@@ -838,6 +847,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &8146443259330342703
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -849,8 +867,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 16.511766, y: 18.258072, z: 1}
-  m_Center: {x: -75.9722, y: 1.721788, z: 0}
+  m_Size: {x: 32.115456, y: 31.441463, z: 1}
+  m_Center: {x: -65.56223, y: -0.34064052, z: 0}
 --- !u!1 &8146443259332841994
 GameObject:
   m_ObjectHideFlags: 0
@@ -1040,6 +1058,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &8146443259340387312
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1301,6 +1328,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &8146443259351139979
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1350,8 +1386,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 10, y: -10}
-  m_SizeDelta: {x: 20, y: 20}
+  m_AnchoredPosition: {x: 30, y: -23}
+  m_SizeDelta: {x: 35, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8146443259359480376
 CanvasRenderer:
@@ -1694,8 +1730,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 10, y: -10}
-  m_SizeDelta: {x: 20, y: 20}
+  m_AnchoredPosition: {x: 30, y: -23}
+  m_SizeDelta: {x: 35, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8146443259510600688
 CanvasRenderer:
@@ -2072,6 +2108,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8146443259555556455
 GameObject:
   m_ObjectHideFlags: 0
@@ -2105,10 +2150,10 @@ RectTransform:
   m_Father: {fileID: 8146443260843573525}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 20}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.00008392334, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8146443259555556458
 CanvasRenderer:
@@ -2261,6 +2306,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &8146443259589861235
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2715,8 +2769,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 10, y: -10}
-  m_SizeDelta: {x: 20, y: 20}
+  m_AnchoredPosition: {x: 30, y: -24}
+  m_SizeDelta: {x: 35, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8146443259707958745
 CanvasRenderer:
@@ -3216,6 +3270,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &8146443259798340141
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3612,6 +3675,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &8146443259848931509
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3666,7 +3738,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.23900001, y: 1}
-  m_AnchoredPosition: {x: 191, y: 0}
+  m_AnchoredPosition: {x: 279.5, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8146443259934085443
@@ -3756,10 +3828,10 @@ RectTransform:
   m_Father: {fileID: 8146443259934085436}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.4}
-  m_AnchorMax: {x: 1, y: 0.55}
-  m_AnchoredPosition: {x: 0, y: -41}
-  m_SizeDelta: {x: -20, y: -10}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0.24}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8146443259953148303
 MonoBehaviour:
@@ -3832,8 +3904,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 18.274038, y: 18.278389, z: 1}
-  m_Center: {x: -75.67505, y: -0.011831521, z: 0}
+  m_Size: {x: 31.48329, y: 30.734678, z: 1}
+  m_Center: {x: -65.67317, y: 0.17667049, z: 0}
 --- !u!114 &8146443259953148297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3868,6 +3940,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8146443260027661433
 GameObject:
   m_ObjectHideFlags: 0
@@ -3980,6 +4061,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &8146443260027659138
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4181,6 +4271,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8146443260033257036
 GameObject:
   m_ObjectHideFlags: 0
@@ -4294,6 +4393,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &8146443260033257042
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4340,10 +4448,10 @@ RectTransform:
   m_Father: {fileID: 8146443259359480378}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 20}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.00012207031, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8146443260054759193
 CanvasRenderer:
@@ -4554,8 +4662,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4705,10 +4813,10 @@ RectTransform:
   m_Father: {fileID: 8146443260550489794}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.11755329, y: 0}
+  m_AnchorMin: {x: 0.25, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2.5, y: 0}
-  m_SizeDelta: {x: -5, y: -4}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8146443260112627075
 CanvasRenderer:
@@ -4765,15 +4873,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 36
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -4958,10 +5066,10 @@ RectTransform:
   m_Father: {fileID: 8146443259934085436}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.4}
-  m_AnchorMax: {x: 1, y: 0.55}
-  m_AnchoredPosition: {x: 0, y: -5}
-  m_SizeDelta: {x: -20, y: -10}
+  m_AnchorMin: {x: 0, y: 0.24}
+  m_AnchorMax: {x: 1, y: 0.47}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8146443260176383969
 MonoBehaviour:
@@ -5034,8 +5142,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 18.274038, y: 18.278389, z: 1}
-  m_Center: {x: -75.67505, y: -0.011831521, z: 0}
+  m_Size: {x: 31.066774, y: 31.714172, z: 1}
+  m_Center: {x: -65.34427, y: 0.2647694, z: 0}
 --- !u!114 &8146443260176383971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5070,6 +5178,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8146443260204398806
 GameObject:
   m_ObjectHideFlags: 0
@@ -5318,10 +5435,10 @@ RectTransform:
   m_Father: {fileID: 8146443260573844395}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.4}
-  m_AnchorMax: {x: 1, y: 0.55}
-  m_AnchoredPosition: {x: 4.1000843, y: -1.5}
-  m_SizeDelta: {x: -20, y: -10}
+  m_AnchorMin: {x: 0, y: 0.23}
+  m_AnchorMax: {x: 1, y: 0.46}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -0.00000166893, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8146443260317331842
 MonoBehaviour:
@@ -5394,8 +5511,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 18.274038, y: 18.278389, z: 1}
-  m_Center: {x: -75.67505, y: -0.011831521, z: 0}
+  m_Size: {x: 31.862465, y: 31.48747, z: 1}
+  m_Center: {x: -110.02455, y: 0.17507, z: 0}
 --- !u!114 &8146443260317332092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5430,6 +5547,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8146443260369315395
 GameObject:
   m_ObjectHideFlags: 0
@@ -5583,7 +5709,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8146443260383695011
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5691,10 +5817,10 @@ RectTransform:
   m_Father: {fileID: 8146443260317332095}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.11755329, y: 0}
+  m_AnchorMin: {x: 0.25, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2.5, y: 0}
-  m_SizeDelta: {x: -5, y: -4}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8146443260389331828
 CanvasRenderer:
@@ -5751,15 +5877,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 36
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -5964,6 +6090,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8146443260527550109
 GameObject:
   m_ObjectHideFlags: 0
@@ -6135,10 +6270,10 @@ RectTransform:
   m_Father: {fileID: 8146443260573844395}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.4}
-  m_AnchorMax: {x: 1, y: 0.55}
-  m_AnchoredPosition: {x: 4.1000843, y: 33}
-  m_SizeDelta: {x: -20, y: -10}
+  m_AnchorMin: {x: 0, y: 0.46}
+  m_AnchorMax: {x: 1, y: 0.7}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8146443260550489793
 MonoBehaviour:
@@ -6223,8 +6358,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 18.274038, y: 18.278389, z: 1}
-  m_Center: {x: -75.67505, y: -0.011831521, z: 0}
+  m_Size: {x: 32.241314, y: 31.112638, z: 1}
+  m_Center: {x: -109.835815, y: 0.7431283, z: 0}
 --- !u!114 &8146443260550489795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6259,6 +6394,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8146443260568359935
 GameObject:
   m_ObjectHideFlags: 0
@@ -6311,7 +6455,7 @@ GameObject:
   - component: {fileID: 8146443260573844393}
   - component: {fileID: 8146443260573844392}
   m_Layer: 5
-  m_Name: Container
+  m_Name: Container Config
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6338,7 +6482,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.23900001, y: 1}
+  m_AnchorMax: {x: 0.35, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6676,6 +6820,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8146443260593386622
 GameObject:
   m_ObjectHideFlags: 0
@@ -6847,8 +7000,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 10, y: -10}
-  m_SizeDelta: {x: 20, y: 20}
+  m_AnchoredPosition: {x: 30, y: -23}
+  m_SizeDelta: {x: 35, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8146443260700370350
 CanvasRenderer:
@@ -7004,6 +7157,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d888891d4fd728b43a380f005160a35f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _id: 
+  _description: 
   interactable: 1
   useParent: 1
   scallable: 0
@@ -7094,10 +7249,10 @@ RectTransform:
   m_Father: {fileID: 8146443259330342702}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.11755329, y: 0}
+  m_AnchorMin: {x: 0.3, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2.5, y: 0}
-  m_SizeDelta: {x: -5, y: -4}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -0.0000009536743, y: -4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8146443260789922211
 CanvasRenderer:
@@ -7127,7 +7282,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: X
+  m_text: Eixo X
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7154,15 +7309,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 36
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -7564,8 +7719,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 10, y: -10}
-  m_SizeDelta: {x: 20, y: 20}
+  m_AnchoredPosition: {x: 30, y: -23}
+  m_SizeDelta: {x: 35, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8146443260843573531
 CanvasRenderer:
@@ -7638,10 +7793,10 @@ RectTransform:
   m_Father: {fileID: 8146443259510600690}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 20}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.00008392334, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8146443260898446466
 CanvasRenderer:
@@ -7909,8 +8064,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -8236,6 +8391,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &8146443261042206263
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8282,10 +8446,10 @@ RectTransform:
   m_Father: {fileID: 8146443259953148296}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.11755329, y: 0}
+  m_AnchorMin: {x: 0.3, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2.5, y: 0}
-  m_SizeDelta: {x: -5, y: -4}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8146443261062591744
 CanvasRenderer:
@@ -8315,7 +8479,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Z
+  m_text: Eixo Z
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8342,15 +8506,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 36
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -8632,6 +8796,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _OnReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedButton:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnHighlightedReleasedButton:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &8146443261137503432
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8889,10 +9062,10 @@ RectTransform:
   m_Father: {fileID: 8146443260700370344}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 20}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.00012207031, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8146443261204451334
 CanvasRenderer:
