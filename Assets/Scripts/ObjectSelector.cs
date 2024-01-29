@@ -225,7 +225,7 @@ public class ObjectSelector : MonoBehaviour
 
         if (element == null || !element.IsVisible || (!WithActionHolder && element.IsFixed)) return;
 
-        if (!WithActionHolder)
+        if (!WithActionHolder && !element.IsInteractionDisabled)
         {
             if (obj.layer == LayerMask.NameToLayer("Draggable"))
             {
@@ -419,6 +419,12 @@ public class ObjectSelector : MonoBehaviour
                 DragUI element = currentObjectHold.gameObject.GetComponent<DragUI>();
 
                 if (element == null) return;
+
+                if (element.IsInteractionDisabled)
+                {
+                    currentObjectHold = null;
+                    return;
+                }
 
                 if (currentObjectHold.GetComponent<IAction>() != null || currentObjectHold.gameObject.layer.Equals(LayerMask.NameToLayer("Draggable")))
                 {

@@ -21,18 +21,18 @@ public abstract class AbstractAction : MonoBehaviour, IAction
         if (!isActive) return;
     }
 
-    private void OnRayEnter(Collider other)
+    protected virtual void OnRayEnter(Collider other)
     {
         if (!isActive || !other.gameObject.layer.Equals(LayerMask.NameToLayer("InteractableObject"))) return;
 
-        OnTriggerEnterWithObject(other);
+        ValidadeAndOnTriggerEnterWithObject(other);
     }
 
-    private void OnRayExit(Collider other)
+    protected virtual void OnRayExit(Collider other)
     {
         if (!isActive || !other.gameObject.layer.Equals(LayerMask.NameToLayer("InteractableObject"))) return;
 
-        OnTriggerExitWithObject(other);
+        ValidadeAndOnTriggerExitWithObject(other);
     }
 
     private void OnStageChange()
@@ -110,6 +110,28 @@ public abstract class AbstractAction : MonoBehaviour, IAction
         {
             OnRayExit(collider);
         }
+    }
+
+    protected virtual void ValidadeAndOnTriggerEnterWithObject(Collider other)
+    {
+        Debug.Log($"Validate enter {other.name}");
+        if (other.TryGetComponent<DragUI>(out var element))
+        {
+            if (element.IsInteractionDisabled) return;
+        }
+
+        OnTriggerEnterWithObject(other);
+    }
+
+    protected virtual void ValidadeAndOnTriggerExitWithObject(Collider other)
+    {
+        Debug.Log($"Validate exit {other.name}");
+        if (other.TryGetComponent<DragUI>(out var element))
+        {
+            if (element.IsInteractionDisabled) return;
+        }
+
+        OnTriggerExitWithObject(other);
     }
 
     protected virtual void OnEnable()

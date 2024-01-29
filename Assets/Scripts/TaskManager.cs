@@ -223,8 +223,11 @@ public class TaskManager : MonoBehaviour
             mainObject.SetNewTransform(relativeParent);
             mainObject.IsFixed = element.isFixed;
             mainObject.IsOcclusion = element.isOcclusionObj;
+            mainObject.IsInteractionDisabled = element.isInteractionDisabled;
+
             if (element.colors != null)
                 mainObject.ColorController.UpdateColors(element.colors);
+
 
             instance.SetParent(relativeParent);
             instance.localPosition = element.position;

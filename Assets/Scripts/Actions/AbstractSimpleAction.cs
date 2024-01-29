@@ -79,19 +79,7 @@ public abstract class AbstractSimpleAction : AbstractAction
             }
         }
 
-
         currentElement = null;
-
-        /*
-        if (currentElement == null) return;
-
-        if (!objInCurrentSelection)
-        {
-            OculusManager.Instance.RmvSelectedObject(currentElement.TransformToUpdate.gameObject);
-        }
-
-        currentElement = null;
-        */
     }
 
     public override void ReleaseActionObject()
@@ -108,12 +96,12 @@ public abstract class AbstractSimpleAction : AbstractAction
 
             if (sceneElements.Length != 0)
             {
-                ApplyAction(new List<GameObject>(sceneElements));
+                ValidateAndApplyAction(new List<GameObject>(sceneElements));
             }
         }
         else
         {
-            ApplyAction(new List<GameObject>() { currentElement.TransformToUpdate.gameObject });
+            ValidateAndApplyAction(new List<GameObject>() { currentElement.TransformToUpdate.gameObject });
         }
 
         currentElement = null;
@@ -139,6 +127,13 @@ public abstract class AbstractSimpleAction : AbstractAction
         }
 
         return isAllFalse;
+    }
+
+    protected virtual void ValidateAndApplyAction(List<GameObject> sceneElement)
+    {
+        if (currentElement.IsInteractionDisabled) return;
+
+        ApplyAction(sceneElement);
     }
 
     public abstract void ApplyAction(List<GameObject> sceneElement);

@@ -163,6 +163,7 @@ public class Plan
         public ObjType objType;
         public bool isFixed;
         public bool isOcclusionObj;
+        public bool isInteractionDisabled;
         public List<Vector3> colors;
         public PersistentTrackableData persistentTrackableData;
 
@@ -193,6 +194,7 @@ public class Plan
 
             isFixed = dragUI.IsFixed;
             isOcclusionObj = dragUI.IsOcclusion;
+            isInteractionDisabled = dragUI.IsInteractionDisabled;
 
             colors = new List<Vector3>();
             foreach (MeshRenderer renderer in dragUI.ColorController.MeshRenderers)
@@ -225,6 +227,7 @@ public class Plan
             objType = taskElementToCopy.objType;
             isFixed = taskElementToCopy.isFixed;
             isOcclusionObj = taskElementToCopy.isOcclusionObj;
+            isInteractionDisabled = taskElementToCopy.isInteractionDisabled;
             colors = taskElementToCopy.colors;
             persistentTrackableData = taskElementToCopy.persistentTrackableData;
         }

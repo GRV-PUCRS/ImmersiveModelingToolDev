@@ -24,12 +24,13 @@ public class DragUI : MonoBehaviour, IDraggable
     private ColorController colorController;
 
     // Object Properties
-    private bool isReferenceObject = false;
-    private bool isFixed = false;
-    private bool isPersistent = false;
-    private bool isSelected = false;
-    private bool isHighlighted = false;
-    private bool isOcclusion = false;
+    private bool _isReferenceObject = false;
+    private bool _isFixed = false;
+    private bool _isPersistent = false;
+    private bool _isSelected = false;
+    private bool _isHighlighted = false;
+    private bool _isOcclusion = false;
+    private bool _isInteractionDisabled = false;
 
     // Occlusion variables
     private bool isVisible = true;
@@ -81,7 +82,7 @@ public class DragUI : MonoBehaviour, IDraggable
 
     public void BeginDrag(ObjectSelector controller)
     {
-        if (!OculusManager.Instance.IsEditMode || IsReferenceObject || IsDragging || IsFixed) return;
+        if (!OculusManager.Instance.IsEditMode || IsReferenceObject || IsDragging || IsFixed || IsInteractionDisabled) return;
 
         oldParent = transformToUpdate.parent;
         transformToUpdate.SetParent(controller.Pivot);
@@ -91,7 +92,7 @@ public class DragUI : MonoBehaviour, IDraggable
 
     public void EndDrag()
     {
-        if (!OculusManager.Instance.IsEditMode || IsReferenceObject || !isDragging || IsFixed) return;
+        if (!isDragging) return;
 
         transformToUpdate.SetParent(oldParent);
 
@@ -100,7 +101,7 @@ public class DragUI : MonoBehaviour, IDraggable
 
     public void BeginScale(Transform newPivot1, Transform newPivot2, bool recursive = true)
     {
-        if (!OculusManager.Instance.IsEditMode || IsReferenceObject || IsFixed || !IsInteractableObject) return;
+        if (!OculusManager.Instance.IsEditMode || IsReferenceObject || IsFixed || !IsInteractableObject || IsInteractionDisabled) return;
 
         isInScaleMode = scallable;
 
@@ -168,16 +169,16 @@ public class DragUI : MonoBehaviour, IDraggable
 
     public void SetSelected(bool isActive)
     {
-        isSelected = isActive;
+        _isSelected = isActive;
 
         SetOutline(isActive, Color.red);
     }
 
     public void SetHighlighted(bool isActive)
     {
-        isHighlighted = isActive;
+        _isHighlighted = isActive;
 
-        if (isSelected)
+        if (_isSelected)
         {
             SetOutline(true, Color.red);
         }
@@ -189,9 +190,9 @@ public class DragUI : MonoBehaviour, IDraggable
 
     public void SetHighlightedByAction(bool isActive)
     {
-        isHighlighted = isActive;
+        _isHighlighted = isActive;
 
-        if (isSelected && !isActive)
+        if (_isSelected && !isActive)
         {
             SetOutline(true, Color.red);
         }
@@ -222,19 +223,20 @@ public class DragUI : MonoBehaviour, IDraggable
 
     public bool IsInteractableObject { get => gameObject.layer == LayerMask.NameToLayer("InteractableObject"); }
     public ColorController ColorController { get => colorController; }
-    public bool IsReferenceObject { get => isReferenceObject; set => isReferenceObject = value; }
-    public bool IsFixed { get => isFixed; set => isFixed = value; }
-    public bool IsPersistent { get => isPersistent; set => isPersistent = value; }
-    public bool IsSelected { get => isSelected; }
-    public bool IsHighlighted { get => isHighlighted; }
+    public bool IsReferenceObject { get => _isReferenceObject; set => _isReferenceObject = value; }
+    public bool IsFixed { get => _isFixed; set => _isFixed = value; }
+    public bool IsPersistent { get => _isPersistent; set => _isPersistent = value; }
+    public bool IsSelected { get => _isSelected; }
+    public bool IsHighlighted { get => _isHighlighted; }
     public bool IsDragging { get => isDragging; }
     public bool IsScalling { get => isInScaleMode; }
+    public bool IsInteractionDisabled { get => _isInteractionDisabled; set => _isInteractionDisabled = value; }
     public bool IsOcclusion
     {
-        get => isOcclusion; set
+        get => _isOcclusion; set
         {
-            isOcclusion = value;
-            SetObjectVisibility(isOcclusion ? OculusManager.Instance.IsOcclusionObjVisible : true);
+            _isOcclusion = value;
+            SetObjectVisibility(_isOcclusion ? OculusManager.Instance.IsOcclusionObjVisible : true);
         }
     }
     public bool IsVisible { get => isVisible; }

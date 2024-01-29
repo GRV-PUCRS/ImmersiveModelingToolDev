@@ -4,6 +4,8 @@ public class SelectionBoxAction : AbstractProlongedAction
 {
     public override void ApplyActionOnTriggerEnter(DragUI element)
     {
+        if (element.IsInteractionDisabled) return;
+
         GameObject sceneElement = element.TransformToUpdate.gameObject;
 
         if (OculusManager.Instance.SelectionList.Contains(sceneElement))
