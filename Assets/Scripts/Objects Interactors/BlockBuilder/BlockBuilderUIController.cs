@@ -23,22 +23,6 @@ public class BlockBuilderUIController : MonoBehaviour
         KeyboardManager.Instance.GetInput(result => ChangeAxis(txtField, result), null, txtField.text, TouchScreenKeyboardType.NumbersAndPunctuation | TouchScreenKeyboardType.DecimalPad);
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            ChangeAxis(txtXAxis, "-0.8");
-        }
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            ChangeAxis(txtYAxis, "0.1");
-        }
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            ChangeAxis(txtZAxis, "0.3");
-        }
-    }
-
     public void InvertSignal(TextMeshProUGUI txtField)
     {
         float value = float.Parse(txtField.text) * -1;
@@ -51,7 +35,7 @@ public class BlockBuilderUIController : MonoBehaviour
     {
         if (value.Length == 0) return;
 
-        float floatValue = float.Parse(value);
+        float floatValue = ParseFloat(value);
 
         if (floatValue == 0f) return;
 
@@ -63,9 +47,9 @@ public class BlockBuilderUIController : MonoBehaviour
     {
         Vector3 newScale = new Vector3();
 
-        newScale.x = float.Parse(txtXAxis.text);
-        newScale.y = float.Parse(txtYAxis.text);
-        newScale.z = float.Parse(txtZAxis.text);
+        newScale.x = ParseFloat(txtXAxis.text);
+        newScale.y = ParseFloat(txtYAxis.text);
+        newScale.z = ParseFloat(txtZAxis.text);
 
         builder.ChangeAxis(newScale / CURRENT_SCALE);
     }
@@ -80,4 +64,16 @@ public class BlockBuilderUIController : MonoBehaviour
     }
 
     public string ParseFloat(float value) => value.ToString(VALUES_FORMAT).Replace(",", ".");
+    public float ParseFloat(string value)
+    {
+        try
+        {
+            return float.Parse(value.Replace(".", ","));
+
+        }catch (Exception exception)
+        {
+            Debug.LogError($"[BlockBuilderUIController] Error parsing float: {exception.Message}");
+            return 0f;
+        }
+    }
 }
