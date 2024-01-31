@@ -1164,8 +1164,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4278190335
+  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1259,8 +1259,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.15, y: 0.8075917}
   m_AnchorMax: {x: 0.85, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000015258789}
-  m_SizeDelta: {x: -0.000002503395, y: -0.000030517578}
+  m_AnchoredPosition: {x: 7.3, y: 29}
+  m_SizeDelta: {x: 36, y: -0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8118779901543854517
 CanvasRenderer:
@@ -1290,7 +1290,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Multiplicador De Objetos\n(valores em cent\xEDmetros)"
+  m_text: "Multiplicador De Objetos:\n(valores digitados em cent\xEDmetros)\nas cores
+    do x,y e z correspondem as cores do eixo no objeto"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1656,7 +1657,7 @@ RectTransform:
   m_GameObject: {fileID: 8118779902017838233}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.3218, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 657604519003809769}
@@ -1890,9 +1891,11 @@ MonoBehaviour:
   View: {fileID: 5981955807799688861}
   originalObjectPrefab: {fileID: 0}
   quantityInputField: {fileID: 8118779900954362079}
-  spacingXInputField: {fileID: 8118779901362686054}
+  spacingXInputField: {fileID: 8118779901299004074}
   spacingYInputField: {fileID: 8118779901936069638}
-  spacingZInputField: {fileID: 8118779901299004074}
+  spacingZInputField: {fileID: 8118779901362686054}
+  axisPrefab: {fileID: 8045000183965048121, guid: 2b4e529ed0e066e43a94cde4d52d47fa,
+    type: 3}
 --- !u!114 &8118779902218215884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2036,8 +2039,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294905600
+  m_fontColor: {r: 0, g: 0.059048653, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2173,8 +2176,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4278255379
+  m_fontColor: {r: 0.07476878, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

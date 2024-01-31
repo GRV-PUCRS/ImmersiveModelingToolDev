@@ -14,6 +14,7 @@ public class MultiplyUIManeger : Singleton<MultiplyUIManeger>
     public TextMeshProUGUI spacingXInputField;
     public TextMeshProUGUI spacingYInputField;
     public TextMeshProUGUI spacingZInputField;
+    public GameObject axisPrefab;
 
 
     private void Update()
@@ -38,35 +39,28 @@ public class MultiplyUIManeger : Singleton<MultiplyUIManeger>
     // Método para atualizar o valor do campo de texto da UI
     private void UpdateUIValue(TextMeshProUGUI txtField, string result)
     {
-        if (txtField == quantityInputField)
-        {
-            txtField.text = result;
-        }
-        else
-        {
-            float resultInCentimeters = float.Parse(result) / 100f;
-            txtField.text = resultInCentimeters.ToString();
-        }
+       // if (txtField == quantityInputField)
+       // {
+       //     txtField.text = result;
+       // }
+      //  else
+      //  {
+        //    float resultInCentimeters = float.Parse(result) / 100f;
+          //  txtField.text = resultInCentimeters.ToString();
+        //}
         // float resultInCentimeters = float.Parse(result) / 100f;
 
         // Atribuindo o valor convertido ao campo de texto
         //  txtField.text = resultInCentimeters.ToString();
-        // txtField.text = result;
+        txtField.text = result;
     }
      
     public void metodo()
     {
-
-        if (originalObjectPrefab.transform.childCount != 1)
-        {
-            Destroy(gameObject);
-            return;
-        }
-
         int quantidade = int.Parse(quantityInputField.text);
-        float spacingX = float.Parse(spacingXInputField.text);
-        float spacingY = float.Parse(spacingYInputField.text);
-        float spacingZ = float.Parse(spacingZInputField.text);
+        float spacingX = float.Parse(spacingXInputField.text)/100f;
+        float spacingY = float.Parse(spacingYInputField.text)/100f;
+        float spacingZ = float.Parse(spacingZInputField.text)/100f;
 
         // Armazena a posição e a rotação originais
         Transform cubo = originalObjectPrefab.transform.GetChild(0);
@@ -100,9 +94,14 @@ public class MultiplyUIManeger : Singleton<MultiplyUIManeger>
         Destroy(gameObject);
     }   
     internal void ativar(GameObject gameObject)
-    { 
+    {
         transform.position = gameObject.transform.position;
         originalObjectPrefab = gameObject;
+
+        var child = originalObjectPrefab.transform.GetChild(0);
+        // GameObject newObject = Instantiate(axisPrefab, originalObjectPrefab.transform.position, originalObjectPrefab.transform.rotation);
+        GameObject axisObject = Instantiate(axisPrefab, child.position, child.rotation);
+        axisObject.transform.SetParent(child);
     }
 }
 
