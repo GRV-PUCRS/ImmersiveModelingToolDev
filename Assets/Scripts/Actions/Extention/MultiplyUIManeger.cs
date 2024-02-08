@@ -15,6 +15,7 @@ public class MultiplyUIManeger : Singleton<MultiplyUIManeger>
     public TextMeshProUGUI spacingYInputField;
     public TextMeshProUGUI spacingZInputField;
     public GameObject axisPrefab;
+    public GameObject axisObject;
 
 
     private void Update()
@@ -68,6 +69,11 @@ public class MultiplyUIManeger : Singleton<MultiplyUIManeger>
 
         Quaternion originalRotation = cubo.rotation;
 
+        if (axisObject != null)
+        {
+            axisObject.SetActive(false);
+        }
+
         //Quaternion originalRotation = originalObjectPrefab.transform.rotation;
         // Instanciar as cópias do objeto original com o espaçamento especificado
         for (int i = 1; i <= quantidade; i++)
@@ -100,7 +106,7 @@ public class MultiplyUIManeger : Singleton<MultiplyUIManeger>
 
         var child = originalObjectPrefab.transform.GetChild(0);
         // GameObject newObject = Instantiate(axisPrefab, originalObjectPrefab.transform.position, originalObjectPrefab.transform.rotation);
-        GameObject axisObject = Instantiate(axisPrefab, child.position, child.rotation);
+        axisObject = Instantiate(axisPrefab, child.position, child.rotation);
         axisObject.transform.SetParent(child);
     }
 }
