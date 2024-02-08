@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4614057178643348291}
   - component: {fileID: 4614057178643348290}
+  - component: {fileID: 6206986424726325475}
   m_Layer: 0
   m_Name: Animation Pivot
   m_TagString: Untagged
@@ -32,7 +33,7 @@ Transform:
   - {fileID: 5152916165588306708}
   m_Father: {fileID: 5821174736208563344}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 267.01987, z: 0}
 --- !u!111 &4614057178643348290
 Animation:
   m_ObjectHideFlags: 0
@@ -50,6 +51,19 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!65 &6206986424726325475
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4614057178643348292}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.36, y: 0.04, z: 0.25}
+  m_Center: {x: -0.03, y: 0, z: -0.06}
 --- !u!1 &4614057178831508634
 GameObject:
   m_ObjectHideFlags: 0
@@ -60,7 +74,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4614057178831508633}
   - component: {fileID: 1299631575947002478}
-  - component: {fileID: 2253674087052685835}
   m_Layer: 0
   m_Name: 90_rotation_arrow_anim
   m_TagString: Untagged
@@ -100,19 +113,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &2253674087052685835
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4614057178831508634}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.50280094, y: 0.38642856, z: 0.115464255}
-  m_Center: {x: 0.008832455, y: 0.009595051, z: 0.0027573034}
 --- !u!1 &6693099773107065760
 GameObject:
   m_ObjectHideFlags: 0
