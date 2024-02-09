@@ -16,6 +16,9 @@ public class MultiplyUIManeger : Singleton<MultiplyUIManeger>
     public TextMeshProUGUI spacingZInputField;
     public GameObject axisPrefab;
     public GameObject axisObject;
+    public TextMeshProUGUI XrealInputField;
+    public TextMeshProUGUI YrealInputField;
+    public TextMeshProUGUI ZrealInputField;
 
 
     private void Update()
@@ -71,7 +74,7 @@ public class MultiplyUIManeger : Singleton<MultiplyUIManeger>
 
         if (axisObject != null)
         {
-            axisObject.SetActive(false);
+            Destroy(axisObject);
         }
 
         //Quaternion originalRotation = originalObjectPrefab.transform.rotation;
@@ -96,13 +99,27 @@ public class MultiplyUIManeger : Singleton<MultiplyUIManeger>
             //newObject.transform.Translate(new Vector3(i * spacingX, i * spacingY, i * spacingZ));
             OculusManager.Instance.TaskManager.AddObjectInTask(sceneElement.transform);
         }
-
+          
         Destroy(gameObject);
     }   
     internal void ativar(GameObject gameObject)
     {
         transform.position = gameObject.transform.position;
         originalObjectPrefab = gameObject;
+
+        // Acessa o componente Collider do objeto original
+        Collider collider = originalObjectPrefab.GetComponent<Collider>();
+
+        if (collider != null)
+        {
+            // Obtém as dimensões do Collider
+            Vector3 size = collider.bounds.size;
+
+            // Exibe as dimensões nas caixas de texto
+            XrealInputField.text = size.x.ToString();
+            YrealInputField.text = size.y.ToString();
+            ZrealInputField.text = size.z.ToString();
+        }
 
         var child = originalObjectPrefab.transform.GetChild(0);
         // GameObject newObject = Instantiate(axisPrefab, originalObjectPrefab.transform.position, originalObjectPrefab.transform.rotation);
