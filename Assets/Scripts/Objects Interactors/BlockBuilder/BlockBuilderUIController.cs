@@ -23,14 +23,6 @@ public class BlockBuilderUIController : MonoBehaviour
         KeyboardManager.Instance.GetInput(result => ChangeAxis(txtField, result), null, txtField.text, TouchScreenKeyboardType.NumbersAndPunctuation | TouchScreenKeyboardType.DecimalPad);
     }
 
-    public void InvertSignal(TextMeshProUGUI txtField)
-    {
-        float value = float.Parse(txtField.text) * -1;
-
-        txtField.text = value.ToString(VALUES_FORMAT);
-        UpdateBlockScale();
-    }
-
     private void ChangeAxis(TextMeshProUGUI txtAxis, string value)
     {
         if (value.Length == 0) return;
@@ -68,7 +60,7 @@ public class BlockBuilderUIController : MonoBehaviour
     {
         try
         {
-            return float.Parse(value.Replace(".", ","));
+            return float.Parse(value.Replace(",", "."));
 
         }catch (Exception exception)
         {
