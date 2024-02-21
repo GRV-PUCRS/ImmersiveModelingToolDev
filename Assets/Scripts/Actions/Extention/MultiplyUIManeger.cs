@@ -20,7 +20,6 @@ public class MultiplyUIManeger : Singleton<MultiplyUIManeger>
     public TextMeshProUGUI YrealInputField;
     public TextMeshProUGUI ZrealInputField;
 
-
     private void Update()
     {
         if (Input.GetKeyUp(KeyCode.Z))
@@ -36,11 +35,11 @@ public class MultiplyUIManeger : Singleton<MultiplyUIManeger>
 
     public void ChangeAxisValue(TextMeshProUGUI txtField)
     {
-        //  teclado virtual para obter a entrada do usu·rio
+        //  teclado virtual para obter a entrada do usu√°rio
         KeyboardManager.Instance.GetInput(result => UpdateUIValue(txtField, result), null, txtField.text, TouchScreenKeyboardType.NumbersAndPunctuation | TouchScreenKeyboardType.DecimalPad);
     }
 
-    // MÈtodo para atualizar o valor do campo de texto da UI
+    // M√©todo para atualizar o valor do campo de texto da UI
     private void UpdateUIValue(TextMeshProUGUI txtField, string result)
     {
        // if (txtField == quantityInputField)
@@ -66,7 +65,7 @@ public class MultiplyUIManeger : Singleton<MultiplyUIManeger>
         float spacingY = float.Parse(spacingYInputField.text)/100f;
         float spacingZ = float.Parse(spacingZInputField.text)/100f;
 
-        // Armazena a posiÁ„o e a rotaÁ„o originais
+        // Armazena a posi√ß√£o e a rota√ß√£o originais
         Transform cubo = originalObjectPrefab.transform.GetChild(0);
         Vector3 originalPosition = cubo.position;
 
@@ -74,17 +73,19 @@ public class MultiplyUIManeger : Singleton<MultiplyUIManeger>
 
         if (axisObject != null)
         {
-            Destroy(axisObject);
+          //  Destroy(axisObject, 0f);
+           axisObject.SetActive(false);
+           
         }
 
         //Quaternion originalRotation = originalObjectPrefab.transform.rotation;
-        // Instanciar as cÛpias do objeto original com o espaÁamento especificado
+        // Instanciar as c√≥pias do objeto original com o espa√ßamento especificado
         for (int i = 1; i <= quantidade; i++)
         {
             //GameObject newObject = Instantiate(originalObjectPrefab, originalObjectPrefab.transform.position, originalRotation);
             //newObject.transform.Translate(new Vector3(spacingX, spacingY, spacingZ) * i);
 
-            // Calcula a nova posiÁ„o com base no espaÁamento
+            // Calcula a nova posi√ß√£o com base no espa√ßamento
             Vector3 newPosition = originalPosition;
             GameObject sceneElement = new GameObject("copia "+ i);
             // Instancia o novo objeto
@@ -98,30 +99,34 @@ public class MultiplyUIManeger : Singleton<MultiplyUIManeger>
             //GameObject newObject = Instantiate(originalObjectPrefab, originalObjectPrefab.transform.position, Quaternion.identity);
             //newObject.transform.Translate(new Vector3(i * spacingX, i * spacingY, i * spacingZ));
             OculusManager.Instance.TaskManager.AddObjectInTask(sceneElement.transform);
+
+            if (axisObject != null)
+            {
+                // Destroy(axisObject, 0f);
+              //  axisObject.SetActive(false);
+            }
         }
-          
+
         Destroy(gameObject);
     }   
     internal void ativar(GameObject gameObject)
     {
         transform.position = gameObject.transform.position;
         originalObjectPrefab = gameObject;
-
-        // Acessa o componente Collider do objeto original
-        Collider collider = originalObjectPrefab.GetComponent<Collider>();
-
-        if (collider != null)
-        {
-            // ObtÈm as dimensıes do Collider
-            Vector3 size = collider.bounds.size;
-
-            // Exibe as dimensıes nas caixas de texto
-            XrealInputField.text = size.x.ToString();
-            YrealInputField.text = size.y.ToString();
-            ZrealInputField.text = size.z.ToString();
-        }
-
         var child = originalObjectPrefab.transform.GetChild(0);
+        // Acessa o componente Collider do objeto original
+        //  Collider collider = originalObjectPrefab.transform.GetChild(0).GetComponent<Collider>();
+
+        
+           // Obt√©m as dimens√µes do Collider
+           // Vector3 size = collider.bounds.size;
+
+        // Exibe as dimens√µes nas caixas de texto
+        XrealInputField.text = (child.localScale.x * 100f).ToString("F2");
+        YrealInputField.text = (child.localScale.y * 100f).ToString("F2");
+        ZrealInputField.text = (child.localScale.z * 100f).ToString("F2");
+
+      //  var child = originalObjectPrefab.transform.GetChild(0);
         // GameObject newObject = Instantiate(axisPrefab, originalObjectPrefab.transform.position, originalObjectPrefab.transform.rotation);
         axisObject = Instantiate(axisPrefab, child.position, child.rotation);
         axisObject.transform.SetParent(child);
@@ -145,7 +150,7 @@ public class MultiplyUIManeger : Singleton<MultiplyUIManeger>
     public TextMeshProUGUI spacingYInputField;
     public TextMeshProUGUI spacingZInputField;
 
-    // Adicione referÍncias para os botıes
+    // Adicione refer√™ncias para os bot√µes
     public Button BTNmult;
     public Button BTNX;
     public Button BTNY;
@@ -154,7 +159,7 @@ public class MultiplyUIManeger : Singleton<MultiplyUIManeger>
 
     private void Start()
     {
-        // Adicione ouvintes de clique para os botıes
+        // Adicione ouvintes de clique para os bot√µes
         BTNmult.onClick.AddListener(() => OnButtonClick(BTNmult));
         BTNX.onClick.AddListener(() => OnButtonClick(BTNX));
         BTNY.onClick.AddListener(() => OnButtonClick(BTNY));
@@ -164,16 +169,16 @@ public class MultiplyUIManeger : Singleton<MultiplyUIManeger>
 
     private void OnButtonClick(Button button)
     {
-        // Desative os outros botıes quando um bot„o È pressionado
+        // Desative os outros bot√µes quando um bot√£o √© pressionado
         BTNmult.interactable = false;
         BTNX.interactable = false;
         BTNY.interactable = false;
         BTNZ.interactable = false;
 
-        // Ative apenas o bot„o pressionado
+        // Ative apenas o bot√£o pressionado
         button.interactable = true;
 
-        // Ative a interface do usu·rio
+        // Ative a interface do usu√°rio
         View.SetActive(true);
 
         // Atualize o texto do campo de entrada para evitar valores residuais
@@ -185,14 +190,14 @@ public class MultiplyUIManeger : Singleton<MultiplyUIManeger>
 
     private void OnConfirmarClick()
     {
-        // Validar entrada para garantir que seja um n˙mero inteiro positivo
+        // Validar entrada para garantir que seja um n√∫mero inteiro positivo
         if (!int.TryParse(quantityInputField.text, out int quantidade) || quantidade <= 0)
         {
-            Debug.LogError("Quantidade inv·lida. Insira um n˙mero inteiro positivo.");
+            Debug.LogError("Quantidade inv√°lida. Insira um n√∫mero inteiro positivo.");
             return;
         }
 
-        // Chamar mÈtodo correspondente ao bot„o pressionado
+        // Chamar m√©todo correspondente ao bot√£o pressionado
         if (BTNmult.interactable)
         {
             MultiplyObjects();
@@ -210,7 +215,7 @@ public class MultiplyUIManeger : Singleton<MultiplyUIManeger>
             MultiplyObjectsAlongAxis(Vector3.forward);
         }
 
-        // Restaure a interface do usu·rio para o estado inicial
+        // Restaure a interface do usu√°rio para o estado inicial
         View.SetActive(false);
         BTNmult.interactable = true;
         BTNX.interactable = true;
@@ -220,7 +225,7 @@ public class MultiplyUIManeger : Singleton<MultiplyUIManeger>
 
     private void MultiplyObjects()
     {
-        // LÛgica de multiplicaÁ„o geral aqui
+        // L√≥gica de multiplica√ß√£o geral aqui
         for (int i = 0; i < quantidade; i++)
         {
              GameObject newObject = Instantiate(originalObjectPrefab, sceneElements[0].transform.position, Quaternion.identity);
@@ -230,7 +235,7 @@ public class MultiplyUIManeger : Singleton<MultiplyUIManeger>
 
     private void MultiplyObjectsAlongAxis(Vector3 axis)
     {
-        // LÛgica de multiplicaÁ„o ao longo de um eixo especÌfico aqui
+        // L√≥gica de multiplica√ß√£o ao longo de um eixo espec√≠fico aqui
         for (int i = 0; i < quantidade; i++)
         {
              GameObject newObject = Instantiate(originalObjectPrefab, sceneElements[0].transform.position, Quaternion.identity);
