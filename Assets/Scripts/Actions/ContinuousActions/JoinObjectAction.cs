@@ -104,6 +104,8 @@ public class JoinObjectAction : AbstractProlongedAction
                 element.SetSelected(false);
             }
 
+            Utils.UpdateSceneElementPivot(tempSceneElement);
+
             OculusManager.Instance.TaskManager.AddObjectInTask(tempSceneElement);
         }
 

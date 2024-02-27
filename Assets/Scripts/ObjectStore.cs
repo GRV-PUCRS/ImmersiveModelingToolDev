@@ -359,17 +359,17 @@ public class ObjectStore : Singleton<ObjectStore>
         Transform sceneElementInstance = new GameObject("SceneElement").transform;
         taskManager.AddObjectInTask(sceneElementInstance);
 
-        sceneElementInstance.localPosition = Vector3.zero;
-        sceneElementInstance.localEulerAngles = Vector3.zero;
+        sceneElementInstance.position = obj.transform.position;
+        sceneElementInstance.rotation = obj.transform.rotation;
 
         Transform instance = ObjectManager.Instance.InstantiateObject(obj.name).transform;
         instance.gameObject.SetActive(true);
 
-        instance.name = obj.name;
-        instance.position = obj.transform.position;
-        instance.rotation = obj.transform.rotation;
-        instance.localScale = Vector3.one;
         instance.SetParent(sceneElementInstance);
+        instance.name = obj.name;
+        instance.localPosition = Vector3.zero;
+        instance.localRotation = Quaternion.identity;
+        instance.localScale = Vector3.one;
         instance.GetComponentInChildren<DragUI>().SetNewTransform(sceneElementInstance);
         instance.gameObject.AddComponent<Outline>();
 

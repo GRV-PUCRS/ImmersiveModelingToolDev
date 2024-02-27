@@ -59,4 +59,33 @@ public static class Utils
 
         return bounds;
     }
+
+    public static void UpdateSceneElementPivot(Transform sceneElement)
+    {
+        if (sceneElement.childCount == 0) return;
+
+        Vector3 newPosition = Vector3.zero;
+        Vector3 newRotation = Vector3.zero;
+        int childAmount = sceneElement.childCount;
+
+        var childs = sceneElement.GetComponentsInChildren<DragUI>();
+
+        foreach (var child in childs)
+        {
+            newPosition += child.transform.position;
+            newRotation += child.transform.eulerAngles;
+            child.transform.SetParent(null);
+        }
+
+        newPosition *= 1 / (float)childAmount;
+        newRotation *= 1 / (float)childAmount;
+
+        sceneElement.transform.position = newPosition;
+        sceneElement.transform.eulerAngles = newRotation;
+
+        foreach(var child in childs)
+        {
+            child.transform.SetParent(sceneElement);
+        }
+    }
 }

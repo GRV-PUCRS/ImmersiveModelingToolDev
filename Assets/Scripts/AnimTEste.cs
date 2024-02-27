@@ -4,12 +4,22 @@ using UnityEngine;
 
 public class AnimTEste : MonoBehaviour
 {
-    private void Start()
+    private void Update()
     {
-        AnimatorClipInfo[] a = GetComponent<Animator>().GetCurrentAnimatorClipInfo(0);
-        Debug.Log(a.Length);
+        if (Input.GetKeyUp(KeyCode.Alpha6))
+        {
+            Teste();
+        }
+    }
 
-        foreach (var g in a)
-            Debug.Log(g.clip.name);
+    public void Teste()
+    {
+        var renderer = GetComponentInChildren<MeshRenderer>();
+
+        Debug.Log("====>");
+        Debug.Log(renderer.bounds.size);
+        Debug.Log(renderer.bounds.max - renderer.bounds.min);
+        Debug.Log(renderer.bounds.min + renderer.bounds.center);
+        Debug.Log(renderer.bounds);
     }
 }
