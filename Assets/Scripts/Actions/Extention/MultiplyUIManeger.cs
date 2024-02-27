@@ -8,7 +8,7 @@ using UnityEngine;
 public class MultiplyUIManeger : Singleton<MultiplyUIManeger>
 
 {
-    public GameObject View; 
+    public GameObject View;
     public GameObject originalObjectPrefab;
     public TextMeshProUGUI quantityInputField;
     public TextMeshProUGUI spacingXInputField;
@@ -42,14 +42,14 @@ public class MultiplyUIManeger : Singleton<MultiplyUIManeger>
     // Método para atualizar o valor do campo de texto da UI
     private void UpdateUIValue(TextMeshProUGUI txtField, string result)
     {
-       // if (txtField == quantityInputField)
-       // {
-       //     txtField.text = result;
-       // }
-      //  else
-      //  {
+        // if (txtField == quantityInputField)
+        // {
+        //     txtField.text = result;
+        // }
+        //  else
+        //  {
         //    float resultInCentimeters = float.Parse(result) / 100f;
-          //  txtField.text = resultInCentimeters.ToString();
+        //  txtField.text = resultInCentimeters.ToString();
         //}
         // float resultInCentimeters = float.Parse(result) / 100f;
 
@@ -57,25 +57,74 @@ public class MultiplyUIManeger : Singleton<MultiplyUIManeger>
         //  txtField.text = resultInCentimeters.ToString();
         txtField.text = result;
     }
-     
+
     public void metodo()
     {
         int quantidade = int.Parse(quantityInputField.text);
-        float spacingX = float.Parse(spacingXInputField.text)/100f;
-        float spacingY = float.Parse(spacingYInputField.text)/100f;
-        float spacingZ = float.Parse(spacingZInputField.text)/100f;
+        float spacingX = float.Parse(spacingXInputField.text) / 100f;
+        float spacingY = float.Parse(spacingYInputField.text) / 100f;
+        float spacingZ = float.Parse(spacingZInputField.text) / 100f;
 
+        /*   // Armazena a posição média dos objetos no grupo
+           Vector3 groupCenter = Vector3.zero;
+           int objectCount = 0;
+
+           // Itera por todos os objetos no grupo para calcular a posição média
+           foreach (Transform child in originalObjectPrefab.transform)
+           {
+               groupCenter += child.position;
+               objectCount++;
+           }
+
+           // Calcula o centro médio
+           if (objectCount > 0)
+           {
+               groupCenter /= objectCount;
+           }
+
+           Quaternion originalRotation = originalObjectPrefab.transform.rotation;
+           if (axisObject != null)
+           {
+               axisObject.SetActive(false);
+
+           }
+
+           // Instanciar as cópias do grupo original com o espaçamento especificado
+           for (int i = 1; i <= quantidade; i++)
+           {
+               GameObject sceneElement = new GameObject("copia " + i);
+
+               // Instancia uma cópia de cada objeto no grupo
+               foreach (Transform child in originalObjectPrefab.transform)
+               {
+                   // Instancia o novo objeto
+                   GameObject newObject = Instantiate(child.gameObject, child.position, originalRotation);
+
+                   // Calcula a posição com base no espaçamento e no centro do grupo
+                   Vector3 offset = new Vector3(spacingX * i, spacingY * i, spacingZ * i);
+                   newObject.transform.position = groupCenter + (child.position - groupCenter) + offset;
+
+                   // Define o objeto como filho do objeto original
+                   newObject.transform.SetParent(sceneElement.transform);
+                   newObject.GetComponent<DragUI>().SetNewTransform(sceneElement.transform);
+               }
+
+               OculusManager.Instance.TaskManager.AddObjectInTask(sceneElement.transform);
+           }
+
+           Destroy(gameObject);
+       */
         // Armazena a posição e a rotação originais
-        Transform cubo = originalObjectPrefab.transform.GetChild(0);
-        Vector3 originalPosition = cubo.position;
+        // Transform cubo = originalObjectPrefab.transform.GetChild(0);
+        Vector3 originalPosition = originalObjectPrefab.transform.position;
 
-        Quaternion originalRotation = cubo.rotation;
+        Quaternion originalRotation = originalObjectPrefab.transform.rotation;
 
         if (axisObject != null)
         {
-          //  Destroy(axisObject, 0f);
-           axisObject.SetActive(false);
-           
+            //  Destroy(axisObject, 0f);
+            axisObject.SetActive(false);
+
         }
 
         //Quaternion originalRotation = originalObjectPrefab.transform.rotation;
@@ -87,29 +136,37 @@ public class MultiplyUIManeger : Singleton<MultiplyUIManeger>
 
             // Calcula a nova posição com base no espaçamento
             Vector3 newPosition = originalPosition;
-            GameObject sceneElement = new GameObject("copia "+ i);
+            // GameObject sceneElement = new GameObject("copia "+ i);
             // Instancia o novo objeto
-            GameObject newObject = Instantiate(cubo.gameObject, newPosition, originalRotation);
+            GameObject sceneElement = Instantiate(originalObjectPrefab, newPosition, originalRotation);
 
-            newObject.transform.Translate(new Vector3(spacingX * i, spacingY * i, spacingZ * i));
+            sceneElement.transform.Translate(new Vector3(spacingX * i, spacingY * i, spacingZ * i));
             // Define o objeto como filho do objeto original
 
-            newObject.transform.SetParent(sceneElement.transform);
-            newObject.GetComponent<DragUI>().SetNewTransform(sceneElement.transform);
+            //sceneElement.transform.SetParent(sceneElement.transform);
+            //sceneElement.GetComponent<DragUI>().SetNewTransform(sceneElement.transform);
             //GameObject newObject = Instantiate(originalObjectPrefab, originalObjectPrefab.transform.position, Quaternion.identity);
             //newObject.transform.Translate(new Vector3(i * spacingX, i * spacingY, i * spacingZ));
             OculusManager.Instance.TaskManager.AddObjectInTask(sceneElement.transform);
 
+
+            foreach (DragUI child in sceneElement.GetComponentsInChildren<DragUI>())
+            {
+                child.SetNewTransform(sceneElement.transform);
+            }
+
             if (axisObject != null)
             {
                 // Destroy(axisObject, 0f);
-              //  axisObject.SetActive(false);
+                //  axisObject.SetActive(false);
             }
         }
 
+
         Destroy(gameObject);
-    }   
-    internal void ativar(GameObject gameObject)
+    }
+
+    public void ativar(GameObject gameObject)
     {
         transform.position = gameObject.transform.position;
         originalObjectPrefab = gameObject;
@@ -117,21 +174,22 @@ public class MultiplyUIManeger : Singleton<MultiplyUIManeger>
         // Acessa o componente Collider do objeto original
         //  Collider collider = originalObjectPrefab.transform.GetChild(0).GetComponent<Collider>();
 
-        
-           // Obtém as dimensões do Collider
-           // Vector3 size = collider.bounds.size;
+
+        // Obtém as dimensões do Collider
+        // Vector3 size = collider.bounds.size;
 
         // Exibe as dimensões nas caixas de texto
         XrealInputField.text = (child.localScale.x * 100f).ToString("F2");
         YrealInputField.text = (child.localScale.y * 100f).ToString("F2");
         ZrealInputField.text = (child.localScale.z * 100f).ToString("F2");
 
-      //  var child = originalObjectPrefab.transform.GetChild(0);
+        //  var child = originalObjectPrefab.transform.GetChild(0);
         // GameObject newObject = Instantiate(axisPrefab, originalObjectPrefab.transform.position, originalObjectPrefab.transform.rotation);
-        axisObject = Instantiate(axisPrefab, child.position, child.rotation);
-        axisObject.transform.SetParent(child);
+        axisObject = Instantiate(axisPrefab, gameObject.transform.position, gameObject.transform.rotation);
+        axisObject.transform.SetParent(gameObject.transform);
     }
 }
+
 
 
 /*using JetBrains.Annotations;
